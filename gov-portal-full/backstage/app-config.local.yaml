@@ -1,0 +1,34 @@
+# Local development overrides
+# This file is gitignored and should contain local-only configuration
+
+app:
+  baseUrl: http://localhost:3002
+
+backend:
+  baseUrl: http://localhost:7007
+  database:
+    client: pg
+    connection:
+      host: localhost
+      port: 5433
+      user: backstage
+      password: backstage123
+      database: backstage_catalog
+      ssl:
+        require: false
+
+auth:
+  providers:
+    guest:
+      enabled: true
+    github:
+      development:
+        clientId: ${GITHUB_CLIENT_ID}
+        clientSecret: ${GITHUB_CLIENT_SECRET}
+
+# Development-specific Langfuse settings
+nova:
+  langfuse:
+    debug: true
+    requestTimeout: 30000
+    retryAttempts: 3

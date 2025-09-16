@@ -1,0 +1,132 @@
+/* Navigation fixes for all tabs visibility */
+
+/* Ensure all navigation tabs are visible */
+.md-tabs__list {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+/* Make tabs more compact if needed */
+.md-tabs__item {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  min-width: auto;
+}
+
+/* Reduce padding on tabs for more space */
+.md-tabs__link {
+  padding: 0.6rem 0.8rem;
+  font-size: 0.875rem;
+}
+
+/* Ensure emojis don't break layout */
+.md-tabs__link .twemoji {
+  vertical-align: middle;
+  height: 1.125em;
+  width: 1.125em;
+  margin-right: 0.25rem;
+}
+
+/* Add scroll indicators for mobile */
+@media screen and (max-width: 76.1875em) {
+  .md-tabs__list {
+    position: relative;
+    padding: 0 1rem;
+  }
+  
+  .md-tabs__list::before,
+  .md-tabs__list::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1rem;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  .md-tabs__list::before {
+    left: 0;
+    background: linear-gradient(to right, var(--md-primary-bg-color), transparent);
+  }
+  
+  .md-tabs__list::after {
+    right: 0;
+    background: linear-gradient(to left, var(--md-primary-bg-color), transparent);
+  }
+}
+
+/* Ensure all tabs are always visible on desktop */
+@media screen and (min-width: 76.25em) {
+  .md-tabs__list {
+    justify-content: space-evenly;
+    max-width: 100%;
+  }
+  
+  .md-tabs__item {
+    flex: 1 1 auto;
+    max-width: none;
+  }
+  
+  .md-tabs__link {
+    text-align: center;
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+/* Fix for very wide screens */
+@media screen and (min-width: 88em) {
+  .md-tabs__list {
+    max-width: 88rem;
+    margin: 0 auto;
+  }
+}
+
+/* Highlight active tab more clearly */
+.md-tabs__item--active .md-tabs__link {
+  font-weight: 600;
+  border-bottom: 3px solid var(--md-accent-fg-color);
+}
+
+/* Fix navigation sections dropdown */
+.md-nav--primary .md-nav__title {
+  font-weight: 600;
+  color: var(--md-primary-fg-color);
+}
+
+/* Ensure navigation hierarchy is clear */
+.md-nav--primary .md-nav__item--nested > .md-nav__link {
+  font-weight: 500;
+}
+
+/* Mobile navigation improvements */
+@media screen and (max-width: 60em) {
+  .md-nav--primary .md-nav__title {
+    padding: 0.75rem 1rem;
+    background: var(--md-primary-bg-color--light);
+  }
+  
+  .md-nav--primary .md-nav__item {
+    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  }
+}
+
+/* Fix for navigation.tabs.sticky */
+.md-tabs--active {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Ensure subsections are properly indented */
+.md-nav--primary .md-nav__item--nested .md-nav__item {
+  padding-left: 1rem;
+}
+
+/* Fix for Anexos visibility specifically */
+.md-nav__item:has(.md-nav__link:contains("📋")) {
+  display: block !important;
+  visibility: visible !important;
+}

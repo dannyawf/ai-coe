@@ -1,0 +1,705 @@
+/* Nova-Themed Design System for Portal de Gobierno de IA */
+
+:root {
+  /* Nova Primary Colors - Based on logo analysis */
+  --nova-primary-blue: #003366;
+  --nova-secondary-teal: #00A79D;
+  --nova-accent-gold: #BFA169;
+  --nova-light-blue: #E6F3FF;
+  --nova-dark-blue: #001A33;
+  
+  /* Extended Palette */
+  --nova-white: #FFFFFF;
+  --nova-light-gray: #F8F9FA;
+  --nova-medium-gray: #6C757D;
+  --nova-dark-gray: #343A40;
+  --nova-success: #28A745;
+  --nova-warning: #FFC107;
+  --nova-error: #DC3545;
+  --nova-info: var(--nova-secondary-teal);
+  
+  /* Typography Scale */
+  --nova-font-family: "Inter", "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --nova-font-mono: "JetBrains Mono", "Roboto Mono", "Courier New", monospace;
+  
+  /* Font Weights */
+  --nova-font-light: 300;
+  --nova-font-regular: 400;
+  --nova-font-medium: 500;
+  --nova-font-semibold: 600;
+  --nova-font-bold: 700;
+  
+  /* Font Sizes - Responsive Scale */
+  --nova-text-xs: 0.75rem;     /* 12px */
+  --nova-text-sm: 0.875rem;    /* 14px */
+  --nova-text-base: 1rem;      /* 16px */
+  --nova-text-lg: 1.125rem;    /* 18px */
+  --nova-text-xl: 1.25rem;     /* 20px */
+  --nova-text-2xl: 1.5rem;     /* 24px */
+  --nova-text-3xl: 1.875rem;   /* 30px */
+  --nova-text-4xl: 2.25rem;    /* 36px */
+  --nova-text-5xl: 3rem;       /* 48px */
+  
+  /* Spacing System - 8pt Grid */
+  --nova-space-1: 0.25rem;     /* 4px */
+  --nova-space-2: 0.5rem;      /* 8px */
+  --nova-space-3: 0.75rem;     /* 12px */
+  --nova-space-4: 1rem;        /* 16px */
+  --nova-space-5: 1.25rem;     /* 20px */
+  --nova-space-6: 1.5rem;      /* 24px */
+  --nova-space-8: 2rem;        /* 32px */
+  --nova-space-10: 2.5rem;     /* 40px */
+  --nova-space-12: 3rem;       /* 48px */
+  --nova-space-16: 4rem;       /* 64px */
+  
+  /* Border Radius */
+  --nova-radius-sm: 0.25rem;   /* 4px */
+  --nova-radius-md: 0.5rem;    /* 8px */
+  --nova-radius-lg: 0.75rem;   /* 12px */
+  --nova-radius-xl: 1rem;      /* 16px */
+  --nova-radius-2xl: 1.5rem;   /* 24px */
+  --nova-radius-full: 9999px;
+  
+  /* Shadows */
+  --nova-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --nova-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --nova-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --nova-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+  /* Transitions */
+  --nova-transition-fast: 150ms ease-in-out;
+  --nova-transition-normal: 250ms ease-in-out;
+  --nova-transition-slow: 350ms ease-in-out;
+}
+
+/* Material Design Theme Overrides for Nova Branding */
+
+/* Header/Navigation */
+.md-header {
+  background: linear-gradient(135deg, var(--nova-primary-blue) 0%, var(--nova-dark-blue) 100%);
+  color: var(--nova-white);
+  box-shadow: var(--nova-shadow-md);
+  z-index: 1000;
+}
+
+.md-header__title {
+  font-family: var(--nova-font-family);
+  font-weight: var(--nova-font-semibold);
+  font-size: var(--nova-text-xl);
+}
+
+.md-header-nav__button {
+  color: var(--nova-white);
+}
+
+/* Logo Integration - Removed duplicate logo */
+/* Logo is handled by Material Design theme configuration */
+
+/* Navigation Tabs */
+.md-tabs {
+  background: var(--nova-secondary-teal);
+  color: var(--nova-white);
+  z-index: 999;
+}
+
+.md-tabs__link {
+  color: var(--nova-white);
+  font-weight: var(--nova-font-medium);
+  transition: var(--nova-transition-fast);
+}
+
+.md-tabs__link:hover,
+.md-tabs__link--active {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--nova-white);
+}
+
+/* Sidebar */
+.md-sidebar {
+  width: 16rem;
+}
+
+.md-nav__title {
+  font-family: var(--nova-font-family);
+  font-weight: var(--nova-font-semibold);
+  color: var(--nova-primary-blue);
+  border-bottom: 1px solid var(--nova-light-gray);
+  padding-bottom: var(--nova-space-2);
+  margin-bottom: var(--nova-space-3);
+}
+
+.md-nav__link {
+  font-family: var(--nova-font-family);
+  font-weight: var(--nova-font-regular);
+  color: var(--nova-dark-gray);
+  transition: var(--nova-transition-fast);
+}
+
+.md-nav__link:hover {
+  color: var(--nova-secondary-teal);
+}
+
+.md-nav__link--active {
+  color: var(--nova-primary-blue);
+  font-weight: var(--nova-font-medium);
+}
+
+/* Main Content */
+.md-content {
+  font-family: var(--nova-font-family);
+}
+
+.md-content__inner {
+  margin: 0 var(--nova-space-6);
+  max-width: none;
+}
+
+/* Typography Improvements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--nova-font-family);
+  font-weight: var(--nova-font-semibold);
+  color: var(--nova-primary-blue);
+  line-height: 1.2;
+  margin-top: var(--nova-space-8);
+  margin-bottom: var(--nova-space-4);
+}
+
+h1 {
+  font-size: var(--nova-text-4xl);
+  font-weight: var(--nova-font-bold);
+  border-bottom: 3px solid var(--nova-secondary-teal);
+  padding-bottom: var(--nova-space-3);
+}
+
+h2 {
+  font-size: var(--nova-text-3xl);
+  color: var(--nova-dark-gray);
+}
+
+h3 {
+  font-size: var(--nova-text-2xl);
+  color: var(--nova-secondary-teal);
+}
+
+/* Enhanced Cards */
+.md-typeset .admonition {
+  border: none;
+  border-radius: var(--nova-radius-lg);
+  box-shadow: var(--nova-shadow-md);
+  overflow: hidden;
+  transition: var(--nova-transition-normal);
+  margin: var(--nova-space-6) 0;
+}
+
+.md-typeset .admonition:hover {
+  box-shadow: var(--nova-shadow-lg);
+  transform: translateY(-2px);
+}
+
+.md-typeset .admonition-title {
+  font-family: var(--nova-font-family);
+  font-weight: var(--nova-font-semibold);
+  font-size: var(--nova-text-lg);
+  padding: var(--nova-space-4) var(--nova-space-6);
+  margin: 0;
+}
+
+/* Note Admonition - Primary */
+.md-typeset .admonition.note {
+  border-left: 4px solid var(--nova-primary-blue);
+}
+
+.md-typeset .admonition.note .admonition-title {
+  background: linear-gradient(135deg, var(--nova-primary-blue), var(--nova-dark-blue));
+  color: var(--nova-white);
+}
+
+/* Info Admonition - Teal */
+.md-typeset .admonition.info {
+  border-left: 4px solid var(--nova-secondary-teal);
+}
+
+.md-typeset .admonition.info .admonition-title {
+  background: linear-gradient(135deg, var(--nova-secondary-teal), #008a82);
+  color: var(--nova-white);
+}
+
+/* Warning Admonition */
+.md-typeset .admonition.warning {
+  border-left: 4px solid var(--nova-warning);
+}
+
+.md-typeset .admonition.warning .admonition-title {
+  background: linear-gradient(135deg, var(--nova-warning), #e6ac00);
+  color: var(--nova-dark-gray);
+}
+
+/* Code Blocks */
+.md-typeset pre {
+  border-radius: var(--nova-radius-md);
+  box-shadow: var(--nova-shadow-sm);
+}
+
+.md-typeset code {
+  font-family: var(--nova-font-mono);
+  color: var(--nova-secondary-teal);
+  background: var(--nova-light-gray);
+  padding: var(--nova-space-1) var(--nova-space-2);
+  border-radius: var(--nova-radius-sm);
+  font-size: var(--nova-text-sm);
+}
+
+/* Tables */
+.md-typeset table:not([class]) {
+  border-radius: var(--nova-radius-md);
+  overflow: hidden;
+  box-shadow: var(--nova-shadow-sm);
+}
+
+.md-typeset table:not([class]) th {
+  background: var(--nova-primary-blue);
+  color: var(--nova-white);
+  font-weight: var(--nova-font-semibold);
+  font-family: var(--nova-font-family);
+}
+
+.md-typeset table:not([class]) tr:hover {
+  background: var(--nova-light-blue);
+}
+
+/* Links */
+.md-typeset a {
+  color: var(--nova-secondary-teal);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: var(--nova-transition-fast);
+}
+
+.md-typeset a:hover {
+  color: var(--nova-primary-blue);
+  border-bottom-color: var(--nova-primary-blue);
+}
+
+/* Buttons */
+.md-typeset .md-button {
+  background: var(--nova-secondary-teal);
+  color: var(--nova-white);
+  border: none;
+  border-radius: var(--nova-radius-md);
+  padding: var(--nova-space-3) var(--nova-space-6);
+  font-family: var(--nova-font-family);
+  font-weight: var(--nova-font-medium);
+  transition: var(--nova-transition-normal);
+  box-shadow: var(--nova-shadow-sm);
+}
+
+.md-typeset .md-button:hover {
+  background: var(--nova-primary-blue);
+  box-shadow: var(--nova-shadow-md);
+  transform: translateY(-1px);
+}
+
+.md-typeset .md-button--primary {
+  background: var(--nova-primary-blue);
+}
+
+.md-typeset .md-button--primary:hover {
+  background: var(--nova-dark-blue);
+}
+
+/* Footer */
+.md-footer {
+  background: var(--nova-dark-gray);
+  color: var(--nova-white);
+}
+
+.md-footer-meta {
+  background: var(--nova-primary-blue);
+}
+
+/* Search */
+.md-search__input {
+  border-radius: var(--nova-radius-md);
+  font-family: var(--nova-font-family);
+}
+
+.md-search__input::placeholder {
+  color: var(--nova-medium-gray);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 76.1875em) {
+  .md-nav__title--site {
+    background: var(--nova-primary-blue);
+  }
+  
+  .md-nav__title--site .md-nav__button {
+    color: var(--nova-white);
+  }
+}
+
+/* Custom Nova Utilities */
+.nova-gradient-bg {
+  background: linear-gradient(135deg, var(--nova-primary-blue) 0%, var(--nova-secondary-teal) 100%);
+  color: var(--nova-white);
+  padding: var(--nova-space-8);
+  border-radius: var(--nova-radius-lg);
+  margin: var(--nova-space-6) 0;
+}
+
+.nova-card {
+  background: var(--nova-white);
+  border-radius: var(--nova-radius-lg);
+  box-shadow: var(--nova-shadow-md);
+  padding: var(--nova-space-6);
+  margin: var(--nova-space-4) 0;
+  transition: var(--nova-transition-normal);
+}
+
+.nova-card:hover {
+  box-shadow: var(--nova-shadow-lg);
+  transform: translateY(-2px);
+}
+
+.nova-accent-border {
+  border-left: 4px solid var(--nova-accent-gold);
+  padding-left: var(--nova-space-4);
+}
+
+/* PHASE 2: Enhanced Cards, Navigation & Layout */
+
+/* Advanced Card System */
+.nova-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--nova-space-6);
+  margin: var(--nova-space-8) 0;
+}
+
+.nova-card-hero {
+  background: linear-gradient(135deg, var(--nova-primary-blue), var(--nova-secondary-teal));
+  color: var(--nova-white);
+  padding: var(--nova-space-10);
+  border-radius: var(--nova-radius-xl);
+  box-shadow: var(--nova-shadow-xl);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.nova-card-hero::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.nova-card-feature {
+  background: var(--nova-white);
+  border: 2px solid var(--nova-light-gray);
+  border-radius: var(--nova-radius-lg);
+  padding: var(--nova-space-6);
+  transition: all var(--nova-transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.nova-card-feature:hover {
+  border-color: var(--nova-secondary-teal);
+  box-shadow: var(--nova-shadow-lg);
+  transform: translateY(-4px);
+}
+
+.nova-card-feature::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 0;
+  background: var(--nova-secondary-teal);
+  transition: height var(--nova-transition-normal);
+}
+
+.nova-card-feature:hover::before {
+  height: 100%;
+}
+
+.nova-card-metric {
+  background: var(--nova-light-gray);
+  border-left: 6px solid var(--nova-accent-gold);
+  border-radius: var(--nova-radius-md);
+  padding: var(--nova-space-4) var(--nova-space-6);
+  margin: var(--nova-space-3) 0;
+  transition: var(--nova-transition-fast);
+  color: var(--nova-dark-gray);
+}
+
+.nova-card-metric:hover {
+  background: var(--nova-light-blue);
+  border-left-color: var(--nova-primary-blue);
+  transform: translateX(8px);
+}
+
+.nova-card-metric strong {
+  color: var(--nova-primary-blue);
+}
+
+/* Enhanced Navigation */
+.md-nav__item--active > .md-nav__link {
+  background: linear-gradient(90deg, var(--nova-light-blue), transparent);
+  border-right: 3px solid var(--nova-secondary-teal);
+  font-weight: var(--nova-font-semibold);
+}
+
+.md-nav__link:focus,
+.md-nav__link:hover {
+  background: var(--nova-light-blue);
+  border-radius: var(--nova-radius-sm);
+  transform: translateX(4px);
+}
+
+/* Breadcrumb Enhancement */
+.md-nav__list .md-nav__item {
+  position: relative;
+}
+
+.md-nav__item--nested > .md-nav__link::after {
+  content: "→";
+  float: right;
+  color: var(--nova-secondary-teal);
+  font-weight: var(--nova-font-bold);
+  transition: var(--nova-transition-fast);
+}
+
+.md-nav__item--nested > .md-nav__link:hover::after {
+  transform: translateX(4px);
+}
+
+/* Enhanced Tables */
+.md-typeset table:not([class]) {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  margin: var(--nova-space-6) 0;
+}
+
+.md-typeset table:not([class]) td {
+  border-bottom: 1px solid var(--nova-light-gray);
+  padding: var(--nova-space-4);
+  transition: var(--nova-transition-fast);
+}
+
+.md-typeset table:not([class]) tbody tr {
+  transition: var(--nova-transition-fast);
+}
+
+.md-typeset table:not([class]) tbody tr:nth-child(even) {
+  background: rgba(0, 167, 157, 0.02);
+}
+
+.md-typeset table:not([class]) tbody tr:hover {
+  background: var(--nova-light-blue);
+  box-shadow: 0 2px 8px rgba(0, 51, 102, 0.1);
+}
+
+/* Status Badges */
+.nova-badge {
+  display: inline-block;
+  padding: var(--nova-space-1) var(--nova-space-3);
+  border-radius: var(--nova-radius-full);
+  font-size: var(--nova-text-xs);
+  font-weight: var(--nova-font-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.nova-badge--success {
+  background: var(--nova-success);
+  color: var(--nova-white);
+}
+
+.nova-badge--warning {
+  background: var(--nova-warning);
+  color: var(--nova-dark-gray);
+}
+
+.nova-badge--info {
+  background: var(--nova-info);
+  color: var(--nova-white);
+}
+
+.nova-badge--primary {
+  background: var(--nova-primary-blue);
+  color: var(--nova-white);
+}
+
+/* Progress Indicators */
+.nova-progress-bar {
+  width: 100%;
+  height: 8px;
+  background: var(--nova-light-gray);
+  border-radius: var(--nova-radius-full);
+  overflow: hidden;
+  margin: var(--nova-space-2) 0;
+}
+
+.nova-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--nova-secondary-teal), var(--nova-primary-blue));
+  border-radius: var(--nova-radius-full);
+  transition: width 1s ease-in-out;
+}
+
+/* Enhanced Grid System */
+.nova-grid {
+  display: grid;
+  gap: var(--nova-space-6);
+}
+
+.nova-grid--2 { grid-template-columns: repeat(2, 1fr); }
+.nova-grid--3 { grid-template-columns: repeat(3, 1fr); }
+.nova-grid--4 { grid-template-columns: repeat(4, 1fr); }
+
+@media (max-width: 768px) {
+  .nova-grid--2,
+  .nova-grid--3,
+  .nova-grid--4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Feature Highlights */
+.nova-highlight {
+  background: linear-gradient(135deg, rgba(0, 167, 157, 0.1), rgba(0, 51, 102, 0.05));
+  border-left: 4px solid var(--nova-secondary-teal);
+  padding: var(--nova-space-6);
+  border-radius: var(--nova-radius-md);
+  margin: var(--nova-space-6) 0;
+  position: relative;
+}
+
+.nova-highlight::before {
+  content: "✨";
+  position: absolute;
+  top: var(--nova-space-4);
+  right: var(--nova-space-4);
+  font-size: var(--nova-text-xl);
+}
+
+/* Icon Enhancements */
+.nova-icon {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: var(--nova-space-2);
+}
+
+.nova-icon--large {
+  width: 48px;
+  height: 48px;
+}
+
+.nova-icon--small {
+  width: 16px;
+  height: 16px;
+}
+
+/* Layout Utilities */
+.nova-section {
+  margin: var(--nova-space-12) 0;
+  padding: 0 var(--nova-space-4);
+}
+
+.nova-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--nova-space-4);
+}
+
+.nova-flex {
+  display: flex;
+  gap: var(--nova-space-4);
+}
+
+.nova-flex--center {
+  align-items: center;
+  justify-content: center;
+}
+
+.nova-flex--between {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nova-flex--wrap {
+  flex-wrap: wrap;
+}
+
+/* Text Utilities */
+.nova-text-center { text-align: center; }
+.nova-text-right { text-align: right; }
+.nova-text-primary { color: var(--nova-primary-blue); }
+.nova-text-secondary { color: var(--nova-secondary-teal); }
+.nova-text-muted { color: var(--nova-medium-gray); }
+
+/* Animation for smooth interactions */
+@keyframes nova-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes nova-slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes nova-scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.nova-fade-in { animation: nova-fade-in 0.6s ease-out; }
+.nova-slide-in-left { animation: nova-slide-in-left 0.5s ease-out; }
+.nova-scale-in { animation: nova-scale-in 0.4s ease-out; }
+
+/* Hover Effects */
+.nova-hover-lift {
+  transition: var(--nova-transition-normal);
+}
+
+.nova-hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--nova-shadow-lg);
+}
+
+.nova-hover-glow {
+  transition: var(--nova-transition-normal);
+}
+
+.nova-hover-glow:hover {
+  box-shadow: 0 0 20px rgba(0, 167, 157, 0.3);
+}

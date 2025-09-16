@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "bank": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "short_name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "short_name"
+      ]
+    },
+    "branding": {
+      "type": "object",
+      "properties": {
+        "primary_color": {
+          "type": "string"
+        },
+        "secondary_color": {
+          "type": "string"
+        },
+        "logo_url": {
+          "type": "string"
+        }
+      }
+    },
+    "metrics_targets": {
+      "type": "object",
+      "properties": {
+        "coverage_pct": {
+          "type": "number"
+        },
+        "utilization_pct": {
+          "type": "number"
+        },
+        "productivity_ratio": {
+          "type": "number"
+        },
+        "churn_max_pct": {
+          "type": "number"
+        },
+        "roi_min_pct": {
+          "type": "number"
+        }
+      }
+    }
+  },
+  "required": [
+    "bank",
+    "branding",
+    "metrics_targets"
+  ]
+}

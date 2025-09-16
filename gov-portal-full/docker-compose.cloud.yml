@@ -1,0 +1,222 @@
+version: '3.8'
+
+services:
+  # ============================================
+  # APPLICATION SERVICES (Using Supabase Cloud)
+  # ============================================
+
+  # Documentation Portal (MkDocs)
+  docs:
+    build: ./services/docs
+    restart: unless-stopped
+    environment:
+      BANK_CONFIG: /app/data/bank.yml
+    volumes:
+      - ./data/bank.yml:/app/data/bank.yml:ro
+      - ./services/docs/docs:/site/docs:ro
+      - ./services/docs/mkdocs.yml:/site/mkdocs.yml:ro
+    ports:
+      - ${DOCS_PORT:-8001}:8000
+    command: ["mkdocs", "serve", "-a", "0.0.0.0:8000"]
+
+  # FastAPI Backend
+  api:
+    build: ./services/api
+    restart: unless-stopped
+    depends_on:
+      - redis
+      - temporal
+    environment:
+      # Use Supabase Cloud
+      SUPABASE_URL: ${SUPABASE_URL}
+      SUPABASE_ANON_KEY: ${SUPABASE_ANON_KEY}
+      SUPABASE_SERVICE_KEY: ${SUPABASE_SERVICE_KEY}
+      DATABASE_URL: ${SUPABASE_URL}
+      JWT_SECRET: not-needed-for-cloud
+      REDIS_URL: redis://redis:6379
+      TEMPORAL_HOST: temporal:7233
+      OPENTELEMETRY_ENDPOINT: http://otel-collector:4317
+    ports:
+      - ${API_PORT:-8080}:8080
+    volumes:
+      - ./services/api:/app
+    command: ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8080", "--reload"]
+
+  # Next.js Dashboard with Tremor
+  dashboard:
+    build: ./services/dashboard
+    restart: unless-stopped
+    depends_on:
+      - api
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:${API_PORT:-8080}
+      NEXT_PUBLIC_SUPABASE_URL: ${SUPABASE_URL}
+      NEXT_PUBLIC_SUPABASE_ANON_KEY: ${SUPABASE_ANON_KEY}
+    ports:
+      - ${DASHBOARD_PORT:-3000}:3000
+    volumes:
+      - ./services/dashboard:/app
+      - /app/node_modules
+      - /app/.next
+    command: ["npm", "run", "dev"]
+
+  # Training Tracker Service
+  training-tracker:
+    build: ./services/training-tracker
+    restart: unless-stopped
+    depends_on:
+      - redis
+    environment:
+      # Use Supabase Cloud
+      SUPABASE_URL: ${SUPABASE_URL}
+      SUPABASE_SERVICE_KEY: ${SUPABASE_SERVICE_KEY}
+      DATABASE_URL: ${SUPABASE_URL}
+      REDIS_URL: redis://redis:6379
+    ports:
+      - ${TRAINING_PORT:-8082}:8080
+    volumes:
+      - ./services/training-tracker:/app
+    command: ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8080", "--reload"]
+
+  # ============================================
+  # WORKFLOW & MESSAGING
+  # ============================================
+
+  # Temporal Workflow Engine
+  temporal:
+    image: temporalio/auto-setup:1.22.4
+    depends_on:
+      - temporal-postgresql
+      - elasticsearch
+    environment:
+      - DB=postgresql
+      - DB_PORT=5432
+      - POSTGRES_USER=temporal
+      - POSTGRES_PWD=temporal
+      - POSTGRES_SEEDS=temporal-postgresql
+      - DYNAMIC_CONFIG_FILE_PATH=config/dynamicconfig/development-sql.yaml
+      - ENABLE_ES=true
+      - ES_SEEDS=elasticsearch
+      - ES_VERSION=v7
+    ports:
+      - ${TEMPORAL_PORT:-7233}:7233
+    volumes:
+      - ./infra/temporal/dynamicconfig:/etc/temporal/config/dynamicconfig
+
+  temporal-postgresql:
+    image: postgres:15
+    environment:
+      POSTGRES_PASSWORD: temporal
+      POSTGRES_USER: temporal
+    volumes:
+      - ./data/temporal-postgres:/var/lib/postgresql/data
+
+  temporal-ui:
+    image: temporalio/ui:2.21.3
+    depends_on:
+      - temporal
+    environment:
+      - TEMPORAL_ADDRESS=temporal:7233
+      - TEMPORAL_CORS_ORIGINS=http://localhost:3000
+    ports:
+      - ${TEMPORAL_UI_PORT:-8088}:8080
+
+  temporal-admin-tools:
+    image: temporalio/admin-tools:1.22.4
+    depends_on:
+      - temporal
+    stdin_open: true
+    tty: true
+    environment:
+      - TEMPORAL_ADDRESS=temporal:7233
+      - TEMPORAL_CLI_ADDRESS=temporal:7233
+
+  # Redis Cache & Message Broker
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    ports:
+      - ${REDIS_PORT:-6379}:6379
+    volumes:
+      - ./data/redis:/data
+    command: redis-server --appendonly yes
+
+  # ============================================
+  # OBSERVABILITY STACK
+  # ============================================
+
+  # Elasticsearch for Temporal & Logging
+  elasticsearch:
+    image: elasticsearch:7.17.16
+    environment:
+      - discovery.type=single-node
+      - cluster.name=temporal-cluster
+      - ES_JAVA_OPTS=-Xms512m -Xmx512m
+      - xpack.security.enabled=false
+    ports:
+      - ${ELASTICSEARCH_PORT:-9200}:9200
+    volumes:
+      - ./data/elasticsearch:/usr/share/elasticsearch/data
+
+  # Prometheus Metrics
+  prometheus:
+    image: prom/prometheus:latest
+    restart: unless-stopped
+    ports:
+      - ${PROMETHEUS_PORT:-9090}:9090
+    volumes:
+      - ./infra/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./data/prometheus:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+
+  # Grafana Dashboards
+  grafana:
+    image: grafana/grafana:latest
+    restart: unless-stopped
+    depends_on:
+      - prometheus
+    ports:
+      - ${GRAFANA_PORT:-3001}:3000
+    environment:
+      - GF_SECURITY_ADMIN_USER=${GRAFANA_USER:-admin}
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD:-admin}
+      - GF_INSTALL_PLUGINS=grafana-clock-panel
+    volumes:
+      - ./data/grafana:/var/lib/grafana
+      - ./infra/grafana/provisioning:/etc/grafana/provisioning
+
+  # OpenTelemetry Collector
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:latest
+    restart: unless-stopped
+    ports:
+      - ${OTEL_GRPC_PORT:-4317}:4317     # OTLP gRPC receiver
+      - ${OTEL_HTTP_PORT:-4318}:4318     # OTLP HTTP receiver
+      - ${OTEL_METRICS_PORT:-8888}:8888  # Prometheus metrics
+    volumes:
+      - ./infra/otel/otel-config.yaml:/etc/otelcol-contrib/config.yaml
+    command: ["--config=/etc/otelcol-contrib/config.yaml"]
+
+  # Jaeger Tracing
+  jaeger:
+    image: jaegertracing/all-in-one:latest
+    restart: unless-stopped
+    environment:
+      - COLLECTOR_OTLP_ENABLED=true
+    ports:
+      - ${JAEGER_UI_PORT:-16686}:16686
+      - ${JAEGER_COLLECTOR_PORT:-14268}:14268
+
+networks:
+  default:
+    name: ai-governance-net
+    driver: bridge
+
+volumes:
+  redis-data:
+  elasticsearch-data:
+  prometheus-data:
+  grafana-data:
+  temporal-postgres-data:

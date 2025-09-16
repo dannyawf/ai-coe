@@ -1,0 +1,391 @@
+/* ====================================
+   Portal de Gobierno de IA - Modo Oscuro Corporativo
+   Paleta profesional con alto contraste WCAG AAA
+   ==================================== */
+
+/* Variables de color para modo oscuro corporativo */
+[data-md-color-scheme="slate"] {
+  /* Fondos - Gradación de grises azulados corporativos */
+  --md-default-bg-color: #0D1117;              /* Fondo principal - Negro azulado profundo */
+  --md-default-bg-color--light: #161B22;       /* Fondo elevado - Gris carbón */
+  --md-default-bg-color--lighter: #1C2128;     /* Cards y superficies */
+  --md-default-bg-color--lightest: #262C36;    /* Hover states */
+  
+  /* Colores primarios - Azul corporativo brillante */
+  --md-primary-fg-color: #4A9EFF;              /* Azul corporativo brillante (ratio 7.5:1) */
+  --md-primary-fg-color--light: #70B3FF;       /* Azul más claro */
+  --md-primary-fg-color--dark: #2E7FDB;        /* Azul más oscuro */
+  --md-primary-bg-color: #FFFFFF;              /* Texto sobre primario */
+  --md-primary-bg-color--light: #F6F8FA;       /* Texto secundario sobre primario */
+  
+  /* Colores de acento - Teal corporativo */
+  --md-accent-fg-color: #39D5CC;               /* Teal brillante (ratio 8.3:1) */
+  --md-accent-fg-color--transparent: rgba(57, 213, 204, 0.15);
+  --md-accent-bg-color: #0D1117;
+  --md-accent-bg-color--light: #161B22;
+  
+  /* Texto - Alto contraste */
+  --md-default-fg-color: #E6EDF3;              /* Texto principal (ratio 13.5:1) */
+  --md-default-fg-color--light: #B3BFC9;       /* Texto secundario (ratio 7.2:1) */
+  --md-default-fg-color--lighter: #8B949E;     /* Texto terciario (ratio 5.4:1) */
+  --md-default-fg-color--lightest: #6E7681;    /* Texto deshabilitado */
+  
+  /* Código y sintaxis */
+  --md-code-fg-color: #79C0FF;                 /* Código inline - Azul claro */
+  --md-code-bg-color: #161B22;                 /* Fondo de código */
+  --md-code-hl-color: rgba(121, 192, 255, 0.15);
+  --md-code-hl-number-color: #79C0FF;
+  --md-code-hl-special-color: #FF7B72;
+  --md-code-hl-function-color: #D2A8FF;
+  --md-code-hl-constant-color: #79C0FF;
+  --md-code-hl-keyword-color: #FF7B72;
+  --md-code-hl-string-color: #A5D6FF;
+  --md-code-hl-name-color: #E6EDF3;
+  --md-code-hl-operator-color: #FF7B72;
+  --md-code-hl-punctuation-color: #8B949E;
+  --md-code-hl-comment-color: #6E7681;
+  --md-code-hl-generic-color: #8B949E;
+  --md-code-hl-variable-color: #FFA657;
+  
+  /* Bordes y divisores */
+  --md-divider-color: #30363D;
+  --md-divider-color--light: #21262D;
+  
+  /* Admonitions - Colores vibrantes pero profesionales */
+  --md-admonition-fg-color: #E6EDF3;
+  --md-admonition-bg-color: #161B22;
+  
+  /* Sombras con efecto de elevación */
+  --md-shadow-z1: 0 2px 4px rgba(0,0,0,0.5), 0 1px 2px rgba(0,0,0,0.4);
+  --md-shadow-z2: 0 4px 8px rgba(0,0,0,0.6), 0 2px 4px rgba(0,0,0,0.5);
+  --md-shadow-z3: 0 8px 16px rgba(0,0,0,0.7), 0 4px 8px rgba(0,0,0,0.6);
+  
+  /* Footer */
+  --md-footer-fg-color: #B3BFC9;
+  --md-footer-fg-color--light: #8B949E;
+  --md-footer-fg-color--lighter: #6E7681;
+  --md-footer-bg-color: #010409;
+  --md-footer-bg-color--dark: #0D1117;
+  
+  /* Colores bancarios adicionales */
+  --banking-gold: #FFD33D;                     /* Dorado brillante */
+  --banking-gold-light: rgba(255, 211, 61, 0.15);
+  --banking-success: #3FB950;                  /* Verde éxito */
+  --banking-warning: #F0883E;                  /* Naranja advertencia */
+  --banking-error: #F85149;                    /* Rojo error */
+  --banking-info: #58A6FF;                     /* Azul información */
+  
+  /* Grises corporativos para modo oscuro */
+  --banking-gray: #161B22;
+  --banking-gray-dark: #0D1117;
+  --banking-gray-light: #21262D;
+  --text-color-secondary: #B3BFC9;
+}
+
+/* Ajustes específicos para elementos en modo oscuro */
+[data-md-color-scheme="slate"] {
+  
+  /* Header con gradiente sutil */
+  .md-header {
+    background: linear-gradient(135deg, #0D1117 0%, #161B22 100%);
+    border-bottom: 1px solid #30363D;
+  }
+  
+  /* Navigation sidebar */
+  .md-nav {
+    background-color: var(--md-default-bg-color);
+  }
+  
+  .md-nav__item--active > .md-nav__link {
+    background: linear-gradient(90deg, rgba(74, 158, 255, 0.15), transparent);
+    border-left: 3px solid var(--md-primary-fg-color);
+    color: var(--md-primary-fg-color);
+  }
+  
+  .md-nav__link:hover {
+    background-color: rgba(74, 158, 255, 0.1);
+    color: var(--md-primary-fg-color);
+  }
+  
+  /* Tabs de navegación */
+  .md-tabs {
+    background: #010409;
+    border-bottom: 1px solid #30363D;
+  }
+  
+  .md-tabs__link {
+    color: var(--md-default-fg-color--light);
+    opacity: 1;
+  }
+  
+  .md-tabs__link--active,
+  .md-tabs__link:hover {
+    color: var(--md-primary-fg-color);
+  }
+  
+  /* Content area */
+  .md-content {
+    background-color: var(--md-default-bg-color);
+  }
+  
+  /* Hero banner oscuro */
+  .ai-hero {
+    background: linear-gradient(135deg, #1E4976 0%, #0D5A5B 100%);
+    border: 1px solid rgba(74, 158, 255, 0.3);
+  }
+  
+  .ai-hero h1 {
+    color: #FFFFFF;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+  
+  .ai-hero p {
+    color: #E6EDF3;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+  }
+  
+  /* Cards bancarias */
+  .banking-card {
+    background: var(--md-default-bg-color--light);
+    border: 1px solid #30363D;
+    box-shadow: var(--md-shadow-z1);
+  }
+  
+  .banking-card:hover {
+    background: var(--md-default-bg-color--lighter);
+    border-color: var(--md-primary-fg-color);
+    box-shadow: var(--md-shadow-z2);
+  }
+  
+  .card-icon {
+    background: linear-gradient(135deg, rgba(74, 158, 255, 0.2), rgba(57, 213, 204, 0.2));
+    border: 1px solid rgba(74, 158, 255, 0.3);
+  }
+  
+  /* Tables con alto contraste */
+  .md-typeset table:not([class]) {
+    background: var(--md-default-bg-color--light);
+    border: 1px solid #30363D;
+  }
+  
+  .md-typeset table:not([class]) th {
+    background: #161B22;
+    color: var(--md-primary-fg-color);
+    border-bottom: 2px solid var(--md-primary-fg-color);
+  }
+  
+  .md-typeset table:not([class]) td {
+    border-bottom: 1px solid #21262D;
+    color: var(--md-default-fg-color);
+  }
+  
+  .md-typeset table:not([class]) tr:hover {
+    background: rgba(74, 158, 255, 0.05);
+  }
+  
+  /* Code blocks mejorados */
+  .md-typeset pre {
+    background: #0D1117;
+    border: 1px solid #30363D;
+  }
+  
+  .md-typeset code {
+    background: rgba(121, 192, 255, 0.15);
+    color: #79C0FF;
+    border: 1px solid rgba(121, 192, 255, 0.3);
+  }
+  
+  /* Admonitions con colores vibrantes */
+  .md-typeset .admonition.note {
+    background: rgba(88, 166, 255, 0.1);
+    border-left: 4px solid #58A6FF;
+  }
+  
+  .md-typeset .admonition.note .admonition-title {
+    background: rgba(88, 166, 255, 0.2);
+    color: #58A6FF;
+  }
+  
+  .md-typeset .admonition.info {
+    background: rgba(57, 213, 204, 0.1);
+    border-left: 4px solid #39D5CC;
+  }
+  
+  .md-typeset .admonition.info .admonition-title {
+    background: rgba(57, 213, 204, 0.2);
+    color: #39D5CC;
+  }
+  
+  .md-typeset .admonition.warning {
+    background: rgba(240, 136, 62, 0.1);
+    border-left: 4px solid #F0883E;
+  }
+  
+  .md-typeset .admonition.warning .admonition-title {
+    background: rgba(240, 136, 62, 0.2);
+    color: #F0883E;
+  }
+  
+  .md-typeset .admonition.success {
+    background: rgba(63, 185, 80, 0.1);
+    border-left: 4px solid #3FB950;
+  }
+  
+  .md-typeset .admonition.success .admonition-title {
+    background: rgba(63, 185, 80, 0.2);
+    color: #3FB950;
+  }
+  
+  .md-typeset .admonition.danger,
+  .md-typeset .admonition.error {
+    background: rgba(248, 81, 73, 0.1);
+    border-left: 4px solid #F85149;
+  }
+  
+  .md-typeset .admonition.danger .admonition-title,
+  .md-typeset .admonition.error .admonition-title {
+    background: rgba(248, 81, 73, 0.2);
+    color: #F85149;
+  }
+  
+  /* Links con mejor contraste */
+  .md-typeset a {
+    color: var(--md-accent-fg-color);
+  }
+  
+  .md-typeset a:hover {
+    color: #70B3FF;
+    text-decoration: underline;
+  }
+  
+  /* Headings con mejor legibilidad */
+  .md-typeset h1 {
+    color: #FFFFFF;
+    border-bottom-color: var(--md-primary-fg-color);
+  }
+  
+  .md-typeset h2 {
+    color: var(--md-default-fg-color);
+  }
+  
+  .md-typeset h2::after {
+    background: var(--banking-gold);
+  }
+  
+  .md-typeset h3,
+  .md-typeset h4,
+  .md-typeset h5,
+  .md-typeset h6 {
+    color: var(--md-default-fg-color--light);
+  }
+  
+  /* Search mejorado */
+  .md-search__form {
+    background: var(--md-default-bg-color--light);
+    border: 1px solid #30363D;
+  }
+  
+  .md-search__input {
+    color: var(--md-default-fg-color);
+  }
+  
+  .md-search__input::placeholder {
+    color: var(--md-default-fg-color--lighter);
+  }
+  
+  /* Footer oscuro */
+  .md-footer {
+    background: #010409;
+    border-top: 1px solid #30363D;
+  }
+  
+  .md-footer-meta {
+    background: #010409;
+  }
+  
+  /* Scrollbar personalizado */
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--md-default-bg-color);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #30363D;
+    border-radius: 6px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #484F58;
+  }
+  
+  /* Nova cards en modo oscuro */
+  .nova-card {
+    background: var(--md-default-bg-color--light);
+    border: 1px solid #30363D;
+    box-shadow: var(--md-shadow-z1);
+    color: var(--md-default-fg-color);
+  }
+  
+  .nova-card:hover {
+    border-color: var(--md-primary-fg-color);
+    box-shadow: 0 0 20px rgba(74, 158, 255, 0.2);
+  }
+  
+  /* Nova card metrics - Fix para texto en modo oscuro */
+  .nova-card-metric {
+    background: rgba(139, 148, 158, 0.1);
+    border-left-color: var(--md-accent-fg-color);
+    color: var(--md-default-fg-color);
+  }
+  
+  .nova-card-metric:hover {
+    background: rgba(88, 166, 255, 0.1);
+    border-left-color: var(--md-primary-fg-color);
+  }
+  
+  .nova-card-metric strong {
+    color: var(--md-primary-fg-color);
+  }
+  
+  /* Nova card feature */
+  .nova-card-feature {
+    background: var(--md-default-bg-color--light);
+    border-color: #30363D;
+    color: var(--md-default-fg-color);
+  }
+  
+  .nova-card-feature:hover {
+    background: var(--md-default-bg-color--lighter);
+    border-color: var(--md-primary-fg-color);
+  }
+  
+  .nova-gradient-bg {
+    background: linear-gradient(135deg, #1E4976 0%, #0D5A5B 100%);
+    border: 1px solid rgba(74, 158, 255, 0.3);
+  }
+  
+  /* Badges con colores vibrantes */
+  .nova-badge--success {
+    background: #3FB950;
+    color: #0D1117;
+  }
+  
+  .nova-badge--warning {
+    background: #F0883E;
+    color: #0D1117;
+  }
+  
+  .nova-badge--info {
+    background: #58A6FF;
+    color: #0D1117;
+  }
+  
+  .nova-badge--primary {
+    background: #4A9EFF;
+    color: #0D1117;
+  }
+}

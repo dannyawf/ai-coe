@@ -1,0 +1,382 @@
+/* ====================================
+   Portal de Gobierno de IA - Tema Bancario
+   Basado en recomendaciones de Gemini, O3 y Grok
+   ==================================== */
+
+/* Variables de colores corporativos */
+:root {
+  /* Paleta principal bancaria */
+  --md-primary-fg-color: #003366;         /* Navy profundo para confianza (mayor contraste) */
+  --md-primary-fg-color--light: #004785;  
+  --md-primary-fg-color--dark: #002244;   
+  --md-primary-bg-color: #ffffff;
+  --md-primary-bg-color--light: #fcfcfc;
+
+  /* Acento AI/Innovación */
+  --md-accent-fg-color: #006B75;          /* Teal más oscuro para mejor contraste */
+  --md-accent-fg-color--transparent: rgba(0,107,117,.1);
+  
+  /* Dorado bancario para highlights */
+  --banking-gold: #B8941F;                /* Dorado más oscuro para contraste */
+  --banking-gold-light: rgba(184,148,31,.2);
+  
+  /* Grises corporativos */
+  --banking-gray: #F8FAFC;
+  --banking-gray-dark: #E2E8F0;
+  --text-color-secondary: #334155;        /* Gris más oscuro para mejor legibilidad */
+  
+  /* Gradientes */
+  --hero-gradient: linear-gradient(135deg, var(--md-primary-fg-color--dark) 0%, var(--md-primary-fg-color) 50%, var(--md-accent-fg-color) 100%);
+  --card-gradient: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+}
+
+/* Tipografía mejorada */
+:root {
+  --md-text-font: "Inter", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --md-code-font: "JetBrains Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+/* Import de fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* Header personalizado con gradiente */
+.md-header {
+  background: var(--hero-gradient);
+  box-shadow: 0 0 20px rgba(0,53,107,.15);
+}
+
+.md-header__title {
+  font-weight: 600;
+  color: white;
+}
+
+/* Hero Banner para página principal */
+.ai-hero {
+  background: linear-gradient(135deg, #004785 0%, #006B75 100%);
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgba(255,255,255,0.1);
+}
+
+.ai-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255,255,255,.05);
+  z-index: 0;
+}
+
+.ai-hero > * {
+  position: relative;
+  z-index: 2;
+}
+
+.ai-hero h1 {
+  margin: 0 0 1.5rem 0;
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 8px rgba(0,0,0,.4);
+  color: #ffffff;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  text-stroke: 1px rgba(255,255,255,0.1);
+}
+
+.ai-hero p {
+  margin: 0 auto;
+  font-size: 1.1rem;
+  font-weight: 400;
+  max-width: 700px;
+  opacity: 1;
+  color: #ffffff;
+  text-shadow: 1px 1px 4px rgba(0,0,0,.3);
+  line-height: 1.6;
+}
+
+/* Sistema de Cards responsive */
+.card-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  margin: 3rem 0;
+  padding: 0 1rem;
+}
+
+.banking-card {
+  background: var(--card-gradient);
+  border: 1px solid var(--banking-gray-dark);
+  border-radius: 16px;
+  padding: 2.5rem;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(0,53,107,.12);
+  overflow: hidden;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.banking-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--md-accent-fg-color);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.banking-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0,53,107,.15);
+  border-color: var(--md-accent-fg-color);
+}
+
+.banking-card:hover::before {
+  transform: scaleX(1);
+}
+
+.banking-card h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--md-primary-fg-color);
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.banking-card h3 a {
+  color: var(--md-primary-fg-color);
+  text-decoration: none;
+}
+
+.banking-card h3 a:hover {
+  color: var(--md-accent-fg-color);
+}
+
+.banking-card p {
+  color: var(--text-color-secondary);
+  line-height: 1.6;
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+.banking-card .card-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--md-primary-fg-color);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: white;
+  font-size: 28px;
+  box-shadow: 0 4px 8px rgba(0,53,107,.15);
+}
+
+/* Mejoras tipográficas */
+.md-typeset {
+  line-height: 1.7;
+}
+
+.md-typeset h1 {
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--banking-gray-dark);
+  color: var(--md-primary-fg-color);
+  font-weight: 700;
+}
+
+.md-typeset h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--md-primary-fg-color);
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.md-typeset h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--banking-gold);
+  border-radius: 2px;
+}
+
+.md-typeset h3 {
+  color: var(--md-primary-fg-color--light);
+  font-weight: 600;
+}
+
+/* Links mejorados */
+.md-typeset a {
+  color: var(--md-accent-fg-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.md-typeset a:hover {
+  color: var(--md-primary-fg-color);
+  text-decoration: underline;
+}
+
+/* Navegación mejorada */
+.md-nav__title {
+  font-weight: 600;
+  color: var(--md-primary-fg-color);
+}
+
+.md-nav__link--active {
+  color: var(--md-accent-fg-color);
+  font-weight: 600;
+}
+
+/* Tabs horizontales */
+.md-tabs {
+  background: var(--md-primary-fg-color);
+}
+
+.md-tabs__link {
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.md-tabs__link--active {
+  opacity: 1;
+  font-weight: 600;
+}
+
+/* Admonitions bancarios */
+.md-typeset .admonition {
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,.1);
+}
+
+.md-typeset .admonition.info {
+  border-left: 4px solid var(--md-accent-fg-color);
+  background: rgba(0,152,166,.05);
+}
+
+.md-typeset .admonition.warning {
+  border-left: 4px solid #FF9500;
+  background: rgba(255,149,0,.05);
+}
+
+.md-typeset .admonition.success {
+  border-left: 4px solid var(--banking-gold);
+  background: var(--banking-gold-light);
+}
+
+/* Footer corporativo */
+.md-footer {
+  background: var(--md-primary-fg-color--dark);
+}
+
+.md-footer-meta {
+  background: var(--md-primary-fg-color--dark);
+}
+
+/* Botones bancarios */
+.banking-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--md-accent-fg-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.banking-btn:hover {
+  background: var(--md-primary-fg-color);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,53,107,.3);
+}
+
+.banking-btn-secondary {
+  background: transparent;
+  color: var(--md-primary-fg-color);
+  border: 2px solid var(--md-primary-fg-color);
+}
+
+.banking-btn-secondary:hover {
+  background: var(--md-primary-fg-color);
+  color: white;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .ai-hero {
+    padding: 3rem 1.5rem;
+  }
+  
+  .ai-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .banking-card {
+    padding: 1.5rem;
+  }
+}
+
+/* Animaciones sutiles */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.banking-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Dark mode adaptations */
+[data-md-color-scheme="slate"] {
+  --banking-gray: #1e293b;
+  --banking-gray-dark: #334155;
+  --card-gradient: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
+}
+
+[data-md-color-scheme="slate"] .banking-card {
+  background: var(--card-gradient);
+  border-color: var(--banking-gray-dark);
+}

@@ -1,0 +1,4 @@
+- Curva 11 semanas
+- TTFV <15m
+- Acceptance 25–40%
+- ROI semana 11

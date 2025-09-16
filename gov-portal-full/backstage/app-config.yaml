@@ -1,0 +1,144 @@
+app:
+  title: Nova Knowledge Hub
+  baseUrl: http://localhost:3000
+  support:
+    url: https://github.com/dannyawf/gov-portal-full/issues
+    items:
+      - title: Documentation
+        icon: docs
+        links:
+          - url: https://backstage.io/docs
+            title: Backstage Documentation
+      - title: Support
+        icon: help
+        links:
+          - url: https://github.com/dannyawf/gov-portal-full/issues
+            title: GitHub Issues
+
+organization:
+  name: Centro de Excelencia de IA
+
+backend:
+  baseUrl: http://localhost:7007
+  listen:
+    port: 7007
+    host: 0.0.0.0
+  csp:
+    connect-src: ["'self'", 'http:', 'https:']
+  cors:
+    origin: http://localhost:3000
+    methods: [GET, HEAD, PATCH, POST, PUT, DELETE]
+    credentials: true
+  database:
+    client: pg
+    connection:
+      host: ${POSTGRES_HOST}
+      port: ${POSTGRES_PORT}
+      user: ${POSTGRES_USER}
+      password: ${POSTGRES_PASSWORD}
+      database: backstage_catalog
+      ssl:
+        require: false
+  cache:
+    store: memory
+  auth:
+    keys:
+      - secret: ${AUTH_SECRET}
+
+integrations:
+  github:
+    - host: github.com
+      token: ${GITHUB_TOKEN}
+
+proxy:
+  '/langfuse':
+    target: ${LANGFUSE_BASE_URL}
+    changeOrigin: true
+    headers:
+      X-API-KEY: ${LANGFUSE_PUBLIC_KEY}
+      Authorization: Bearer ${LANGFUSE_SECRET_KEY}
+
+techdocs:
+  builder: 'local'
+  generator:
+    runIn: 'local'
+  publisher:
+    type: 'local'
+    local:
+      publishDirectory: '/tmp/techdocs-static'
+
+auth:
+  environment: development
+  providers:
+    guest:
+      enabled: true
+
+scaffolder:
+  defaultAuthor:
+    name: CoE IA Team
+    email: coe-ia@banco.mx
+
+catalog:
+  import:
+    entityFilename: catalog-info.yaml
+    pullRequestBranchName: backstage-integration
+  rules:
+    - allow: [Component, System, API, Resource, Location, Template]
+  locations:
+    - type: file
+      target: ../../catalog-entities/all.yaml
+      rules:
+        - allow: [Component, System, API, Resource, Location, Template]
+    - type: url
+      target: https://github.com/dannyawf/gov-portal-full/blob/main/catalog-info.yaml
+      rules:
+        - allow: [Component, System, API, Resource, Location, Template]
+
+kubernetes:
+  serviceLocatorMethod:
+    type: 'multiTenant'
+  clusterLocatorMethods:
+    - type: 'config'
+      clusters: []
+
+permission:
+  enabled: false
+
+search:
+  pg:
+    highlightOptions:
+      mergeNumberOfFragments: 3
+      fragmentDelimiter: ' ... '
+      maxWord: 35
+      minWord: 10
+      
+# Nova Cell Integration
+nova:
+  langfuse:
+    enabled: true
+    baseUrl: ${LANGFUSE_BASE_URL}
+    publicKey: ${LANGFUSE_PUBLIC_KEY}
+    secretKey: ${LANGFUSE_SECRET_KEY}
+    cache:
+      ttl: 300
+      maxSize: 1000
+  knowledge:
+    sources:
+      - type: langfuse
+        name: "Prompts Library"
+        enabled: true
+      - type: markdown
+        name: "Documentation"
+        path: "./docs"
+      - type: github
+        name: "Code Samples"
+        repo: "dannyawf/gov-portal-full"
+    categories:
+      - name: "Prompts"
+        icon: "description"
+      - name: "Agents"
+        icon: "smart_toy"
+      - name: "Playbooks"
+        icon: "menu_book"
+      - name: "Best Practices"
+        icon: "star"

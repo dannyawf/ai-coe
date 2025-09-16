@@ -1,0 +1,432 @@
+version: '3.8'
+
+services:
+  # ============================================
+  # CORE PLATFORM SERVICES
+  # ============================================
+  
+  # Supabase Stack (Auth + Database + Realtime + Storage)
+  supabase-db:
+    image: supabase/postgres:15.1.0.117
+    healthcheck:
+      test: pg_isready -U postgres -h localhost
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    command:
+      - postgres
+      - -c
+      - config_file=/etc/postgresql/postgresql.conf
+      - -c
+      - log_min_messages=fatal
+    restart: unless-stopped
+    ports:
+      - ${POSTGRES_PORT:-5432}:5432
+    environment:
+      POSTGRES_HOST: /var/run/postgresql
+      PGPORT: 5432
+      POSTGRES_PORT: 5432
+      PGPASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      PGDATABASE: postgres
+      POSTGRES_DB: postgres
+      JWT_SECRET: ${JWT_SECRET}
+      JWT_EXP: 3600
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data:Z
+      - ./infra/db/init.sql:/docker-entrypoint-initdb.d/00-init.sql:ro
+      - ./infra/db/migrations:/docker-entrypoint-initdb.d/migrations:ro
+
+  supabase-auth:
+    image: supabase/gotrue:v2.143.0
+    depends_on:
+      supabase-db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:9999/health"]
+      timeout: 5s
+      interval: 5s
+      retries: 3
+    restart: unless-stopped
+    environment:
+      GOTRUE_API_HOST: 0.0.0.0
+      GOTRUE_API_PORT: 9999
+      API_EXTERNAL_URL: ${API_EXTERNAL_URL:-http://localhost:8000}
+      GOTRUE_DB_DRIVER: postgres
+      GOTRUE_DB_DATABASE_URL: postgres://supabase_auth_admin:${POSTGRES_PASSWORD}@supabase-db:5432/postgres
+      GOTRUE_SITE_URL: ${SITE_URL:-http://localhost:3000}
+      GOTRUE_URI_ALLOW_LIST: ${ADDITIONAL_REDIRECT_URLS}
+      GOTRUE_DISABLE_SIGNUP: ${DISABLE_SIGNUP:-false}
+      GOTRUE_JWT_ADMIN_ROLES: service_role
+      GOTRUE_JWT_AUD: authenticated
+      GOTRUE_JWT_DEFAULT_GROUP_NAME: authenticated
+      GOTRUE_JWT_EXP: 3600
+      GOTRUE_JWT_SECRET: ${JWT_SECRET}
+      GOTRUE_EXTERNAL_EMAIL_ENABLED: ${ENABLE_EMAIL_SIGNUP:-true}
+      GOTRUE_MAILER_AUTOCONFIRM: ${ENABLE_EMAIL_AUTOCONFIRM:-false}
+      GOTRUE_SMTP_HOST: ${SMTP_HOST}
+      GOTRUE_SMTP_PORT: ${SMTP_PORT:-587}
+      GOTRUE_SMTP_USER: ${SMTP_USER}
+      GOTRUE_SMTP_PASS: ${SMTP_PASS}
+      GOTRUE_SMTP_SENDER_NAME: ${SMTP_SENDER_NAME}
+      GOTRUE_EXTERNAL_PHONE_ENABLED: false
+      GOTRUE_SMS_AUTOCONFIRM: false
+
+  supabase-realtime:
+    image: supabase/realtime:v2.25.35
+    depends_on:
+      supabase-db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "bash", "-c", "printf \\0 > /dev/tcp/localhost/4000"]
+      timeout: 5s
+      interval: 5s
+      retries: 3
+    restart: unless-stopped
+    ports:
+      - ${REALTIME_PORT:-4000}:4000
+    environment:
+      PORT: 4000
+      DB_HOST: supabase-db
+      DB_PORT: 5432
+      DB_USER: supabase_admin
+      DB_PASSWORD: ${POSTGRES_PASSWORD}
+      DB_NAME: postgres
+      DB_AFTER_CONNECT_QUERY: 'SET search_path TO _realtime'
+      DB_ENC_KEY: supabaserealtime
+      API_JWT_SECRET: ${JWT_SECRET}
+      FLY_ALLOC_ID: fly123
+      FLY_APP_NAME: realtime
+      SECRET_KEY_BASE: ${JWT_SECRET}
+      ERL_AFLAGS: -proto_dist inet_tcp
+
+  supabase-storage:
+    image: supabase/storage-api:v0.46.4
+    depends_on:
+      supabase-db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:5000/status"]
+      timeout: 5s
+      interval: 5s
+      retries: 3
+    restart: unless-stopped
+    ports:
+      - ${STORAGE_PORT:-5000}:5000
+    environment:
+      ANON_KEY: ${ANON_KEY}
+      SERVICE_KEY: ${SERVICE_ROLE_KEY}
+      JWT_SECRET: ${JWT_SECRET}
+      DATABASE_URL: postgres://supabase_storage_admin:${POSTGRES_PASSWORD}@supabase-db:5432/postgres
+      FILE_SIZE_LIMIT: 52428800
+      STORAGE_BACKEND: file
+      FILE_STORAGE_BACKEND_PATH: /var/lib/storage
+      TENANT_ID: stub
+      REGION: stub
+      GLOBAL_S3_BUCKET: stub
+      ENABLE_IMAGE_TRANSFORMATION: true
+      IMGPROXY_URL: http://supabase-imgproxy:5001
+    volumes:
+      - ./data/storage:/var/lib/storage:z
+
+  supabase-imgproxy:
+    image: darthsim/imgproxy:v3.8.0
+    healthcheck:
+      test: ["CMD", "imgproxy", "health"]
+      timeout: 5s
+      interval: 5s
+      retries: 3
+    environment:
+      IMGPROXY_BIND: ":5001"
+      IMGPROXY_LOCAL_FILESYSTEM_ROOT: /
+      IMGPROXY_USE_ETAG: true
+      IMGPROXY_ENABLE_WEBP_DETECTION: true
+    volumes:
+      - ./data/storage:/var/lib/storage:z
+
+  # Kong API Gateway for Supabase
+  supabase-kong:
+    image: kong:3.3
+    restart: unless-stopped
+    ports:
+      - ${KONG_HTTP_PORT:-8000}:8000/tcp
+      - ${KONG_HTTPS_PORT:-8443}:8443/tcp
+    depends_on:
+      supabase-db:
+        condition: service_healthy
+    environment:
+      KONG_DATABASE: "off"
+      KONG_DECLARATIVE_CONFIG: /var/lib/kong/kong.yml
+      KONG_DNS_ORDER: LAST,A,CNAME
+      KONG_PLUGINS: request-transformer,cors,key-auth,acl,basic-auth,jwt
+      KONG_NGINX_PROXY_PROXY_BUFFER_SIZE: 160k
+      KONG_NGINX_PROXY_PROXY_BUFFERS: 64 160k
+      KONG_LOG_LEVEL: info
+    volumes:
+      - ./infra/kong/kong.yml:/var/lib/kong/kong.yml:ro
+
+  # ============================================
+  # APPLICATION SERVICES
+  # ============================================
+
+  # Documentation Portal (MkDocs)
+  docs:
+    build: ./services/docs
+    restart: unless-stopped
+    environment:
+      BANK_CONFIG: /app/data/bank.yml
+    volumes:
+      - ./data/bank.yml:/app/data/bank.yml:ro
+      - ./services/docs/docs:/site/docs:ro
+      - ./services/docs/mkdocs.yml:/site/mkdocs.yml:ro
+    ports:
+      - ${DOCS_PORT:-8001}:8000
+    command: ["mkdocs", "serve", "-a", "0.0.0.0:8000"]
+
+  # FastAPI Backend
+  api:
+    build: ./services/api
+    restart: unless-stopped
+    depends_on:
+      - supabase-db
+      - redis
+      - temporal
+    environment:
+      DATABASE_URL: postgres://postgres:${POSTGRES_PASSWORD}@supabase-db:5432/postgres
+      SUPABASE_URL: http://supabase-kong:8000
+      SUPABASE_ANON_KEY: ${ANON_KEY}
+      SUPABASE_SERVICE_KEY: ${SERVICE_ROLE_KEY}
+      JWT_SECRET: ${JWT_SECRET}
+      REDIS_URL: redis://redis:6379
+      TEMPORAL_HOST: temporal:7233
+      OPENTELEMETRY_ENDPOINT: http://otel-collector:4317
+    ports:
+      - ${API_PORT:-8080}:8080
+    volumes:
+      - ./services/api:/app
+    command: ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8080", "--reload"]
+
+  # Next.js Dashboard with Tremor
+  dashboard:
+    build: ./services/dashboard
+    restart: unless-stopped
+    depends_on:
+      - api
+      - supabase-kong
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:${API_PORT:-8080}
+      NEXT_PUBLIC_SUPABASE_URL: http://localhost:${KONG_HTTP_PORT:-8000}
+      NEXT_PUBLIC_SUPABASE_ANON_KEY: ${ANON_KEY}
+    ports:
+      - ${DASHBOARD_PORT:-3000}:3000
+    volumes:
+      - ./services/dashboard:/app
+      - /app/node_modules
+      - /app/.next
+    command: ["npm", "run", "dev"]
+
+  # Training Tracker Service (Replaces Moodle)
+  training-tracker:
+    build: ./services/training-tracker
+    restart: unless-stopped
+    depends_on:
+      - supabase-db
+      - redis
+    environment:
+      DATABASE_URL: postgres://postgres:${POSTGRES_PASSWORD}@supabase-db:5432/postgres
+      SUPABASE_URL: http://supabase-kong:8000
+      SUPABASE_SERVICE_KEY: ${SERVICE_ROLE_KEY}
+      REDIS_URL: redis://redis:6379
+    ports:
+      - ${TRAINING_PORT:-8082}:8080
+    volumes:
+      - ./services/training-tracker:/app
+    command: ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8080", "--reload"]
+
+  # ============================================
+  # WORKFLOW & MESSAGING
+  # ============================================
+
+  # Temporal Workflow Engine
+  temporal:
+    image: temporalio/auto-setup:1.22.4
+    depends_on:
+      - temporal-postgresql
+      - elasticsearch
+    environment:
+      - DB=postgresql
+      - DB_PORT=5432
+      - POSTGRES_USER=temporal
+      - POSTGRES_PWD=temporal
+      - POSTGRES_SEEDS=temporal-postgresql
+      - DYNAMIC_CONFIG_FILE_PATH=config/dynamicconfig/development-sql.yaml
+      - ENABLE_ES=true
+      - ES_SEEDS=elasticsearch
+      - ES_VERSION=v7
+    ports:
+      - ${TEMPORAL_PORT:-7233}:7233
+    volumes:
+      - ./infra/temporal/dynamicconfig:/etc/temporal/config/dynamicconfig
+
+  temporal-postgresql:
+    image: postgres:15
+    environment:
+      POSTGRES_PASSWORD: temporal
+      POSTGRES_USER: temporal
+    volumes:
+      - ./data/temporal-postgres:/var/lib/postgresql/data
+
+  temporal-ui:
+    image: temporalio/ui:2.21.3
+    depends_on:
+      - temporal
+    environment:
+      - TEMPORAL_ADDRESS=temporal:7233
+      - TEMPORAL_CORS_ORIGINS=http://localhost:3000
+    ports:
+      - ${TEMPORAL_UI_PORT:-8088}:8080
+
+  temporal-admin-tools:
+    image: temporalio/admin-tools:1.22.4
+    depends_on:
+      - temporal
+    stdin_open: true
+    tty: true
+    environment:
+      - TEMPORAL_ADDRESS=temporal:7233
+      - TEMPORAL_CLI_ADDRESS=temporal:7233
+
+  # Redis Cache & Message Broker
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    ports:
+      - ${REDIS_PORT:-6379}:6379
+    volumes:
+      - ./data/redis:/data
+    command: redis-server --appendonly yes
+
+  # ============================================
+  # OBSERVABILITY STACK
+  # ============================================
+
+  # Elasticsearch for Temporal & Logging
+  elasticsearch:
+    image: elasticsearch:7.17.16
+    environment:
+      - discovery.type=single-node
+      - cluster.name=temporal-cluster
+      - ES_JAVA_OPTS=-Xms512m -Xmx512m
+      - xpack.security.enabled=false
+    ports:
+      - ${ELASTICSEARCH_PORT:-9200}:9200
+    volumes:
+      - ./data/elasticsearch:/usr/share/elasticsearch/data
+
+  # Prometheus Metrics
+  prometheus:
+    image: prom/prometheus:latest
+    restart: unless-stopped
+    ports:
+      - ${PROMETHEUS_PORT:-9090}:9090
+    volumes:
+      - ./infra/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./data/prometheus:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+
+  # Grafana Dashboards
+  grafana:
+    image: grafana/grafana:latest
+    restart: unless-stopped
+    depends_on:
+      - prometheus
+    ports:
+      - ${GRAFANA_PORT:-3001}:3000
+    environment:
+      - GF_SECURITY_ADMIN_USER=${GRAFANA_USER:-admin}
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD:-admin}
+      - GF_INSTALL_PLUGINS=grafana-clock-panel
+    volumes:
+      - ./data/grafana:/var/lib/grafana
+      - ./infra/grafana/provisioning:/etc/grafana/provisioning
+
+  # OpenTelemetry Collector
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:latest
+    restart: unless-stopped
+    ports:
+      - ${OTEL_GRPC_PORT:-4317}:4317     # OTLP gRPC receiver
+      - ${OTEL_HTTP_PORT:-4318}:4318     # OTLP HTTP receiver
+      - ${OTEL_METRICS_PORT:-8888}:8888  # Prometheus metrics
+    volumes:
+      - ./infra/otel/otel-config.yaml:/etc/otelcol-contrib/config.yaml
+    command: ["--config=/etc/otelcol-contrib/config.yaml"]
+
+  # Jaeger Tracing
+  jaeger:
+    image: jaegertracing/all-in-one:latest
+    restart: unless-stopped
+    environment:
+      - COLLECTOR_OTLP_ENABLED=true
+    ports:
+      - ${JAEGER_UI_PORT:-16686}:16686
+      - ${JAEGER_COLLECTOR_PORT:-14268}:14268
+
+  # ============================================
+  # KNOWLEDGE HUB SERVICES
+  # ============================================
+  
+  # Backstage Developer Portal
+  backstage:
+    image: backstage/backstage:latest
+    restart: unless-stopped
+    environment:
+      - POSTGRES_HOST=supabase-db
+      - POSTGRES_PORT=5432
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - APP_CONFIG_backend_baseUrl=http://localhost:${BACKSTAGE_BACKEND_PORT:-7007}
+      - APP_CONFIG_app_baseUrl=http://localhost:${BACKSTAGE_PORT:-3000}
+      - LANGFUSE_BASE_URL=${LANGFUSE_BASE_URL:-https://cloud.langfuse.com}
+      - LANGFUSE_PUBLIC_KEY=${LANGFUSE_PUBLIC_KEY}
+      - LANGFUSE_SECRET_KEY=${LANGFUSE_SECRET_KEY}
+      - NODE_ENV=development
+    ports:
+      - ${BACKSTAGE_PORT:-7007}:7007
+      - ${BACKSTAGE_FRONTEND_PORT:-3002}:3000
+    volumes:
+      - ./backstage/app-config.yaml:/app/app-config.yaml:ro
+      - ./backstage/app-config.local.yaml:/app/app-config.local.yaml:ro
+      - ./backstage/plugins:/app/plugins:ro
+    depends_on:
+      - supabase-db
+    command: ["node", "packages/backend", "--config", "app-config.yaml", "--config", "app-config.local.yaml"]
+
+  # PostgreSQL for Backstage Catalog
+  backstage-db:
+    image: postgres:15
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=backstage
+      - POSTGRES_PASSWORD=${BACKSTAGE_DB_PASSWORD:-backstage123}
+      - POSTGRES_DB=backstage_catalog
+    ports:
+      - ${BACKSTAGE_DB_PORT:-5433}:5432
+    volumes:
+      - ./data/backstage-db:/var/lib/postgresql/data:Z
+
+networks:
+  default:
+    name: ai-governance-net
+    driver: bridge
+
+volumes:
+  postgres-data:
+  redis-data:
+  elasticsearch-data:
+  prometheus-data:
+  grafana-data:
+  temporal-postgres-data:
+  storage-data:

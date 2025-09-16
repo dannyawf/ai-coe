@@ -1,0 +1,2 @@
+- Fases: COE central → híbrido → federado
+- Comité IA y roles (AIPO, AIRO)

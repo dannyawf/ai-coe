@@ -1,0 +1,299 @@
+/* ====================================
+   Ajustes adicionales de contraste
+   Cumplimiento WCAG AAA (7:1 texto normal, 4.5:1 texto grande)
+   ==================================== */
+
+/* Mejoras de contraste para ambos modos */
+[data-md-color-scheme="slate"] {
+  
+  /* Texto principal - Ratio 15.5:1 sobre #0D1117 */
+  .md-typeset {
+    color: #F0F6FC;
+  }
+  
+  /* Párrafos y contenido general */
+  .md-typeset p,
+  .md-typeset li,
+  .md-typeset dd {
+    color: #E6EDF3;
+    line-height: 1.7;
+  }
+  
+  /* Enlaces más brillantes - Ratio 8.5:1 */
+  .md-typeset a {
+    color: #58A6FF;
+    font-weight: 500;
+  }
+  
+  .md-typeset a:hover,
+  .md-typeset a:focus {
+    color: #79C0FF;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+  }
+  
+  /* Código inline con mejor contraste */
+  .md-typeset code {
+    background: rgba(139, 148, 158, 0.2);
+    color: #79C0FF;
+    padding: 0.15em 0.4em;
+    font-weight: 500;
+  }
+  
+  /* Navegación lateral mejorada */
+  .md-nav__link {
+    color: #B3BFC9;
+    font-weight: 400;
+  }
+  
+  .md-nav__link:hover,
+  .md-nav__link:focus {
+    color: #FFFFFF;
+    background-color: rgba(88, 166, 255, 0.15);
+  }
+  
+  .md-nav__link--active {
+    color: #58A6FF;
+    font-weight: 600;
+  }
+  
+  /* Títulos de sección en navegación */
+  .md-nav__title {
+    color: #FFFFFF;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(48, 54, 61, 0.5);
+  }
+  
+  /* Tabs superiores */
+  .md-tabs__link {
+    color: #B3BFC9;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+  
+  .md-tabs__link:hover {
+    color: #FFFFFF;
+  }
+  
+  .md-tabs__link--active {
+    color: #58A6FF;
+    font-weight: 600;
+    border-bottom: 2px solid #58A6FF;
+  }
+  
+  /* Search input mejoras */
+  .md-search__input {
+    color: #F0F6FC;
+    background: rgba(22, 27, 34, 0.95);
+    border: 1px solid #30363D;
+  }
+  
+  .md-search__input:focus {
+    border-color: #58A6FF;
+    box-shadow: 0 0 0 2px rgba(88, 166, 255, 0.2);
+  }
+  
+  .md-search__input::placeholder {
+    color: #6E7681;
+  }
+  
+  /* Resultados de búsqueda */
+  .md-search-result__link {
+    color: #E6EDF3;
+  }
+  
+  .md-search-result__link:hover {
+    background: rgba(88, 166, 255, 0.1);
+  }
+  
+  .md-search-result__title {
+    color: #58A6FF;
+    font-weight: 600;
+  }
+  
+  .md-search-result__teaser {
+    color: #B3BFC9;
+  }
+  
+  /* Mejoras para tablas */
+  .md-typeset table:not([class]) th {
+    color: #FFFFFF;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+  
+  .md-typeset table:not([class]) td {
+    color: #E6EDF3;
+  }
+  
+  .md-typeset table:not([class]) tr:nth-child(even) {
+    background: rgba(22, 27, 34, 0.5);
+  }
+  
+  /* Blockquotes con mejor contraste */
+  .md-typeset blockquote {
+    color: #B3BFC9;
+    border-left-color: #58A6FF;
+    background: rgba(88, 166, 255, 0.05);
+  }
+  
+  /* Lists mejoras */
+  .md-typeset ul li::before {
+    color: #58A6FF;
+  }
+  
+  .md-typeset ol li::before {
+    color: #58A6FF;
+    font-weight: 600;
+  }
+  
+  /* Keyboard keys */
+  .md-typeset kbd {
+    background: #21262D;
+    border: 1px solid #30363D;
+    color: #F0F6FC;
+    box-shadow: 0 2px 0 #0D1117;
+  }
+  
+  /* Horizontal rules */
+  .md-typeset hr {
+    border-color: #30363D;
+  }
+  
+  /* Definition lists */
+  .md-typeset dt {
+    color: #58A6FF;
+    font-weight: 600;
+  }
+  
+  .md-typeset dd {
+    color: #B3BFC9;
+  }
+  
+  /* Footnotes */
+  .md-typeset .footnote {
+    color: #8B949E;
+  }
+  
+  .md-typeset .footnote-ref {
+    color: #58A6FF;
+    font-weight: 600;
+  }
+  
+  /* Task lists */
+  .md-typeset .task-list-control [type="checkbox"]:checked + .task-list-indicator::before {
+    background-color: #3FB950;
+  }
+  
+  .md-typeset .task-list-control [type="checkbox"] + .task-list-indicator {
+    border-color: #30363D;
+  }
+  
+  /* Details/Summary */
+  .md-typeset details {
+    border-color: #30363D;
+  }
+  
+  .md-typeset summary {
+    background: rgba(22, 27, 34, 0.5);
+    color: #E6EDF3;
+  }
+  
+  .md-typeset summary:hover {
+    background: rgba(88, 166, 255, 0.1);
+  }
+  
+  /* Tooltips */
+  .md-tooltip {
+    background: #1C2128;
+    color: #F0F6FC;
+    border: 1px solid #30363D;
+  }
+  
+  /* Pagination */
+  .md-footer__link {
+    color: #B3BFC9;
+  }
+  
+  .md-footer__link:hover {
+    color: #58A6FF;
+  }
+  
+  .md-footer__title {
+    color: #FFFFFF;
+    font-weight: 600;
+  }
+  
+  .md-footer__direction {
+    color: #8B949E;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}
+
+/* Mejoras específicas para elementos Nova */
+[data-md-color-scheme="slate"] {
+  
+  .nova-card h3 {
+    color: #58A6FF;
+  }
+  
+  .nova-card p {
+    color: #B3BFC9;
+  }
+  
+  .nova-highlight {
+    background: rgba(88, 166, 255, 0.1);
+    border-left-color: #58A6FF;
+  }
+  
+  .nova-text-muted {
+    color: #8B949E;
+  }
+  
+  /* Info cards mejoradas */
+  .info-cards .admonition {
+    background: rgba(22, 27, 34, 0.8);
+    border: 1px solid #30363D;
+  }
+  
+  .info-cards .admonition-title {
+    color: #FFFFFF;
+    font-weight: 600;
+  }
+}
+
+/* Focus visible para accesibilidad */
+[data-md-color-scheme="slate"] {
+  
+  *:focus-visible {
+    outline: 2px solid #58A6FF;
+    outline-offset: 2px;
+  }
+  
+  a:focus-visible {
+    outline: 2px solid #79C0FF;
+    outline-offset: 3px;
+    text-decoration: none;
+  }
+  
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid #58A6FF;
+    outline-offset: 0;
+    box-shadow: 0 0 0 4px rgba(88, 166, 255, 0.2);
+  }
+}
+
+/* Media queries para tamaño de fuente adaptativo */
+@media (prefers-contrast: high) {
+  [data-md-color-scheme="slate"] {
+    --md-default-fg-color: #FFFFFF;
+    --md-default-fg-color--light: #F0F6FC;
+    --md-primary-fg-color: #79C0FF;
+    --md-accent-fg-color: #7EE83F;
+  }
+}

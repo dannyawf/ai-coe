@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova AI - IMPACT Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #2C3E50;
+        }
+        
+        /* Header */
+        .header {
+            background: #fff;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: #00B4D8;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: 600;
+            color: #2C3E50;
+        }
+        
+        .header-controls {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+        
+        .filter-group {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            background: #F5F7FA;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+        }
+        
+        .filter-label {
+            font-size: 14px;
+            color: #666;
+            font-weight: 500;
+        }
+        
+        .filter-select {
+            padding: 0.4rem 0.8rem;
+            border: 1px solid #E1E8ED;
+            border-radius: 6px;
+            background: white;
+            font-size: 14px;
+            cursor: pointer;
+            min-width: 150px;
+        }
+        
+        .date-range {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            background: #F5F7FA;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+        }
+        
+        .date-input {
+            padding: 0.4rem 0.8rem;
+            border: 1px solid #E1E8ED;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        
+        /* Main Container */
+        .container {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        /* Summary Cards */
+        .summary-section {
+            margin-bottom: 2rem;
+        }
+        
+        .summary-title {
+            color: white;
+            font-size: 20px;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        
+        .summary-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .summary-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .summary-metric {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .summary-value {
+            font-size: 32px;
+            font-weight: bold;
+            color: #2C3E50;
+            margin-bottom: 0.5rem;
+        }
+        
+        .summary-trend {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 14px;
+        }
+        
+        .trend-up {
+            color: #79BA4A;
+        }
+        
+        .trend-down {
+            color: #DE4949;
+        }
+        
+        .trend-neutral {
+            color: #FAC65F;
+        }
+        
+        /* IMPACT Metrics Section */
+        .impact-section {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #F5F7FA;
+        }
+        
+        .section-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #2C3E50;
+        }
+        
+        .view-toggle {
+            display: flex;
+            gap: 0.5rem;
+            background: #F5F7FA;
+            padding: 0.25rem;
+            border-radius: 8px;
+        }
+        
+        .view-btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            background: transparent;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        
+        .view-btn.active {
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        /* View containers */
+        .view-container {
+            display: none;
+        }
+        
+        .view-container.active {
+            display: block;
+        }
+        
+        /* IMPACT Grid (Cards View) */
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .impact-card {
+            border: 2px solid #E1E8ED;
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: visible; /* Changed from hidden to visible for tooltips */
+        }
+        
+        .impact-card:hover {
+            border-color: #00B4D8;
+            box-shadow: 0 4px 15px rgba(0, 180, 216, 0.2);
+        }
+        
+        .impact-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+        
+        .impact-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2C3E50;
+        }
+        
+        .impact-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .badge-high {
+            background: #E8F5E9;
+            color: #2E7D32;
+        }
+        
+        .badge-medium {
+            background: #FFF3E0;
+            color: #F57C00;
+        }
+        
+        .badge-low {
+            background: #FFEBEE;
+            color: #C62828;
+        }
+        
+        .impact-score {
+            font-size: 48px;
+            font-weight: bold;
+            margin: 1rem 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .impact-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+        
+        .impact-progress {
+            background: #F5F7FA;
+            border-radius: 8px;
+            height: 8px;
+            overflow: hidden;
+            margin-bottom: 0.5rem;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00B4D8 0%, #2F9477 100%);
+            transition: width 1s ease;
+            border-radius: 8px;
+        }
+        
+        .impact-target {
+            font-size: 12px;
+            color: #999;
+            text-align: right;
+        }
+        
+        /* Table View */
+        .table-container {
+            overflow-x: auto;
+        }
+        
+        .impact-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        
+        .impact-table th {
+            background: #F5F7FA;
+            padding: 1rem;
+            text-align: left;
+            font-size: 14px;
+            font-weight: 600;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        .impact-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #E1E8ED;
+            font-size: 14px;
+        }
+        
+        .impact-table tr:hover {
+            background: #FAFBFC;
+        }
+        
+        .metric-value {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        .metric-high {
+            color: #2E7D32;
+        }
+        
+        .metric-medium {
+            color: #F57C00;
+        }
+        
+        .metric-low {
+            color: #C62828;
+        }
+        
+        .mini-progress {
+            width: 100px;
+            height: 6px;
+            background: #E1E8ED;
+            border-radius: 3px;
+            overflow: hidden;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 0.5rem;
+        }
+        
+        .mini-progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00B4D8 0%, #2F9477 100%);
+            border-radius: 3px;
+        }
+        
+        .trend-indicator {
+            display: inline-block;
+            margin-left: 0.5rem;
+            font-size: 12px;
+        }
+        
+        /* Graph View */
+        .graphs-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .graph-card {
+            background: #FAFBFC;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .graph-card.full-width {
+            grid-column: 1 / -1;
+        }
+        
+        .graph-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .graph-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2C3E50;
+        }
+        
+        .graph-controls {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .graph-btn {
+            padding: 0.4rem 0.8rem;
+            border: 1px solid #E1E8ED;
+            background: white;
+            border-radius: 6px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .graph-btn.active {
+            background: #00B4D8;
+            color: white;
+            border-color: #00B4D8;
+        }
+        
+        .canvas-container {
+            position: relative;
+            height: 300px;
+        }
+        
+        /* Detailed squad table */
+        .squad-detail-table {
+            margin-top: 2rem;
+        }
+        
+        .squad-name {
+            font-weight: 600;
+            color: #2C3E50;
+        }
+        
+        .client-badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            background: #E3F2FD;
+            color: #1976D2;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+        
+        /* Tooltips */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: help;
+        }
+        
+        .tooltip-icon {
+            width: 16px;
+            height: 16px;
+            background: #E1E8ED;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #666;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+        }
+        
+        .tooltip-content {
+            visibility: hidden;
+            background: #2C3E50;
+            color: white;
+            text-align: center;
+            padding: 0.75rem 1rem;
+            border-radius: 6px;
+            position: absolute;
+            z-index: 1000;
+            top: -5px;
+            left: 100%;
+            margin-left: 10px;
+            width: 250px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 13px;
+            line-height: 1.4;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        .tooltip-content::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent #2C3E50 transparent transparent;
+        }
+        
+        .tooltip:hover .tooltip-content {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        /* Adjust tooltip position for cards on the right */
+        .impact-grid > div:nth-child(3n) .tooltip-content,
+        .impact-grid > div:last-child .tooltip-content {
+            left: auto;
+            right: 100%;
+            margin-left: 0;
+            margin-right: 10px;
+        }
+        
+        .impact-grid > div:nth-child(3n) .tooltip-content::before,
+        .impact-grid > div:last-child .tooltip-content::before {
+            left: 100%;
+            right: auto;
+            border-color: transparent transparent transparent #2C3E50;
+        }
+        
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            justify-content: center;
+        }
+        
+        .btn {
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: #00B4D8;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #0095B5;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 180, 216, 0.3);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: #2C3E50;
+            border: 2px solid #E1E8ED;
+        }
+        
+        .btn-secondary:hover {
+            border-color: #00B4D8;
+            color: #00B4D8;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .impact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .impact-grid > div:nth-child(2n) .tooltip-content {
+                left: auto;
+                right: 100%;
+                margin-left: 0;
+                margin-right: 10px;
+            }
+            
+            .impact-grid > div:nth-child(2n) .tooltip-content::before {
+                left: 100%;
+                right: auto;
+                border-color: transparent transparent transparent #2C3E50;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-top {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: flex-start;
+            }
+            
+            .date-range {
+                width: 100%;
+            }
+            
+            .header-controls {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .filter-group, .date-range {
+                width: 100%;
+            }
+            
+            .filter-select, .date-input {
+                width: 100%;
+            }
+            
+            .summary-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .impact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .impact-grid .tooltip-content {
+                left: 50%;
+                right: auto;
+                top: 100%;
+                margin-left: -125px;
+                margin-top: 10px;
+            }
+            
+            .impact-grid .tooltip-content::before {
+                top: -5px;
+                left: 50%;
+                right: auto;
+                margin-left: -5px;
+                border-color: transparent transparent #2C3E50 transparent;
+            }
+            
+            .graphs-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .table-container {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="logo">
+                <div class="logo-icon">N</div>
+                <div class="logo-text">Nova AI - IMPACT Dashboard</div>
+            </div>
+            <div class="date-range">
+                <span class="filter-label">Período:</span>
+                <input type="date" class="date-input" value="2025-01-01">
+                <span>-</span>
+                <input type="date" class="date-input" value="2025-01-31">
+            </div>
+        </div>
+        <div class="header-controls">
+            <div class="filter-group">
+                <span class="filter-label">Agrupar por:</span>
+                <select class="filter-select" id="groupBy">
+                    <option value="all">Vista General</option>
+                    <option value="client">Por Cliente</option>
+                    <option value="squad">Por Squad</option>
+                    <option value="individual">Individual</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <span class="filter-label">Cliente:</span>
+                <select class="filter-select" id="clientFilter">
+                    <option value="all">Todos los Clientes</option>
+                    <option value="santander">Santander</option>
+                    <option value="bbva">BBVA</option>
+                    <option value="banorte">Banorte</option>
+                    <option value="hsbc">HSBC</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <span class="filter-label">Squad:</span>
+                <select class="filter-select" id="squadFilter">
+                    <option value="all">Todos los Squads</option>
+                    <option value="alpha">Alpha Team</option>
+                    <option value="beta">Beta Squad</option>
+                    <option value="gamma">Gamma Force</option>
+                    <option value="delta">Delta Team</option>
+                    <option value="epsilon">Epsilon Dev</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Summary Cards -->
+        <section class="summary-section">
+            <h2 class="summary-title">Resumen Ejecutivo - Semana 3 de 11</h2>
+            <div class="summary-cards">
+                <div class="summary-card">
+                    <div class="summary-metric">Productividad Global</div>
+                    <div class="summary-value">1.2X</div>
+                    <div class="summary-trend trend-up">
+                        ↑ 20% vs semana anterior
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-metric">Adopción IA</div>
+                    <div class="summary-value">42%</div>
+                    <div class="summary-trend trend-up">
+                        ↑ 12% vs objetivo 30%
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-metric">Squads Activos</div>
+                    <div class="summary-value">8/10</div>
+                    <div class="summary-trend trend-neutral">
+                        → 2 en onboarding
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-metric">ROI Actual</div>
+                    <div class="summary-value">-5%</div>
+                    <div class="summary-trend trend-up">
+                        ↑ Mejorando (esperado)
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-metric">NPS Desarrollador</div>
+                    <div class="summary-value">32</div>
+                    <div class="summary-trend trend-up">
+                        ↑ 8 puntos vs inicio
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- IMPACT Metrics Section -->
+        <section class="impact-section">
+            <div class="section-header">
+                <h2 class="section-title">Framework IMPACT - Métricas Detalladas</h2>
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="cards">Vista Cards</button>
+                    <button class="view-btn" data-view="table">Vista Tabla</button>
+                    <button class="view-btn" data-view="graph">Vista Gráfica</button>
+                </div>
+            </div>
+
+            <!-- Cards View -->
+            <div id="cards-view" class="view-container active">
+                <div class="impact-grid">
+                    <!-- Implementation -->
+                    <div class="impact-card">
+                        <div class="impact-header">
+                            <div>
+                                <div class="impact-title">Implementation (25%)
+                                    <span class="tooltip">
+                                        <span class="tooltip-icon">?</span>
+                                        <span class="tooltip-content">Tasa de adopción y uso activo de herramientas IA</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <span class="impact-badge badge-high">Alto</span>
+                        </div>
+                        <div class="impact-score">82%</div>
+                        <div class="impact-description">
+                            Tasa de adopción semanal: 42%<br>
+                            Usuarios activos diarios: 67%<br>
+                            Time to first value: 12 min
+                        </div>
+                        <div class="impact-progress">
+                            <div class="progress-fill" style="width: 82%"></div>
+                        </div>
+                        <div class="impact-target">Meta: 90% para semana 6</div>
+                    </div>
+
+                    <!-- Momentum -->
+                    <div class="impact-card">
+                        <div class="impact-header">
+                            <div>
+                                <div class="impact-title">Momentum (20%)
+                                    <span class="tooltip">
+                                        <span class="tooltip-icon">?</span>
+                                        <span class="tooltip-content">Crecimiento y viralidad de la adopción</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <span class="impact-badge badge-medium">Medio</span>
+                        </div>
+                        <div class="impact-score">65%</div>
+                        <div class="impact-description">
+                            Crecimiento semanal: +12%<br>
+                            Retención: 78%<br>
+                            Viralidad interna: 3.2 referrals
+                        </div>
+                        <div class="impact-progress">
+                            <div class="progress-fill" style="width: 65%"></div>
+                        </div>
+                        <div class="impact-target">Meta: 80% para semana 5</div>
+                    </div>
+
+                    <!-- Performance -->
+                    <div class="impact-card">
+                        <div class="impact-header">
+                            <div>
+                                <div class="impact-title">Performance (20%)
+                                    <span class="tooltip">
+                                        <span class="tooltip-icon">?</span>
+                                        <span class="tooltip-content">Mejoras en velocidad y calidad del desarrollo</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <span class="impact-badge badge-low">Bajo</span>
+                        </div>
+                        <div class="impact-score">45%</div>
+                        <div class="impact-description">
+                            Velocidad desarrollo: 1.2X<br>
+                            Calidad código: +15%<br>
+                            Reducción bugs: -8%
+                        </div>
+                        <div class="impact-progress">
+                            <div class="progress-fill" style="width: 45%"></div>
+                        </div>
+                        <div class="impact-target">Meta: 150% para semana 8</div>
+                    </div>
+
+                    <!-- Acceptance -->
+                    <div class="impact-card">
+                        <div class="impact-header">
+                            <div>
+                                <div class="impact-title">Acceptance (15%)
+                                    <span class="tooltip">
+                                        <span class="tooltip-icon">?</span>
+                                        <span class="tooltip-content">Tasa de aceptación de sugerencias IA</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <span class="impact-badge badge-medium">Medio</span>
+                        </div>
+                        <div class="impact-score">38%</div>
+                        <div class="impact-description">
+                            Tasa aceptación código: 38%<br>
+                            Developer NPS: 32<br>
+                            Satisfaction score: 7.2/10
+                        </div>
+                        <div class="impact-progress">
+                            <div class="progress-fill" style="width: 38%"></div>
+                        </div>
+                        <div class="impact-target">Meta: 40% para semana 4</div>
+                    </div>
+
+                    <!-- Cost-Effective -->
+                    <div class="impact-card">
+                        <div class="impact-header">
+                            <div>
+                                <div class="impact-title">Cost-Effective (10%)
+                                    <span class="tooltip">
+                                        <span class="tooltip-icon">?</span>
+                                        <span class="tooltip-content">ROI y eficiencia de costos</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <span class="impact-badge badge-low">En Proceso</span>
+                        </div>
+                        <div class="impact-score">-5%</div>
+                        <div class="impact-description">
+                            ROI actual: -5%<br>
+                            Costo por hora ahorrada: $45<br>
+                            Break-even esperado: Semana 6
+                        </div>
+                        <div class="impact-progress">
+                            <div class="progress-fill" style="width: 15%"></div>
+                        </div>
+                        <div class="impact-target">Meta: +30% para semana 8</div>
+                    </div>
+
+                    <!-- Trust -->
+                    <div class="impact-card">
+                        <div class="impact-header">
+                            <div>
+                                <div class="impact-title">Trust (10%)
+                                    <span class="tooltip">
+                                        <span class="tooltip-icon">?</span>
+                                        <span class="tooltip-content">Confianza en seguridad y compliance</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <span class="impact-badge badge-high">Excelente</span>
+                        </div>
+                        <div class="impact-score">95%</div>
+                        <div class="impact-description">
+                            Confidence score: 9.5/10<br>
+                            Auditorías pasadas: 100%<br>
+                            Compliance rate: 100%
+                        </div>
+                        <div class="impact-progress">
+                            <div class="progress-fill" style="width: 95%"></div>
+                        </div>
+                        <div class="impact-target">Meta: Mantener >90%</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Table View -->
+            <div id="table-view" class="view-container">
+                <div class="table-container">
+                    <table class="impact-table">
+                        <thead>
+                            <tr>
+                                <th>Métrica IMPACT</th>
+                                <th>Peso</th>
+                                <th>Score Actual</th>
+                                <th>Progreso</th>
+                                <th>Meta</th>
+                                <th>Tendencia</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <strong>Implementation</strong>
+                                    <br><small style="color: #666;">Adopción y uso activo</small>
+                                </td>
+                                <td>25%</td>
+                                <td class="metric-value metric-high">82%</td>
+                                <td>
+                                    <div class="mini-progress">
+                                        <div class="mini-progress-fill" style="width: 82%"></div>
+                                    </div>
+                                </td>
+                                <td>90% (S6)</td>
+                                <td><span class="trend-indicator trend-up">↑ +12%</span></td>
+                                <td><span class="impact-badge badge-high">Alto</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Momentum</strong>
+                                    <br><small style="color: #666;">Crecimiento y viralidad</small>
+                                </td>
+                                <td>20%</td>
+                                <td class="metric-value metric-medium">65%</td>
+                                <td>
+                                    <div class="mini-progress">
+                                        <div class="mini-progress-fill" style="width: 65%"></div>
+                                    </div>
+                                </td>
+                                <td>80% (S5)</td>
+                                <td><span class="trend-indicator trend-up">↑ +8%</span></td>
+                                <td><span class="impact-badge badge-medium">Medio</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Performance</strong>
+                                    <br><small style="color: #666;">Velocidad y calidad</small>
+                                </td>
+                                <td>20%</td>
+                                <td class="metric-value metric-low">45%</td>
+                                <td>
+                                    <div class="mini-progress">
+                                        <div class="mini-progress-fill" style="width: 45%"></div>
+                                    </div>
+                                </td>
+                                <td>150% (S8)</td>
+                                <td><span class="trend-indicator trend-up">↑ +5%</span></td>
+                                <td><span class="impact-badge badge-low">Bajo</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Acceptance</strong>
+                                    <br><small style="color: #666;">Tasa de aceptación</small>
+                                </td>
+                                <td>15%</td>
+                                <td class="metric-value metric-medium">38%</td>
+                                <td>
+                                    <div class="mini-progress">
+                                        <div class="mini-progress-fill" style="width: 38%"></div>
+                                    </div>
+                                </td>
+                                <td>40% (S4)</td>
+                                <td><span class="trend-indicator trend-up">↑ +3%</span></td>
+                                <td><span class="impact-badge badge-medium">Medio</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Cost-Effective</strong>
+                                    <br><small style="color: #666;">ROI y eficiencia</small>
+                                </td>
+                                <td>10%</td>
+                                <td class="metric-value metric-low">-5%</td>
+                                <td>
+                                    <div class="mini-progress">
+                                        <div class="mini-progress-fill" style="width: 15%"></div>
+                                    </div>
+                                </td>
+                                <td>+30% (S8)</td>
+                                <td><span class="trend-indicator trend-up">↑ +10%</span></td>
+                                <td><span class="impact-badge badge-low">En Proceso</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Trust</strong>
+                                    <br><small style="color: #666;">Seguridad y compliance</small>
+                                </td>
+                                <td>10%</td>
+                                <td class="metric-value metric-high">95%</td>
+                                <td>
+                                    <div class="mini-progress">
+                                        <div class="mini-progress-fill" style="width: 95%"></div>
+                                    </div>
+                                </td>
+                                <td>>90%</td>
+                                <td><span class="trend-indicator trend-neutral">→ 0%</span></td>
+                                <td><span class="impact-badge badge-high">Excelente</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Squad Detail Table -->
+                <div class="squad-detail-table">
+                    <h3 style="margin-bottom: 1rem; color: #2C3E50;">Desglose por Squad</h3>
+                    <table class="impact-table">
+                        <thead>
+                            <tr>
+                                <th>Squad</th>
+                                <th>Cliente</th>
+                                <th>Impl.</th>
+                                <th>Mom.</th>
+                                <th>Perf.</th>
+                                <th>Acc.</th>
+                                <th>Cost</th>
+                                <th>Trust</th>
+                                <th>Score Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="squad-name">Alpha Team</td>
+                                <td><span class="client-badge">Santander</span></td>
+                                <td class="metric-high">92%</td>
+                                <td class="metric-high">78%</td>
+                                <td class="metric-medium">62%</td>
+                                <td class="metric-high">45%</td>
+                                <td class="metric-medium">15%</td>
+                                <td class="metric-high">98%</td>
+                                <td><strong>73.5%</strong></td>
+                            </tr>
+                            <tr>
+                                <td class="squad-name">Beta Squad</td>
+                                <td><span class="client-badge">BBVA</span></td>
+                                <td class="metric-high">85%</td>
+                                <td class="metric-medium">70%</td>
+                                <td class="metric-medium">55%</td>
+                                <td class="metric-medium">40%</td>
+                                <td class="metric-low">5%</td>
+                                <td class="metric-high">95%</td>
+                                <td><strong>68.2%</strong></td>
+                            </tr>
+                            <tr>
+                                <td class="squad-name">Gamma Force</td>
+                                <td><span class="client-badge">Banorte</span></td>
+                                <td class="metric-medium">72%</td>
+                                <td class="metric-medium">58%</td>
+                                <td class="metric-low">35%</td>
+                                <td class="metric-low">28%</td>
+                                <td class="metric-low">-15%</td>
+                                <td class="metric-high">92%</td>
+                                <td><strong>52.8%</strong></td>
+                            </tr>
+                            <tr>
+                                <td class="squad-name">Delta Team</td>
+                                <td><span class="client-badge">HSBC</span></td>
+                                <td class="metric-high">88%</td>
+                                <td class="metric-high">75%</td>
+                                <td class="metric-medium">58%</td>
+                                <td class="metric-high">42%</td>
+                                <td class="metric-medium">10%</td>
+                                <td class="metric-high">96%</td>
+                                <td><strong>71.3%</strong></td>
+                            </tr>
+                            <tr>
+                                <td class="squad-name">Epsilon Dev</td>
+                                <td><span class="client-badge">Santander</span></td>
+                                <td class="metric-medium">65%</td>
+                                <td class="metric-low">45%</td>
+                                <td class="metric-low">30%</td>
+                                <td class="metric-low">32%</td>
+                                <td class="metric-low">-20%</td>
+                                <td class="metric-high">90%</td>
+                                <td><strong>46.5%</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Graph View -->
+            <div id="graph-view" class="view-container">
+                <div class="graphs-container">
+                    <!-- IMPACT Score Overview -->
+                    <div class="graph-card full-width">
+                        <div class="graph-header">
+                            <h3 class="graph-title">IMPACT Score General</h3>
+                            <div class="graph-controls">
+                                <button class="graph-btn active">Radar</button>
+                                <button class="graph-btn">Barras</button>
+                            </div>
+                        </div>
+                        <div class="canvas-container">
+                            <canvas id="impactRadarChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Productivity Trend -->
+                    <div class="graph-card">
+                        <div class="graph-header">
+                            <h3 class="graph-title">Tendencia de Productividad</h3>
+                            <div class="graph-controls">
+                                <button class="graph-btn active">11 Semanas</button>
+                                <button class="graph-btn">Mensual</button>
+                            </div>
+                        </div>
+                        <div class="canvas-container">
+                            <canvas id="productivityChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Adoption by Squad -->
+                    <div class="graph-card">
+                        <div class="graph-header">
+                            <h3 class="graph-title">Adopción por Squad</h3>
+                            <div class="graph-controls">
+                                <button class="graph-btn active">%</button>
+                                <button class="graph-btn">Absoluto</button>
+                            </div>
+                        </div>
+                        <div class="canvas-container">
+                            <canvas id="adoptionChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Function Usage Heatmap -->
+                    <div class="graph-card">
+                        <div class="graph-header">
+                            <h3 class="graph-title">Uso por Función IA</h3>
+                            <div class="graph-controls">
+                                <button class="graph-btn active">Esta Semana</button>
+                                <button class="graph-btn">Total</button>
+                            </div>
+                        </div>
+                        <div class="canvas-container">
+                            <canvas id="usageChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- ROI Evolution -->
+                    <div class="graph-card">
+                        <div class="graph-header">
+                            <h3 class="graph-title">Evolución ROI</h3>
+                            <div class="graph-controls">
+                                <button class="graph-btn active">Proyectado</button>
+                                <button class="graph-btn">Real</button>
+                            </div>
+                        </div>
+                        <div class="canvas-container">
+                            <canvas id="roiChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button class="btn btn-primary">Exportar Reporte PDF</button>
+                <button class="btn btn-secondary">Configurar Alertas</button>
+                <button class="btn btn-secondary">Ver Detalle Individual</button>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // View switching
+        const viewBtns = document.querySelectorAll('.view-btn');
+        const viewContainers = document.querySelectorAll('.view-container');
+
+        viewBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const targetView = this.dataset.view;
+                
+                // Update button states
+                viewBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Update view containers
+                viewContainers.forEach(container => {
+                    container.classList.remove('active');
+                });
+                document.getElementById(`${targetView}-view`).classList.add('active');
+                
+                // Initialize charts when graph view is selected
+                if (targetView === 'graph') {
+                    initializeCharts();
+                }
+            });
+        });
+
+        // Initialize Charts
+        function initializeCharts() {
+            // IMPACT Radar Chart
+            const radarCtx = document.getElementById('impactRadarChart').getContext('2d');
+            new Chart(radarCtx, {
+                type: 'radar',
+                data: {
+                    labels: ['Implementation', 'Momentum', 'Performance', 'Acceptance', 'Cost-Effective', 'Trust'],
+                    datasets: [{
+                        label: 'Actual',
+                        data: [82, 65, 45, 38, 15, 95],
+                        backgroundColor: 'rgba(0, 180, 216, 0.2)',
+                        borderColor: '#00B4D8',
+                        borderWidth: 2,
+                        pointBackgroundColor: '#00B4D8'
+                    }, {
+                        label: 'Meta',
+                        data: [90, 80, 150, 40, 30, 90],
+                        backgroundColor: 'rgba(47, 148, 119, 0.1)',
+                        borderColor: '#2F9477',
+                        borderWidth: 2,
+                        borderDash: [5, 5],
+                        pointBackgroundColor: '#2F9477'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            beginAtZero: true,
+                            max: 100
+                        }
+                    }
+                }
+            });
+
+            // Productivity Trend Chart
+            const prodCtx = document.getElementById('productivityChart').getContext('2d');
+            new Chart(prodCtx, {
+                type: 'line',
+                data: {
+                    labels: ['S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8', 'S9', 'S10', 'S11'],
+                    datasets: [{
+                        label: 'Real',
+                        data: [0.8, 0.9, 1.2, null, null, null, null, null, null, null, null],
+                        borderColor: '#00B4D8',
+                        backgroundColor: 'rgba(0, 180, 216, 0.1)',
+                        borderWidth: 3,
+                        tension: 0.4
+                    }, {
+                        label: 'Proyectado',
+                        data: [0.8, 0.9, 1.2, 1.4, 1.6, 1.9, 2.0, 2.2, 2.3, 2.4, 2.5],
+                        borderColor: '#2F9477',
+                        borderDash: [5, 5],
+                        borderWidth: 2,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) {
+                                    return value + 'X';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Adoption by Squad Chart
+            const adoptionCtx = document.getElementById('adoptionChart').getContext('2d');
+            new Chart(adoptionCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Alpha', 'Beta', 'Gamma', 'Delta', 'Epsilon'],
+                    datasets: [{
+                        label: 'Adopción %',
+                        data: [92, 85, 72, 88, 65],
+                        backgroundColor: [
+                            '#2E7D32',
+                            '#2E7D32',
+                            '#F57C00',
+                            '#2E7D32',
+                            '#F57C00'
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: {
+                                callback: function(value) {
+                                    return value + '%';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Usage by Function Chart
+            const usageCtx = document.getElementById('usageChart').getContext('2d');
+            new Chart(usageCtx, {
+                type: 'horizontalBar',
+                data: {
+                    labels: ['Unit Tests', 'Documentación', 'Boilerplate', 'SQL', 'Debug', 'Refactoring', 'Code Review'],
+                    datasets: [{
+                        label: 'Uso %',
+                        data: [90, 75, 85, 60, 45, 40, 30],
+                        backgroundColor: '#00B4D8'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: {
+                                callback: function(value) {
+                                    return value + '%';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // ROI Evolution Chart
+            const roiCtx = document.getElementById('roiChart').getContext('2d');
+            new Chart(roiCtx, {
+                type: 'line',
+                data: {
+                    labels: ['S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8', 'S9', 'S10', 'S11'],
+                    datasets: [{
+                        label: 'ROI Real',
+                        data: [-20, -15, -5, null, null, null, null, null, null, null, null],
+                        borderColor: '#F56D40',
+                        backgroundColor: 'rgba(245, 109, 64, 0.1)',
+                        borderWidth: 3
+                    }, {
+                        label: 'ROI Meta',
+                        data: [-20, -15, -5, 5, 10, 15, 25, 30, 45, 60, 70],
+                        borderColor: '#79BA4A',
+                        borderDash: [5, 5],
+                        borderWidth: 2
+                    }, {
+                        label: 'Break-even',
+                        data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                        borderColor: '#666',
+                        borderDash: [2, 2],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            ticks: {
+                                callback: function(value) {
+                                    return value + '%';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Initialize charts on load if graph view is active
+        if (document.getElementById('graph-view').classList.contains('active')) {
+            initializeCharts();
+        }
+    </script>
+</body>
+</html>

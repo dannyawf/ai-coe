@@ -1,0 +1,20 @@
+site_name: AI Governance Portal
+theme: { name: material, palette: [{scheme: default, primary: indigo, accent: cyan}]}
+nav:
+  - Inicio: index.md
+  - Playbooks:
+      - Adopción: playbooks/adopcion.md
+      - Gobierno: playbooks/gobierno.md
+      - Federado por Unidad: playbooks/federated-playbooks.md
+  - Proveedores: 
+      - Resumen: adoption-providers/index.md
+      - Nova-Cell: adoption-providers/nova-cell.md
+      - GitHub Copilot: adoption-providers/github-copilot.md
+      - Anthropic Claude: adoption-providers/anthropic-claude.md
+      - OpenAI: adoption-providers/openai.md
+      - Gemini: adoption-providers/gemini.md
+  - ISO Traceability: iso/iso-traceability.md
+  - BPMN: bpmn/README.md
+  - Métricas (IMPACT): metrics/index.md
+  - Academia AI (LMS): lms/index.md
+  - Seguridad: security.md
