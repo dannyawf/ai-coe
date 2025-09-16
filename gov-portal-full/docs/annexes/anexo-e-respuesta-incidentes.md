@@ -480,7 +480,7 @@ Se ha detectado un incidente crítico que afecta [sistema]. El impacto estimado 
 Conforme a las Disposiciones de carácter general aplicables a las instituciones de crédito
 
 **Datos de la Institución:**
-- Razón Social: [Banco XYZ, S.A.]
+- Razón Social: Nova Solution Systems S.A. de C.V.
 - Fecha y Hora del Incidente: [DD/MM/YYYY HH:MM]
 
 **Clasificación del Incidente:**

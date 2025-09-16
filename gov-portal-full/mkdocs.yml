@@ -165,17 +165,18 @@ nav:
       - Métricas de Valor: dashboard/impact-metrics.md
       - Demo Interactivo: dashboard/impact-demo.html
 
-  - 🛠️ Servicios:
+  - 🛠️ Servicios CoE:
     - Vista General: servicios/index.md
-    - Catálogo de Servicios: servicios/catalogo-servicios.md
-    - Evaluación Modelos LLM: servicios/evaluacion-modelos-llm.md
-    - Arquitecto de Adopción: servicios/arquitecto-adopcion.md
+    - Catálogo Completo de Servicios:
+      - Índice de Servicios: servicios/catalogo-servicios.md
+      - Evaluación Modelos LLM: servicios/evaluacion-modelos-llm.md
+      - Arquitecto de Adopción: servicios/arquitecto-adopcion.md
+      - Red Teaming IA: servicios/red-teaming.md
     - Plataforma Nova-Cell:
       - Hub Principal: servicios/plataforma/nova-cell-hub.md
       - CLI: servicios/plataforma/nova-cell-cli.md
       - Web UI: servicios/plataforma/nova-cell-webui.md
       - Knowledge Base: servicios/plataforma/nova-cell.md
-    - Red Teaming IA: servicios/red-teaming.md
     - Solicitar Apoyo: servicios/solicitar-apoyo.md
 
   - 📚 Recursos:
@@ -266,7 +267,7 @@ extra:
   
   # Custom variables
   org:
-    name: Banco XYZ
+    name: Nova
     coe_email: coe-ia@banco.mx
     helpdesk: helpdesk-ai@banco.mx
     

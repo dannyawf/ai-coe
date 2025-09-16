@@ -1,4 +1,4 @@
-# 🚀 Vista SDLC Integrada con IA - Definition of Done (DoD) BanCoppel
+# 🚀 Vista SDLC Integrada con IA - Definition of Done (DoD)
 
 <div class="nova-card-hero nova-scale-in" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
   <h2 style="margin: 0; font-size: 2rem; color: white;">📋 Definition of Done con IA</h2>
@@ -7,15 +7,15 @@
 
 ## 🎯 Resumen Ejecutivo
 
-Este documento presenta una vista unificada del proceso SDLC basado en el Definition of Done (DoD) de BanCoppel, enriquecido con casos de uso de IA y mejoras específicas para cada una de las 9 fases del ciclo de desarrollo.
+Este documento presenta una vista unificada del proceso SDLC basado en mejores prácticas del sector bancario, enriquecido con casos de uso de IA y mejoras específicas para cada una de las 9 fases del ciclo de desarrollo.
 
 <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 20px; border-radius: 12px; margin: 20px 0; color: white;">
   <h3 style="margin: 0 0 10px;">🌟 Valor Agregado con IA</h3>
   <ul style="list-style: none; padding-left: 0;">
-    <li>✅ <strong>40% reducción</strong> en tiempo de desarrollo</li>
-    <li>✅ <strong>60% mejora</strong> en calidad de código</li>
-    <li>✅ <strong>85% automatización</strong> de pruebas</li>
-    <li>✅ <strong>Zero-defect</strong> en despliegues a producción</li>
+    <li>🎯 <strong>40% reducción estimada</strong> en tiempo de desarrollo (basado en benchmarks SPACE)</li>
+    <li>🎯 <strong>60% mejora proyectada</strong> en calidad de código</li>
+    <li>🎯 <strong>85% automatización potencial</strong> de pruebas</li>
+    <li>🎯 <strong>Objetivo Zero-defect</strong> en despliegues a producción</li>
   </ul>
 </div>
 
@@ -798,7 +798,7 @@ graph TB
   <h3>¿Necesitas ayuda con el SDLC + IA?</h3>
   <p>El equipo del Centro de Excelencia está aquí para apoyarte</p>
   <div style="margin-top: 20px;">
-    <a href="mailto:sdlc-ai@bancoppel.com" style="background: white; color: #667eea; padding: 10px 20px; border-radius: 5px; text-decoration: none; margin: 0 10px;">📧 Email</a>
+    <a href="mailto:sdlc-ai@novasolutionsystems.com" style="background: white; color: #667eea; padding: 10px 20px; border-radius: 5px; text-decoration: none; margin: 0 10px;">📧 Email</a>
     <a href="/chat/sdlc-support" style="background: white; color: #667eea; padding: 10px 20px; border-radius: 5px; text-decoration: none; margin: 0 10px;">💬 Chat</a>
     <a href="/docs/sdlc-guide" style="background: white; color: #667eea; padding: 10px 20px; border-radius: 5px; text-decoration: none; margin: 0 10px;">📚 Documentación</a>
   </div>
@@ -806,4 +806,4 @@ graph TB
 
 ---
 
-*Última actualización: Enero 2025 | Versión 1.0 | Centro de Excelencia de IA - BanCoppel*
+*Última actualización: Enero 2025 | Versión 1.0 | Centro de Excelencia de IA*

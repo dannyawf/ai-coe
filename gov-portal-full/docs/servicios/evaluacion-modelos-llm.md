@@ -824,4 +824,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ---
 
-**Centro de Excelencia de IA** | Banco XYZ | coe-ia@novasolutionsystems.com | ext. 5555
+**Centro de Excelencia de IA** | Nova | coe-ia@novasolutionsystems.com | ext. 5555

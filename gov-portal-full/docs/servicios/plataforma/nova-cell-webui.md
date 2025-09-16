@@ -678,7 +678,7 @@ sequenceDiagram
 #### Estructura Jerárquica:
 ```mermaid
 graph TD
-    A[Organización: Banco XYZ] --> B[Área: Risk Management]
+    A[Organización: Nova] --> B[Área: Risk Management]
     A --> C[Área: Digital Banking]
     A --> D[Área: Operations]
     
