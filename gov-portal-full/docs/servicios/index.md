@@ -124,8 +124,8 @@ casos_exito = {
 ### Proceso Simple en 4 Pasos
 
 1. **Contacto Inicial**
-   - Email: coe-ia@banco.mx
-   - Portal: nova-cell.banco.mx/services
+   - Email: coe-ia@novasolutionsystems.com
+   - Portal: nova-cell.novasolutionsystems.com/services
    - Teams: #ai-services
 
 2. **Discovery Call** (30 min)
@@ -183,7 +183,7 @@ casos_exito = {
 ### Herramientas
 - [Calculadora de ROI](../tools/roi-calculator.md)
 - [Readiness Assessment Tool](../tools/readiness-assessment.md)
-- [Service Request Portal](https://nova-cell.banco.mx/request)
+- [Service Request Portal](https://nova-cell.novasolutionsystems.com/request)
 
 ### Comunidad
 - [AI Community Forum](../community/forum.md)
@@ -194,8 +194,8 @@ casos_exito = {
 
 **¿Listo para empezar tu journey de IA?**
 
-[Solicitar Servicio](https://nova-cell.banco.mx/request){.md-button .md-button--primary}
-[Agendar Discovery Call](mailto:coe-ia@banco.mx?subject=Discovery%20Call){.md-button}
+[Solicitar Servicio](https://nova-cell.novasolutionsystems.com/request){.md-button .md-button--primary}
+[Agendar Discovery Call](mailto:coe-ia@novasolutionsystems.com?subject=Discovery%20Call){.md-button}
 
 ---
 

@@ -649,9 +649,9 @@ Cuando se utilicen servicios de IA de terceros ubicados fuera de México (ej. Op
 ## 📞 Contacto y Soporte
 
 ### Oficina del DPO
-- **Email**: dpo@banco.mx
+- **Email**: dpo@novasolutionsystems.com
 - **Hotline**: 800-PRIVACY
-- **Portal**: privacy.banco.mx
+- **Portal**: privacy.novasolutionsystems.com
 - **Horario**: 24/7 para incidentes
 
 ### Recursos Adicionales

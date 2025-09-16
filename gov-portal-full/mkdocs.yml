@@ -122,55 +122,53 @@ extra_css:
   - stylesheets/contrast-fixes.css
   - stylesheets/mermaid-fixes.css
   - stylesheets/navigation-fixes.css
+  - stylesheets/tabs-vertical-fix.css
+  - stylesheets/hero-text-override.css
 
 # Extra JavaScript for Mermaid diagrams
 extra_javascript:
   - https://unpkg.com/mermaid@10.6.1/dist/mermaid.min.js
   - javascripts/mermaid-config.js
 
-# Navigation
+# Navigation - Optimized for better visibility
 nav:
   - 🏠 Inicio: index.md
-  
-  - 🚀 Empieza Aquí: start-here.md
-  
-  - 👨‍💻 Desarrolladores:
-    - Onboarding:
-      - Guía de Onboarding: developers/onboarding/guia-onboarding-desarrolladores.md
-    - Guías de Instalación:
-      - Instalación Nova-Cell: developers/guides/nova-cell-installation-guide.md
-      - Entorno Local: developers/guides/local-development-setup.md
-      - Mejores Prácticas: developers/guides/best-practices-ai-development.md
-    - Academia de Desarrolladores:
-      - Curriculum Completo: developers/academy/curriculum-desarrolladores-ai.md
-    - Tutoriales:
-      - Integración API: developers/tutorials/api-integration-guide.md
-    - Referencia:
-      - Troubleshooting y FAQ: developers/reference/troubleshooting-faq.md
-  
-  - 📊 IMPACT Dashboard:
-    - Métricas de Valor: dashboard/impact-metrics.md
-    - Demo Interactivo: dashboard/impact-demo.html
-  
-  - 🗺️ Journey de Adopción:
-    - Vista General: journey/index.md
-    - 1. Explorar: journey/explorar.md
-    - 2. Experimentar: journey/experimentar.md
-    - 3. Construir: journey/construir.md
-    - 4. Validar: journey/validar.md
-    - 5. Desplegar: journey/desplegar.md
-    - 6. Escalar: journey/escalar.md
+
+  - 🚀 Empezar:
+    - Guía Rápida: start-here.md
+    - Journey de Adopción:
+      - Vista General: journey/index.md
+      - 1. Explorar: journey/explorar.md
+      - 2. Experimentar: journey/experimentar.md
+      - 3. Construir: journey/construir.md
+      - 4. Validar: journey/validar.md
+      - 5. Desplegar: journey/desplegar.md
+      - 6. Escalar: journey/escalar.md
     - Green Paths:
       - Introducción: journey/green-paths/index.md
       - RAG Assistant: journey/green-paths/rag-assistant.md
       - Chatbot Call Center: journey/green-paths/chatbot-call-center.md
       - Document Classification: journey/green-paths/document-classification.md
       - Credit Scoring: journey/green-paths/credit-scoring.md
-  
-  - 🛠️ Servicios y Soporte:
+
+  - 💻 Desarrollo:
+    - Desarrolladores:
+      - Onboarding: developers/onboarding/guia-onboarding-desarrolladores.md
+      - 🔄 SDLC con IA: sdlc-dod-ai-view.md
+      - Instalación Nova-Cell: developers/guides/nova-cell-installation-guide.md
+      - Entorno Local: developers/guides/local-development-setup.md
+      - Mejores Prácticas: developers/guides/best-practices-ai-development.md
+      - Curriculum Completo: developers/academy/curriculum-desarrolladores-ai.md
+      - Integración API: developers/tutorials/api-integration-guide.md
+      - Troubleshooting FAQ: developers/reference/troubleshooting-faq.md
+    - IMPACT Dashboard:
+      - Métricas de Valor: dashboard/impact-metrics.md
+      - Demo Interactivo: dashboard/impact-demo.html
+
+  - 🛠️ Servicios:
     - Vista General: servicios/index.md
     - Catálogo de Servicios: servicios/catalogo-servicios.md
-    - Evaluación de Modelos LLM: servicios/evaluacion-modelos-llm.md
+    - Evaluación Modelos LLM: servicios/evaluacion-modelos-llm.md
     - Arquitecto de Adopción: servicios/arquitecto-adopcion.md
     - Plataforma Nova-Cell:
       - Hub Principal: servicios/plataforma/nova-cell-hub.md
@@ -179,8 +177,8 @@ nav:
       - Knowledge Base: servicios/plataforma/nova-cell.md
     - Red Teaming IA: servicios/red-teaming.md
     - Solicitar Apoyo: servicios/solicitar-apoyo.md
-  
-  - 📚 Recursos y Conocimiento:
+
+  - 📚 Recursos:
     - Academia:
       - Hub de Academia: recursos/academia/index.md
       - Rutas de Aprendizaje: recursos/academia/rutas-aprendizaje.md
@@ -207,29 +205,32 @@ nav:
       - ROI Calculator: tools/roi-calculator.md
       - Dashboard IMPACT: tools/dashboard-impact.md
       - Opportunity Radar: tools/opportunity-radar.md
-  
-  - 📊 Gobernanza y Compliance:
+
+  - 🏛️ Gobernanza:
     - Políticas y Frameworks:
-      - Uso Responsable de IA: gobernanza/politica-uso-responsable-ia.md
-      - Validación de Modelos: gobernanza/procedimiento-validacion-modelos.md
+      - Uso Responsable IA: gobernanza/politica-uso-responsable-ia.md
+      - Validación Modelos: gobernanza/procedimiento-validacion-modelos.md
       - Framework AISIA: gobernanza/framework-aisia.md
       - Privacidad y Datos: gobernanza/privacidad-datos.md
       - Checklist Seguridad: gobernanza/checklist-seguridad.md
+    - Diagnóstico IMPACT:
+      - Resultados: diagnostico-impact/resultados.md
     - Operating Model:
       - Modelo Operativo CoE: gobernanza/operating-model-coe.md
-      - Plan de Comunicación: gobernanza/plan-comunicacion-coe.md
+      - Plan Comunicación: gobernanza/plan-comunicacion-coe.md
+      - DoD SDLC con IA: sdlc-dod-ai-view.md
     - Métricas y Dashboards:
       - Dashboard Portfolio: metricas/dashboard-portfolio.md
       - Dashboard IMPACT: metricas/dashboard-impact.md
       - Dashboard Riesgos: metricas/dashboard-riesgos.md
       - Mi Proyecto: metricas/mi-proyecto.md
-    - 📋 Anexos y Formularios:
-      - Formulario Caso de Uso: annexes/anexo-a-formulario-caso-uso.md
+    - Anexos y Formularios:
+      - Formulario Caso Uso: annexes/anexo-a-formulario-caso-uso.md
       - Checklist AISIA: annexes/anexo-b-checklist-aisia.md
       - Matriz de Riesgos: annexes/anexo-c-matriz-riesgos.md
-      - Plantillas de Documentación: annexes/anexo-d-plantillas.md
-      - Protocolo Respuesta Incidentes: annexes/anexo-e-respuesta-incidentes.md
-      - Directorio de Recursos: annexes/anexo-f-directorio.md
+      - Plantillas Documentación: annexes/anexo-d-plantillas.md
+      - Protocolo Incidentes: annexes/anexo-e-respuesta-incidentes.md
+      - Directorio Recursos: annexes/anexo-f-directorio.md
 
 # Extra configuration
 extra:

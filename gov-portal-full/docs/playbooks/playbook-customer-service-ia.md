@@ -830,9 +830,9 @@ IA: "He bloqueado tu tarjeta inmediatamente. Recibirás una confirmación por SM
 - **Jira Service Management:** Gestión de tickets y quejas
 
 ### Contactos Clave
-- **Equipo de Servicio al Cliente:** atencion-cliente@banco.mx
-- **CoE IA:** coe-ia@banco.mx
-- **Cumplimiento y Ética:** cumplimiento-ia@banco.mx
+- **Equipo de Servicio al Cliente:** atencion-cliente@novasolutionsystems.com
+- **CoE IA:** coe-ia@novasolutionsystems.com
+- **Cumplimiento y Ética:** cumplimiento-ia@novasolutionsystems.com
 - **Soporte Técnico IA 24/7:** +52-555-XXX-XXXX
 
 ### Actualizaciones del Documento

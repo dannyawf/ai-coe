@@ -648,16 +648,16 @@ graph LR
 
 | Rol | Nombre | Móvil | Email | Horario |
 |-----|--------|-------|-------|---------|
-| **AI CoE Lead** | Juan Pérez | +52 555-1234-001 | jperez@banco.mx | 24/7 |
-| **Incident Commander #1** | María García | +52 555-1234-002 | mgarcia@banco.mx | Principal |
-| **Incident Commander #2** | Carlos López | +52 555-1234-003 | clopez@banco.mx | Backup |
-| **ML Platform Lead** | Ana Martínez | +52 555-1234-004 | amartinez@banco.mx | 24/7 |
-| **Data Science Lead** | Roberto Silva | +52 555-1234-005 | rsilva@banco.mx | Business hrs |
-| **SOC Duty Manager** | -- | Ext. 9999 | soc@banco.mx | 24/7 |
-| **Legal AI** | Patricia Ruiz | +52 555-1234-006 | pruiz@banco.mx | Business hrs |
-| **Risk Management** | Diego Hernández | +52 555-1234-007 | dhernandez@banco.mx | 24/7 |
-| **PR/Communications** | Laura Torres | +52 555-1234-008 | ltorres@banco.mx | 24/7 |
-| **CNBV Liaison** | Fernando Gómez | +52 555-1234-009 | fgomez@banco.mx | Business hrs |
+| **AI CoE Lead** | Juan Pérez | +52 555-1234-001 | jperez@novasolutionsystems.com | 24/7 |
+| **Incident Commander #1** | María García | +52 555-1234-002 | mgarcia@novasolutionsystems.com | Principal |
+| **Incident Commander #2** | Carlos López | +52 555-1234-003 | clopez@novasolutionsystems.com | Backup |
+| **ML Platform Lead** | Ana Martínez | +52 555-1234-004 | amartinez@novasolutionsystems.com | 24/7 |
+| **Data Science Lead** | Roberto Silva | +52 555-1234-005 | rsilva@novasolutionsystems.com | Business hrs |
+| **SOC Duty Manager** | -- | Ext. 9999 | soc@novasolutionsystems.com | 24/7 |
+| **Legal AI** | Patricia Ruiz | +52 555-1234-006 | pruiz@novasolutionsystems.com | Business hrs |
+| **Risk Management** | Diego Hernández | +52 555-1234-007 | dhernandez@novasolutionsystems.com | 24/7 |
+| **PR/Communications** | Laura Torres | +52 555-1234-008 | ltorres@novasolutionsystems.com | 24/7 |
+| **CNBV Liaison** | Fernando Gómez | +52 555-1234-009 | fgomez@novasolutionsystems.com | Business hrs |
 
 **Números de Emergencia:**
 - War Room Hotline: **5555**
@@ -750,7 +750,7 @@ generate-report --incident $ID --format executive
 ## 📞 Soporte y Contacto
 
 **AI Incident Response Team**
-- 📧 ai-incidents@banco.mx
+- 📧 ai-incidents@novasolutionsystems.com
 - 💬 Slack: #ai-incident-response
 - 📱 Hotline 24/7: 5555
 - 🌐 Wiki: https://wiki.banco.interno/ai-incidents

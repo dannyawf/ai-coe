@@ -53,12 +53,12 @@ graph TB
 
 ```yaml
 production:
-  base_url: https://api.coe-ia.banco.mx
+  base_url: https://api.coe-ia.novasolutionsystems.com
   version: v1
-  full_path: https://api.coe-ia.banco.mx/api/v1
+  full_path: https://api.coe-ia.novasolutionsystems.com/api/v1
 
 staging:
-  base_url: https://api-staging.coe-ia.banco.mx
+  base_url: https://api-staging.coe-ia.novasolutionsystems.com
   version: v1
 ```
 
@@ -110,7 +110,7 @@ Content-Type: application/json
   "error": "RATE_LIMIT_EXCEEDED",
   "message": "API rate limit exceeded. Please retry after 60 seconds.",
   "retry_after": 60,
-  "documentation": "https://docs.coe-ia.banco.mx/rate-limits"
+  "documentation": "https://docs.coe-ia.novasolutionsystems.com/rate-limits"
 }
 ```
 
@@ -154,7 +154,7 @@ Authorization: Bearer <token>
   "version": "1.0.0",
   "created_at": "2025-01-10T10:30:00Z",
   "created_by": "user_123",
-  "review_url": "https://knowledge-hub.banco.mx/review/prmpt_7f8a9b2c3d4e5f6g",
+  "review_url": "https://knowledge-hub.novasolutionsystems.com/review/prmpt_7f8a9b2c3d4e5f6g",
   "estimated_review_time": "2-3 días hábiles"
 }
 ```
@@ -790,7 +790,7 @@ Authorization: Bearer <token>
 
 {
   "nombre": "Notificaciones de Compliance",
-  "callback_url": "https://myapp.banco.mx/webhooks/coe-ia",
+  "callback_url": "https://myapp.novasolutionsystems.com/webhooks/coe-ia",
   "eventos": [
     "artifact.approved",
     "compliance.violation",
@@ -818,9 +818,9 @@ Authorization: Bearer <token>
   "subscription_id": "sub_4k5l6m7n8o9p",
   "estado": "ACTIVE",
   "eventos_suscritos": 3,
-  "callback_url": "https://myapp.banco.mx/webhooks/coe-ia",
+  "callback_url": "https://myapp.novasolutionsystems.com/webhooks/coe-ia",
   "proxima_verificacion": "2025-01-11T00:00:00Z",
-  "webhook_test_url": "https://api.coe-ia.banco.mx/webhooks/test/sub_4k5l6m7n8o9p"
+  "webhook_test_url": "https://api.coe-ia.novasolutionsystems.com/webhooks/test/sub_4k5l6m7n8o9p"
 }
 ```
 
@@ -858,7 +858,7 @@ Authorization: Bearer <token>
 
 ```javascript
 // Conexión WebSocket
-const ws = new WebSocket('wss://events.coe-ia.banco.mx/v1/stream');
+const ws = new WebSocket('wss://events.coe-ia.novasolutionsystems.com/v1/stream');
 
 // Autenticación
 ws.onopen = () => {
@@ -915,7 +915,7 @@ from coe_ia.models import PromptRequest, SearchQuery
 # Inicializar cliente
 client = Client(
     api_key="your_api_key",
-    base_url="https://api.coe-ia.banco.mx",
+    base_url="https://api.coe-ia.novasolutionsystems.com",
     timeout=30
 )
 
@@ -969,7 +969,7 @@ public class Example {
         // Inicializar cliente
         Client client = Client.builder()
             .apiKey("your_api_key")
-            .baseUrl("https://api.coe-ia.banco.mx")
+            .baseUrl("https://api.coe-ia.novasolutionsystems.com")
             .build();
         
         // Crear prompt
@@ -1007,7 +1007,7 @@ import { CoeIaClient, PromptRequest, ImpactMetrics } from '@banco/coe-ia-sdk';
 // Inicializar cliente
 const client = new CoeIaClient({
   apiKey: process.env.COE_IA_API_KEY,
-  baseUrl: 'https://api.coe-ia.banco.mx'
+  baseUrl: 'https://api.coe-ia.novasolutionsystems.com'
 });
 
 // Función async para crear prompt
@@ -1377,14 +1377,14 @@ async def handle_webhook(request: Request):
 
 ### Recursos de Desarrollo
 
-- **Portal de Desarrolladores**: [https://developers.coe-ia.banco.mx](https://developers.coe-ia.banco.mx)
-- **API Status**: [https://status.coe-ia.banco.mx](https://status.coe-ia.banco.mx)
-- **Postman Collection**: [Descargar](https://api.coe-ia.banco.mx/postman-collection.json)
-- **OpenAPI Spec**: [https://api.coe-ia.banco.mx/openapi.yaml](https://api.coe-ia.banco.mx/openapi.yaml)
+- **Portal de Desarrolladores**: [https://developers.coe-ia.novasolutionsystems.com](https://developers.coe-ia.novasolutionsystems.com)
+- **API Status**: [https://status.coe-ia.novasolutionsystems.com](https://status.coe-ia.novasolutionsystems.com)
+- **Postman Collection**: [Descargar](https://api.coe-ia.novasolutionsystems.com/postman-collection.json)
+- **OpenAPI Spec**: [https://api.coe-ia.novasolutionsystems.com/openapi.yaml](https://api.coe-ia.novasolutionsystems.com/openapi.yaml)
 
 ### Contacto
 
-- **Email**: api-support@coe-ia.banco.mx
+- **Email**: ai@novasolutionsystems.com
 - **Slack**: #coe-ia-api-support
 - **Teams**: Canal API CoE IA
 - **Horario de Soporte**: Lun-Vie 9:00-18:00 CST

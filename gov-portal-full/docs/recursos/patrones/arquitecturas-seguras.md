@@ -650,21 +650,21 @@ class AISecurityAudit:
 - [ISO/IEC 23053 - AI Trustworthiness](https://www.iso.org/standard/74438.html)
 
 ### Herramientas
-- [AI Security Scanner](https://nova-cell.banco.mx/tools/security-scanner)
+- [AI Security Scanner](https://nova-cell.novasolutionsystems.com/tools/security-scanner)
 - [Adversarial Robustness Toolkit](https://github.com/Trusted-AI/adversarial-robustness-toolbox)
 - [Privacy Meter](https://github.com/privacytrustlab/ml_privacy_meter)
 
 ### Contacto
-- **Security Team**: security-ai@banco.mx
-- **Incident Response**: soc@banco.mx (24/7)
-- **CoE Support**: coe-ia@banco.mx
+- **Security Team**: security-ai@novasolutionsystems.com
+- **Incident Response**: soc@novasolutionsystems.com (24/7)
+- **CoE Support**: coe-ia@novasolutionsystems.com
 
 ---
 
 **¿Necesitas una evaluación de seguridad para tu proyecto de IA?**
 
-[Solicitar Security Assessment](mailto:security-ai@banco.mx?subject=AI%20Security%20Assessment){.md-button .md-button--primary}
-[Reportar Incidente](https://security.banco.mx/incident){.md-button}
+[Solicitar Security Assessment](mailto:security-ai@novasolutionsystems.com?subject=AI%20Security%20Assessment){.md-button .md-button--primary}
+[Reportar Incidente](https://security.novasolutionsystems.com/incident){.md-button}
 
 ---
 

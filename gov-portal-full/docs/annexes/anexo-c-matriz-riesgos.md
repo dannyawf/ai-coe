@@ -475,7 +475,7 @@ new_risk = risk_mgr.create_risk({
     "probability": 4,
     "impact": 3,
     "description": "Degradación detectada en modelo de fraude",
-    "owner": "jperez@banco.mx",
+    "owner": "jperez@novasolutionsystems.com",
     "controls": ["CM-02", "CO-01"]
 })
 
@@ -580,7 +580,7 @@ report = risk_mgr.generate_report(
 ## 📞 Contacto y Soporte
 
 **Gestión de Riesgos IA - CoE**
-- 📧 risk-ai@banco.mx
+- 📧 risk-ai@novasolutionsystems.com
 - 💬 Teams: #risk-management-ai
 - 📱 Hotline: 5555 (Riesgos Críticos)
 - 🌐 Portal: https://risk.nova-cell.banco.interno

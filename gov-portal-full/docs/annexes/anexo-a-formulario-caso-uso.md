@@ -380,7 +380,7 @@ gantt
    - Asegure alineación con arquitectura empresarial
 
 4. **Envío**
-   - Envíe el formulario completo a: `coe-ia@banco.mx`
+   - Envíe el formulario completo a: `coe-ia@novasolutionsystems.com`
    - Asunto: `[Solicitud CU] - [Nombre del Caso de Uso]`
    - Adjunte toda la documentación de soporte
 
@@ -432,7 +432,7 @@ Los casos de uso serán evaluados según los siguientes criterios:
 
 ### Centro de Excelencia de IA
 
-- **Email:** coe-ia@banco.mx
+- **Email:** coe-ia@novasolutionsystems.com
 - **Teams:** Canal CoE-IA-Soporte
 - **Portal:** https://coe-ia.banco.interno
 - **Horario de Atención:** Lunes a Viernes, 9:00 - 18:00 hrs

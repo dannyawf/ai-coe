@@ -382,8 +382,8 @@ roi_calculator = {
 
 ### Canales de Contacto
 
-- **Email:** arquitecto-ia@banco.mx
-- **Portal:** nova-cell.banco.mx/arquitecto
+- **Email:** arquitecto-ia@novasolutionsystems.com
+- **Portal:** nova-cell.novasolutionsystems.com/arquitecto
 - **Teléfono:** +52 55 1234 5678 ext. 2100
 - **WhatsApp Business:** +52 55 9876 5432
 
@@ -432,7 +432,7 @@ Para asignarte el mejor arquitecto, necesitamos:
 
 **¿Listo para acelerar tu adopción de IA con un experto dedicado?**
 
-[Solicitar Arquitecto](mailto:arquitecto-ia@banco.mx?subject=Solicitud%20Arquitecto%20Adopción){.md-button .md-button--primary}
+[Solicitar Arquitecto](mailto:arquitecto-ia@novasolutionsystems.com?subject=Solicitud%20Arquitecto%20Adopción){.md-button .md-button--primary}
 [Agendar Consulta Gratuita](https://calendly.com/coe-ia/arquitecto-consultation){.md-button}
 
 ---

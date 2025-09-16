@@ -719,4 +719,4 @@ El escalamiento no es un destino, sino un proceso continuo de evolución, aprend
 
 ---
 
-Para soporte continuo: coe-ia@banco.mx
+Para soporte continuo: coe-ia@novasolutionsystems.com

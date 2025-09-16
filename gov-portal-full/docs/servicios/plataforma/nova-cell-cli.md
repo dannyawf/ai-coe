@@ -42,17 +42,17 @@ npm install --save-dev @nova-cell/cli
 #### Opción 3: Binario Standalone
 ```bash
 # macOS
-curl -L https://nova-cell.banco.mx/cli/latest/mac -o nova
+curl -L https://nova-cell.novasolutionsystems.com/cli/latest/mac -o nova
 chmod +x nova
 sudo mv nova /usr/local/bin/
 
 # Linux
-wget https://nova-cell.banco.mx/cli/latest/linux -O nova
+wget https://nova-cell.novasolutionsystems.com/cli/latest/linux -O nova
 chmod +x nova
 sudo mv nova /usr/local/bin/
 
 # Windows (PowerShell como Admin)
-Invoke-WebRequest -Uri https://nova-cell.banco.mx/cli/latest/windows -OutFile nova.exe
+Invoke-WebRequest -Uri https://nova-cell.novasolutionsystems.com/cli/latest/windows -OutFile nova.exe
 Move-Item nova.exe C:\Windows\System32\
 ```
 
@@ -325,12 +325,12 @@ defaults:
 
 profiles:
   development:
-    api_endpoint: https://dev.nova-cell.banco.mx
+    api_endpoint: https://dev.nova-cell.novasolutionsystems.com
     timeout: 30
     retry_attempts: 3
     
   production:
-    api_endpoint: https://api.nova-cell.banco.mx
+    api_endpoint: https://api.nova-cell.novasolutionsystems.com
     timeout: 60
     retry_attempts: 5
     ssl_verify: true
@@ -505,7 +505,7 @@ nova job status <job-id>  # Verificar después
 nova doctor --network
 
 # Usar proxy
-export HTTPS_PROXY=http://proxy.banco.mx:8080
+export HTTPS_PROXY=http://proxy.novasolutionsystems.com:8080
 nova --proxy model list
 
 # Modo offline (comandos limitados)

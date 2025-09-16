@@ -1,0 +1,171 @@
+# =============================================================================
+# CATÁLOGO DE VARIABLES - Centro de Excelencia AI
+# =============================================================================
+# Este archivo centraliza todas las variables reemplazables del portal.
+# Usar formato {{VARIABLE_NAME}} en el contenido para reemplazo automático.
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# INFORMACIÓN DE LA INSTITUCIÓN
+# -----------------------------------------------------------------------------
+organization:
+  name: "Nova"                           # {{BANK_NAME}}
+  full_name: "Nova Solution Systems SA de CV" # {{BANK_FULL_NAME}}
+  short_name: "Nova"                        # {{BANK_SHORT}}
+  domain: "novasolutionsystems.com"                      # {{BANK_DOMAIN}}
+  website: "https://novasolutionsystems.com"         # {{BANK_WEBSITE}}
+
+# -----------------------------------------------------------------------------
+# CENTRO DE EXCELENCIA (COE)
+# -----------------------------------------------------------------------------
+coe:
+  name: "Centro de Excelencia de IA"      # {{COE_NAME}}
+  short_name: "CoE IA"                    # {{COE_SHORT}}
+  department: "Innovación y Tecnología"   # {{COE_DEPARTMENT}}
+
+  # Correos electrónicos del CoE
+  emails:
+    general: "ai@novasolutionsystems.com"                # {{COE_EMAIL}}
+    support: "ai@novasolutionsystems.com"        # {{COE_SUPPORT_EMAIL}}
+    admin: "ai@novasolutionsystems.com"            # {{COE_ADMIN_EMAIL}}
+    gerencia: "ai@novasolutionsystems.com"      # {{COE_MANAGEMENT_EMAIL}}
+    escalation: "ai@novasolutionsystems.com"  # {{COE_ESCALATION_EMAIL}}
+
+  # Teléfonos y extensiones
+  phones:
+    main: "+52 55 1234 5678"              # {{COE_PHONE}}
+    extension: "9999"                       # {{COE_EXTENSION}}
+    hotline: "9000"                        # {{COE_HOTLINE}}
+    support: "9001"                        # {{COE_SUPPORT_EXT}}
+
+# -----------------------------------------------------------------------------
+# PLATAFORMA NOVA-CELL
+# -----------------------------------------------------------------------------
+nova_cell:
+  name: "Nova-Cell Platform"              # {{NOVA_NAME}}
+  version: "2.0.0"                        # {{NOVA_VERSION}}
+
+  # Correos de soporte Nova-Cell
+  emails:
+    support: "ai@novasolutionsystems.com"       # {{NOVA_SUPPORT_EMAIL}}
+    cli: "ai@novasolutionsystems.com"        # {{NOVA_CLI_EMAIL}}
+    help: "ai@novasolutionsystems.com"        # {{NOVA_HELP_EMAIL}}
+    api: "ai@novasolutionsystems.com"     # {{NOVA_API_EMAIL}}
+
+  # URLs de servicios
+  urls:
+    portal: "https://ai.novasolutionsystems.com"        # {{NOVA_PORTAL_URL}}
+    api: "https://api.novasolutionsystems.com"       # {{NOVA_API_URL}}
+    docs: "https://docs.novasolutionsystems.com"     # {{NOVA_DOCS_URL}}
+    hub: "https://hub.novasolutionsystems.com"       # {{NOVA_HUB_URL}}
+
+# -----------------------------------------------------------------------------
+# MÉTRICAS IMPACT
+# -----------------------------------------------------------------------------
+impact:
+  email: "ai@novasolutionsystems.com"         # {{IMPACT_EMAIL}}
+  dashboard: "https://impact.novasolutionsystems.com"     # {{IMPACT_DASHBOARD_URL}}
+
+# -----------------------------------------------------------------------------
+# HERRAMIENTAS ESPECÍFICAS
+# -----------------------------------------------------------------------------
+tools:
+  aisia:
+    email: "ai@novasolutionsystems.com"        # {{AISIA_EMAIL}}
+    url: "aisia.novasolutionsystems.com"          # {{AISIA_URL}}
+
+  playbooks:
+    email: "ai@novasolutionsystems.com" # {{PLAYBOOKS_EMAIL}}
+
+# -----------------------------------------------------------------------------
+# CANALES DE COMUNICACIÓN
+# -----------------------------------------------------------------------------
+communication:
+  slack:
+    workspace: "banco-ai"                  # {{SLACK_WORKSPACE}}
+    url: "https://banco-ai.slack.com"      # {{SLACK_URL}}
+    channels:
+      general: "#ai-general"               # {{SLACK_GENERAL}}
+      support: "#ai-support"               # {{SLACK_SUPPORT}}
+      dev: "#ai-developers"                # {{SLACK_DEV}}
+
+  teams:
+    url: "https://chat.google.com/room/AAQAugDuKpE?cls=1" # {{TEAMS_URL}}
+    channel: "Centro de Excelencia IA"     # {{TEAMS_CHANNEL}}
+
+# -----------------------------------------------------------------------------
+# SERVICIOS EXTERNOS
+# -----------------------------------------------------------------------------
+external:
+  github:
+    org: "banco-ai"                        # {{GITHUB_ORG}}
+    url: "https://github.com/banco-ai"     # {{GITHUB_URL}}
+
+  servicenow:
+    instance: "banco.service-now.com"      # {{SERVICENOW_URL}}
+
+  confluence:
+    url: "https://banco.atlassian.net"     # {{CONFLUENCE_URL}}
+
+# -----------------------------------------------------------------------------
+# COMPLIANCE Y REGULATORY
+# -----------------------------------------------------------------------------
+compliance:
+  contact: "compliance-ai@banco.mx"        # {{COMPLIANCE_EMAIL}}
+  regulatory:
+    cnbv: "reportes-cnbv@banco.mx"        # {{CNBV_EMAIL}}
+    banxico: "reportes-banxico@banco.mx"   # {{BANXICO_EMAIL}}
+
+# -----------------------------------------------------------------------------
+# AMBIENTES Y ENDPOINTS
+# -----------------------------------------------------------------------------
+environments:
+  development:
+    api: "http://localhost:8080"           # {{DEV_API_URL}}
+    dashboard: "http://localhost:3000"     # {{DEV_DASHBOARD_URL}}
+    docs: "http://localhost:8001"          # {{DEV_DOCS_URL}}
+
+  staging:
+    api: "https://staging-api.banco.mx"    # {{STAGING_API_URL}}
+    dashboard: "https://staging.banco.mx"  # {{STAGING_DASHBOARD_URL}}
+
+  production:
+    api: "https://api.banco.mx"            # {{PROD_API_URL}}
+    dashboard: "https://coe.banco.mx"      # {{PROD_DASHBOARD_URL}}
+
+# -----------------------------------------------------------------------------
+# INFORMACIÓN LEGAL Y COPYRIGHT
+# -----------------------------------------------------------------------------
+legal:
+  company: "Nova Solution Systems S.A. de C.V."    # {{LEGAL_NAME}}
+  year: "2025"                             # {{CURRENT_YEAR}}
+  copyright: "© 2025 Nova"        # {{COPYRIGHT}}
+  privacy_url: "https://novasolutionsystems.com/privacy-policy.html"  # {{PRIVACY_URL}}
+  terms_url: "https://novasolutionsystems.com/terms-of-service.html"      # {{TERMS_URL}}
+
+# -----------------------------------------------------------------------------
+# CONFIGURACIÓN DE MARCA
+# -----------------------------------------------------------------------------
+branding:
+  primary_color: "#003366"                 # {{PRIMARY_COLOR}}
+  secondary_color: "#0066CC"               # {{SECONDARY_COLOR}}
+  logo_url: "/assets/logo.svg"             # {{LOGO_URL}}
+  favicon: "/favicon.ico"                  # {{FAVICON_URL}}
+
+# -----------------------------------------------------------------------------
+# TAGS DE USO COMÚN
+# -----------------------------------------------------------------------------
+# Estos tags pueden usarse directamente en el contenido:
+#
+# {{BANK_NAME}} - Nombre del banco
+# {{COE_EMAIL}} - Email general del CoE
+# {{COE_SUPPORT_EMAIL}} - Email de soporte
+# {{NOVA_SUPPORT_EMAIL}} - Soporte Nova-Cell
+# {{SLACK_URL}} - URL de Slack
+# {{GITHUB_URL}} - URL de GitHub
+#
+# Para usar en documentación Markdown:
+# - Contacto: {{COE_SUPPORT_EMAIL}}
+# - Teléfono: {{COE_PHONE}} ext. {{COE_EXTENSION}}
+# - Portal: {{NOVA_PORTAL_URL}}
+# -----------------------------------------------------------------------------

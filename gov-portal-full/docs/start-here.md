@@ -53,9 +53,22 @@ Selecciona tu rol para ver recursos y acciones relevantes para ti:
     !!! tip "Recurso destacado"
         📘 [Playbook Banca Digital IA](../recursos/conocimiento/playbooks/playbook-banca-digital-ia/) - Estrategias probadas para transformación digital
 
-=== "👨‍💻 Data Scientist / ML Engineer"
+=== "👨‍💻 Desarrollador / Software Engineer"
 
-    ### Tu camino técnico:
+    ### Aumenta tu productividad con IA:
+
+    1. **Acelera** tu desarrollo con Nova-Cell → [Nova-Cell Platform](../servicios/plataforma/nova-cell/)
+    2. **Transforma** tu SDLC con IA → [Definition of Done + IA](../sdlc-dod-ai-view/)
+    3. **Automatiza** tareas repetitivas → [Guía de Automatización](#automatizacion-desarrollo)
+    4. **Mejora** la calidad del código → [IA para Code Review](#code-review-ia)
+    5. **Optimiza** debugging y testing → [IA para Testing](#testing-ia)
+    
+    !!! info "Herramienta clave"
+        🔧 Nova-Cell te ayuda a codificar más rápido, generar tests automáticamente y documentar tu código
+
+=== "🧬 Data Scientist / ML Engineer"
+
+    ### Tu camino técnico en ML:
     
     1. **Accede** al sandbox de experimentación → [Nova-Cell Platform](../servicios/plataforma/nova-cell/)
     2. **Implementa** con patrones preaprobados → [Green Paths](#green-paths)
@@ -211,7 +224,7 @@ Acelera tu implementación con estos patrones validados y preaprobados por gober
 <div class="nova-card-feature" style="text-align: center;">
     <span style="font-size: 3em;">📧</span>
     <h4>Email</h4>
-    <p><a href="mailto:coe-ia@banco.mx">coe-ia@banco.mx</a></p>
+    <p><a href="mailto:coe-ia@novasolutionsystems.com">coe-ia@novasolutionsystems.com</a></p>
 </div>
 
 <div class="nova-card-feature" style="text-align: center;">

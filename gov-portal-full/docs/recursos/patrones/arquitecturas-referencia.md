@@ -696,21 +696,21 @@ considerations:
 - [API Standards](../../technical/api-documentation.md)
 
 ### Herramientas
-- [Architecture Decision Records](https://nova-cell.banco.mx/tools/adr)
+- [Architecture Decision Records](https://nova-cell.novasolutionsystems.com/tools/adr)
 - [Cost Calculator](../../tools/roi-calculator.md)
-- [Performance Benchmarks](https://nova-cell.banco.mx/benchmarks)
+- [Performance Benchmarks](https://nova-cell.novasolutionsystems.com/benchmarks)
 
 ### Soporte
-- **Architecture Team**: architecture@banco.mx
-- **CoE Support**: coe-ia@banco.mx
+- **Architecture Team**: architecture@novasolutionsystems.com
+- **CoE Support**: coe-ia@novasolutionsystems.com
 - **Office Hours**: Martes y Jueves 15:00-17:00
 
 ---
 
 **¿Necesitas ayuda con tu arquitectura de IA?**
 
-[Solicitar Revisión Arquitectónica](mailto:architecture@banco.mx?subject=Architecture%20Review){.md-button .md-button--primary}
-[Descargar Templates](https://nova-cell.banco.mx/templates/architectures){.md-button}
+[Solicitar Revisión Arquitectónica](mailto:architecture@novasolutionsystems.com?subject=Architecture%20Review){.md-button .md-button--primary}
+[Descargar Templates](https://nova-cell.novasolutionsystems.com/templates/architectures){.md-button}
 
 ---
 

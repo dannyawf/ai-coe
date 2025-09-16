@@ -4,7 +4,7 @@
 
 **Versión API:** 2.0  
 **Última Actualización:** Enero 2025  
-**Base URL:** `https://api.nova-cell.banco.mx/v2`
+**Base URL:** `https://api.nova-cell.novasolutionsystems.com/v2`
 
 ## 🔐 Autenticación
 
@@ -17,7 +17,7 @@ import requests
 def get_access_token(client_id, client_secret):
     """Obtener token de acceso OAuth"""
     response = requests.post(
-        "https://api.nova-cell.banco.mx/v2/auth/token",
+        "https://api.nova-cell.novasolutionsystems.com/v2/auth/token",
         json={
             "client_id": client_id,
             "client_secret": client_secret,
@@ -36,7 +36,7 @@ headers = {
 ```javascript
 // JavaScript - Autenticación
 async function authenticate(clientId, clientSecret) {
-    const response = await fetch('https://api.nova-cell.banco.mx/v2/auth/token', {
+    const response = await fetch('https://api.nova-cell.novasolutionsystems.com/v2/auth/token', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -258,7 +258,7 @@ class NovaGraphQLClient:
 
 # Ejemplo de uso
 client = NovaGraphQLClient(
-    "https://api.nova-cell.banco.mx/graphql",
+    "https://api.nova-cell.novasolutionsystems.com/graphql",
     access_token
 )
 
@@ -304,7 +304,7 @@ result = client.execute_query(
 // JavaScript - GraphQL Mutations
 import { GraphQLClient } from 'graphql-request';
 
-const client = new GraphQLClient('https://api.nova-cell.banco.mx/graphql', {
+const client = new GraphQLClient('https://api.nova-cell.novasolutionsystems.com/graphql', {
     headers: {
         authorization: `Bearer ${token}`,
     },
@@ -367,7 +367,7 @@ async def subscribe_to_model_updates(project_id: str):
     """Suscribirse a actualizaciones de modelo en tiempo real"""
     
     transport = WebsocketsTransport(
-        url='wss://api.nova-cell.banco.mx/graphql',
+        url='wss://api.nova-cell.novasolutionsystems.com/graphql',
         headers={'Authorization': f'Bearer {token}'}
     )
     
@@ -1092,14 +1092,14 @@ class InputValidator {
 - [Java SDK](https://github.com/banco/nova-cell-java-sdk)
 
 ### Herramientas de Testing
-- [Postman Collection](https://api.nova-cell.banco.mx/postman)
-- [Swagger UI](https://api.nova-cell.banco.mx/swagger)
-- [GraphQL Playground](https://api.nova-cell.banco.mx/graphql-playground)
+- [Postman Collection](https://api.nova-cell.novasolutionsystems.com/postman)
+- [Swagger UI](https://api.nova-cell.novasolutionsystems.com/swagger)
+- [GraphQL Playground](https://api.nova-cell.novasolutionsystems.com/graphql-playground)
 
 ### Documentación
-- [API Reference](https://docs.nova-cell.banco.mx/api)
-- [Webhooks Guide](https://docs.nova-cell.banco.mx/webhooks)
-- [Error Codes](https://docs.nova-cell.banco.mx/errors)
+- [API Reference](https://docs.nova-cell.novasolutionsystems.com/api)
+- [Webhooks Guide](https://docs.nova-cell.novasolutionsystems.com/webhooks)
+- [Error Codes](https://docs.nova-cell.novasolutionsystems.com/errors)
 
 ---
 

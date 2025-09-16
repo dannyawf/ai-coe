@@ -324,7 +324,7 @@ content_filtering:
 access_control:
   require_authentication: true
   allowed_domains:
-    - banco.mx
+    - novasolutionsystems.com
   role_permissions:
     user:
       - read
@@ -408,10 +408,10 @@ open http://localhost:3000
 
 ## 📚 Recursos Adicionales
 
-- 📖 [Documentación completa en Confluence](https://confluence.banco.mx/rag-assistant)
-- 🎥 [Video tutorial paso a paso](https://learning.banco.mx/rag-tutorial)
+- 📖 [Documentación completa en Confluence](https://confluence.novasolutionsystems.com/rag-assistant)
+- 🎥 [Video tutorial paso a paso](https://learning.novasolutionsystems.com/rag-tutorial)
 - 💬 [Canal Teams de soporte](https://teams.microsoft.com/l/channel/rag-support)
-- 🐛 [Reportar issues](https://jira.banco.mx/rag-assistant)
+- 🐛 [Reportar issues](https://jira.novasolutionsystems.com/rag-assistant)
 
 ## 🤝 Soporte del CoE
 

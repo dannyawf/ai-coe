@@ -352,20 +352,20 @@ class ChatbotMonitoring:
 
 ### Herramientas
 - [ROI Calculator Chatbot](../../tools/roi-calculator.md)
-- [Conversation Designer](https://nova-cell.banco.mx/tools/conversation-designer)
-- [Intent Builder](https://nova-cell.banco.mx/tools/intent-builder)
+- [Conversation Designer](https://nova-cell.novasolutionsystems.com/tools/conversation-designer)
+- [Intent Builder](https://nova-cell.novasolutionsystems.com/tools/intent-builder)
 
 ### Contacto
-- **Product Owner**: Carlos Mendoza (carlos.mendoza@banco.mx)
-- **Tech Lead**: Ana Rivera (ana.rivera@banco.mx)
-- **CoE Support**: coe-ia@banco.mx
+- **Product Owner**: Carlos Mendoza (carlos.mendoza@novasolutionsystems.com)
+- **Tech Lead**: Ana Rivera (ana.rivera@novasolutionsystems.com)
+- **CoE Support**: coe-ia@novasolutionsystems.com
 
 ---
 
 **¿Listo para transformar tu call center con IA?**
 
-[Solicitar Workshop](mailto:coe-ia@banco.mx?subject=Workshop%20Chatbot%20Call%20Center){.md-button .md-button--primary}
-[Ver Demo en Vivo](https://nova-cell.banco.mx/demos/chatbot){.md-button}
+[Solicitar Workshop](mailto:coe-ia@novasolutionsystems.com?subject=Workshop%20Chatbot%20Call%20Center){.md-button .md-button--primary}
+[Ver Demo en Vivo](https://nova-cell.novasolutionsystems.com/demos/chatbot){.md-button}
 
 ---
 

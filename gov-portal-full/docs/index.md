@@ -34,6 +34,12 @@ hide:
   </div>
 
   <div class="banking-card">
+    <div class="card-icon">🔄</div>
+    <h3><a href="/sdlc-dod-ai-view/">SDLC con IA</a></h3>
+    <p>Definition of Done aumentado con IA para cada fase del ciclo de desarrollo, con casos de uso y mejoras específicas.</p>
+  </div>
+
+  <div class="banking-card">
     <div class="card-icon">🎓</div>
     <h3><a href="/academy/guia-capacitacion-product-owner-ia/">Academia de IA</a></h3>
     <p>Programas de formación y certificación en Inteligencia Artificial diseñados para todos los roles organizacionales.</p>
@@ -61,6 +67,58 @@ hide:
     <div class="card-icon">🏢</div>
     <h3><a href="/operating-model-coe/">Centro de Operaciones</a></h3>
     <p>Modelo operativo del CoE, catálogo de servicios y estrategia de comunicación para la adopción efectiva de IA.</p>
+  </div>
+</div>
+
+## 🎯 Diagnóstico de Adopción IA - Framework IMPACT
+
+<div class="nova-card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 12px; margin: 30px 0;">
+  <div style="text-align: center; color: white;">
+    <h2 style="margin: 0; font-size: 2rem; color: white;">📋 Evalúa tu Madurez en IA</h2>
+    <p style="margin: 15px 0; font-size: 1.1rem; opacity: 0.95;">
+      Completa nuestro diagnóstico para identificar las principales preocupaciones y oportunidades de tu equipo con el uso de IA
+    </p>
+    <div style="margin: 25px 0;">
+      <a href="https://forms.gle/sasDGBjZD6MPKUjt6" target="_blank" style="display: inline-block; background: white; color: #667eea; padding: 15px 40px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; margin: 0 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+        📝 Completar Diagnóstico
+      </a>
+      <a href="/diagnostico-impact/resultados/" style="display: inline-block; background: rgba(255,255,255,0.2); color: white; padding: 15px 40px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; margin: 0 10px; border: 2px solid white;">
+        📊 Ver Resultados
+      </a>
+    </div>
+    <p style="margin: 15px 0; font-size: 0.95rem; opacity: 0.85;">
+      ⏱️ Tiempo estimado: 10-15 minutos | 🎯 Personalizado por rol | 🔒 100% confidencial
+    </p>
+  </div>
+</div>
+
+<div class="info-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 30px 0;">
+  <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #28a745;">
+    <h4 style="color: #28a745; margin: 0 0 10px;">✅ ¿Qué obtienes?</h4>
+    <ul style="margin: 0; padding-left: 20px; color: #666;">
+      <li>Reporte personalizado de madurez</li>
+      <li>Recomendaciones específicas por área</li>
+      <li>Roadmap de adopción sugerido</li>
+      <li>Comparación con benchmarks del sector</li>
+    </ul>
+  </div>
+  <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #17a2b8;">
+    <h4 style="color: #17a2b8; margin: 0 0 10px;">🎯 ¿Para quién?</h4>
+    <ul style="margin: 0; padding-left: 20px; color: #666;">
+      <li>Líderes de equipo</li>
+      <li>Product Owners</li>
+      <li>Desarrolladores</li>
+      <li>Risk Officers</li>
+    </ul>
+  </div>
+  <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #ffc107;">
+    <h4 style="color: #ffc107; margin: 0 0 10px;">📊 Áreas evaluadas</h4>
+    <ul style="margin: 0; padding-left: 20px; color: #666;">
+      <li>Capacidades técnicas actuales</li>
+      <li>Cultura organizacional</li>
+      <li>Barreras para la adopción</li>
+      <li>Casos de uso prioritarios</li>
+    </ul>
   </div>
 </div>
 
@@ -127,10 +185,10 @@ hide:
   <h3>🆘 Canales de Soporte Nova</h3>
   <div class="nova-accent-border">
     <ul style="list-style: none; padding: 0;">
-      <li style="padding: 0.5rem 0;">📧 <strong>Email:</strong> coe-ia@banco.mx</li>
+      <li style="padding: 0.5rem 0;">📧 <strong>Email:</strong> coe-ia@novasolutionsystems.com</li>
       <li style="padding: 0.5rem 0;">💬 <strong>Teams:</strong> Canal #ai-excellence</li>
       <li style="padding: 0.5rem 0;">📞 <strong>Helpdesk:</strong> Ext. 4242</li>
-      <li style="padding: 0.5rem 0;">📚 <strong>Wiki:</strong> <a href="https://wiki.banco.mx/ai">wiki.banco.mx/ai</a></li>
+      <li style="padding: 0.5rem 0;">📚 <strong>Wiki:</strong> <a href="https://wiki.novasolutionsystems.com/ai">wiki.novasolutionsystems.com/ai</a></li>
     </ul>
   </div>
 </div>

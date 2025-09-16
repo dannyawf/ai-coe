@@ -678,9 +678,9 @@ api_endpoints = {
 ---
 
 **Soporte Dashboard IMPACT**:
-- 📧 impact-support@banco.mx
+- 📧 ai@novasolutionsystems.com
 - 💬 Slack: #impact-dashboard
 - 📞 Ext: 5556
-- 🌐 Wiki: confluence.banco.mx/impact
+- 🌐 Wiki: confluence.novasolutionsystems.com/impact
 
 *Dashboard IMPACT v2.0 - Transformando datos en decisiones inteligentes*

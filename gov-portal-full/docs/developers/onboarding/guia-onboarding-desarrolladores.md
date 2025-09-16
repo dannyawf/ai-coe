@@ -19,7 +19,7 @@
 
 ### ¡Bienvenido(a) al futuro del desarrollo bancario!
 
-Como desarrollador en nuestro Centro de Excelencia en Inteligencia Artificial, te unes a un equipo pionero que está transformando la manera en que el sector bancario mexicano abraza la innovación tecnológica. Tu rol es fundamental para construir soluciones de IA que no solo cumplan con los más altos estándares de seguridad y cumplimiento regulatorio, sino que también impulsen la experiencia del cliente y la eficiencia operativa.
+Como desarrollador en nuestro Centro de Excelencia en Inteligencia Artificial, te unes a un equipo pionero que está transformando la manera en que los desarrolladores tradicionales trabajan. Con Nova-Cell y nuestras herramientas de IA, multiplicarás tu productividad en desarrollo tradicional - escribiendo código más rápido, generando tests automáticamente, y documentando sin esfuerzo. No necesitas ser un experto en IA, solo un desarrollador que quiere ser más eficiente.
 
 ### Nuestra Misión
 
@@ -38,14 +38,15 @@ Democratizar el acceso a tecnologías de IA de clase mundial en el sector financ
 
 ## 2. Visión General del Rol del Desarrollador {#vision-general}
 
-### Tu Impacto en el Ecosistema Bancario
+### Tu Impacto como Desarrollador Productivo
 
-Como desarrollador en el AI CoE, tu trabajo directamente influye en:
+Como desarrollador usando herramientas de IA, tu impacto será:
 
-- **10+ millones de clientes bancarios** que interactúan con sistemas potenciados por IA
-- **15,000-20,000 empleados** cuyo trabajo se optimiza mediante herramientas inteligentes
-- **Cumplimiento regulatorio** automático con CNBV, Banxico y CONDUSEF
-- **Prevención de fraude** que protege el patrimonio de millones de mexicanos
+- **40-60% más productivo** en tareas de desarrollo tradicional
+- **Código de mayor calidad** con menos bugs y mejor documentación
+- **Tests automáticos** con mayor cobertura y casos edge
+- **Menos tiempo en tareas repetitivas**, más tiempo en soluciones creativas
+- **Mejor colaboración** con código más limpio y bien documentado
 
 ### Modalidades de Desarrollo
 

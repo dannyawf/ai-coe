@@ -521,16 +521,16 @@ training_program:
 - [Fairness Guidelines](../../governance/ai-fairness.md)
 
 ### Support
-- **Model Owner**: Dr. Miguel Ángel Ruiz (miguel.ruiz@banco.mx)
-- **Risk Lead**: Patricia Morales (patricia.morales@banco.mx)
-- **CoE Support**: coe-ia@banco.mx
+- **Model Owner**: Dr. Miguel Ángel Ruiz (miguel.ruiz@novasolutionsystems.com)
+- **Risk Lead**: Patricia Morales (patricia.morales@novasolutionsystems.com)
+- **CoE Support**: coe-ia@novasolutionsystems.com
 
 ---
 
 **¿Listo para revolucionar tu scoring crediticio?**
 
-[Solicitar Assessment](mailto:coe-ia@banco.mx?subject=Credit%20Scoring%20ML){.md-button .md-button--primary}
-[Ver Caso de Estudio](https://nova-cell.banco.mx/cases/credit-scoring){.md-button}
+[Solicitar Assessment](mailto:coe-ia@novasolutionsystems.com?subject=Credit%20Scoring%20ML){.md-button .md-button--primary}
+[Ver Caso de Estudio](https://nova-cell.novasolutionsystems.com/cases/credit-scoring){.md-button}
 
 ---
 

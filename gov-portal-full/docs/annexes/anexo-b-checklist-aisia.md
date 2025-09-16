@@ -523,7 +523,7 @@ graph TD
 ## 📞 Soporte y Contacto
 
 **Centro de Excelencia de IA**
-- 📧 Email: coe-ia@banco.mx
+- 📧 Email: coe-ia@novasolutionsystems.com
 - 💬 Teams: Canal #AISIA-Support
 - 🌐 Portal: https://aisia.banco.interno
 - 📱 Ext: 5555

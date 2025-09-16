@@ -360,7 +360,7 @@ RELOAD=true
 ```bash
 # Configurar Git
 git config --global user.name "Tu Nombre"
-git config --global user.email "tu.email@banco.mx"
+git config --global user.email "tu.email@novasolutionsystems.com"
 
 # Configurar Git Hooks
 cat > .git/hooks/pre-commit <<'EOF'

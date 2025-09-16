@@ -1232,9 +1232,9 @@ La herramienta se alinea directamente con las métricas del Framework IMPACT:
 
 Para dudas sobre el uso del AI Opportunity Radar:
 
-- **Email**: opportunity-radar@banco.mx
+- **Email**: opportunity-radar@novasolutionsystems.com
 - **Teams**: Canal #ai-opportunities
-- **Wiki**: wiki.banco.mx/opportunity-radar
+- **Wiki**: wiki.novasolutionsystems.com/opportunity-radar
 - **Helpdesk CoE**: Ext. 4242
 
 ---

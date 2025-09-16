@@ -108,7 +108,7 @@ nova test --compliance cnbv    # Validación regulatoria
 - **Data Explorer:** Análisis y preparación de datos
 - **Compliance Center:** Validación regulatoria y auditoría
 
-[**→ Acceder a Web UI**](https://nova-cell.banco.mx) | [**→ Ver Guía de Usuario**](./nova-cell-webui.md)
+[**→ Acceder a Web UI**](https://nova-cell.novasolutionsystems.com) | [**→ Ver Guía de Usuario**](./nova-cell-webui.md)
 
 ---
 
@@ -268,12 +268,12 @@ nova deploy --cloud aws --region us-east-1
 ### Opción 2: On-Premises
 ```bash
 # Descargar instalador
-wget https://nova-cell.banco.mx/installer/latest
+wget https://nova-cell.novasolutionsystems.com/installer/latest
 
 # Instalación completa
 ./nova-cell-installer --mode on-premises \
   --license $LICENSE_KEY \
-  --admin-email admin@banco.mx
+  --admin-email ai@novasolutionsystems.com
 
 # Verificar instalación
 nova doctor --full-check
@@ -342,7 +342,7 @@ deployment:
 
 ### 🎓 Aprendizaje
 - [Nova-Cell Academy](../../../developers/academy/curriculum-desarrolladores-ai.md)
-- [Video Tutorials](https://learning.banco.mx/nova-cell)
+- [Video Tutorials](https://learning.novasolutionsystems.com/nova-cell)
 - [Certificación Oficial](https://cert.nova-cell.mx)
 
 ### 💡 Soporte
@@ -392,7 +392,7 @@ deployment:
   <table style="width: 100%;">
     <tr>
       <td><strong>📧 Email:</strong></td>
-      <td>nova-support@banco.mx</td>
+      <td>ai@novasolutionsystems.com</td>
     </tr>
     <tr>
       <td><strong>📞 Teléfono:</strong></td>

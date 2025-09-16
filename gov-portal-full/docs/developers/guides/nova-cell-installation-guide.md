@@ -121,7 +121,7 @@ echo "✅ Todos los prerrequisitos cumplidos"
 cat > ~/.nova-cell/credentials <<EOF
 # Credenciales de Nova-Cell
 NOVA_LICENSE_KEY=your-license-key
-NOVA_ADMIN_EMAIL=admin@banco.mx
+NOVA_ADMIN_EMAIL=ai@novasolutionsystems.com
 NOVA_ADMIN_PASSWORD=$(openssl rand -base64 32)
 
 # Credenciales de Base de Datos
@@ -739,7 +739,7 @@ sudo systemctl start nova-api
 APP_NAME=Nova-Cell
 APP_ENV=production
 APP_DEBUG=false
-APP_URL=https://nova.banco.mx
+APP_URL=https://nova.novasolutionsystems.com
 
 # Base de Datos
 DB_CONNECTION=postgresql
@@ -760,7 +760,7 @@ REDIS_PASSWORD=redis_password
 JWT_SECRET=your-jwt-secret
 JWT_TTL=60
 ENCRYPTION_KEY=your-encryption-key
-CORS_ALLOWED_ORIGINS=https://nova.banco.mx
+CORS_ALLOWED_ORIGINS=https://nova.novasolutionsystems.com
 
 # Modelos de IA
 OPENAI_API_KEY=sk-...
@@ -912,7 +912,7 @@ class NovaInstallationTest:
         response = requests.post(
             f"{self.base_url}/auth/login",
             json={
-                "email": "admin@banco.mx",
+                "email": "ai@novasolutionsystems.com",
                 "password": "admin_password"
             }
         )
@@ -1032,13 +1032,13 @@ sudo systemctl restart docker
 ## 📚 Recursos Adicionales
 
 ### Enlaces Útiles
-- 📖 [Documentación Completa](https://docs.nova-cell.banco.mx)
-- 🎥 [Videos Tutoriales](https://learning.banco.mx/nova-cell)
+- 📖 [Documentación Completa](https://docs.nova-cell.novasolutionsystems.com)
+- 🎥 [Videos Tutoriales](https://learning.novasolutionsystems.com/nova-cell)
 - 💬 [Comunidad Slack](https://banco-ai.slack.com)
-- 🐛 [Reporte de Issues](https://jira.banco.mx/nova-cell)
+- 🐛 [Reporte de Issues](https://jira.novasolutionsystems.com/nova-cell)
 
 ### Soporte
-- **Email:** nova-support@banco.mx
+- **Email:** ai@novasolutionsystems.com
 - **Teléfono:** +52 55 1234 5678
 - **Horario:** Lunes a Viernes, 9:00 - 18:00 CST
 

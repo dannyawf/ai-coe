@@ -406,7 +406,7 @@ Nova-Cell consumirá artefactos del Knowledge Hub mediante:
 ```javascript
 // Ejemplo de integración desde Nova-Cell
 const knowledgeHub = new KnowledgeHubClient({
-  apiUrl: 'https://knowledge-hub.banco.mx/api/v1',
+  apiUrl: 'https://knowledge-hub.novasolutionsystems.com/api/v1',
   authToken: userJWT
 });
 

@@ -638,7 +638,7 @@ aisia_dashboard = {
 |-------------|-----------|--------|
 | **AISIA Calculator** | Excel con fórmulas pre-configuradas | SharePoint/Tools |
 | **AISIA Assistant** | Chatbot para guiar evaluación | Nova-Cell Platform |
-| **AISIA API** | Integración programática | api.banco.mx/aisia |
+| **AISIA API** | Integración programática | api.novasolutionsystems.com/aisia |
 | **AISIA Templates** | Documentos y presentaciones | Templates/AISIA |
 | **AISIA Training** | Curso de certificación | Academy Portal |
 
@@ -775,10 +775,10 @@ improvement_metrics = {
 ## 📞 Soporte y Contacto
 
 ### Centro de Excelencia AISIA
-- **Email**: aisia@banco.mx
+- **Email**: aisia@novasolutionsystems.com
 - **Teams**: #aisia-framework
 - **Office Hours**: Martes y Jueves 10-12h
-- **Wiki**: confluence.banco.mx/aisia
+- **Wiki**: confluence.novasolutionsystems.com/aisia
 
 ### Recursos Adicionales
 - [Política de Uso Responsable de IA](politica-uso-responsable-ia.md)

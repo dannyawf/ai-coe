@@ -1,0 +1,54 @@
+/* Hero Banner Text Color Override - Force White on All Themes */
+
+/* Light theme override */
+[data-md-color-scheme="default"] .ai-hero h1,
+[data-md-color-scheme=""] .ai-hero h1,
+.ai-hero h1 {
+  color: #FFFFFF !important;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Dark theme specific */
+[data-md-color-scheme="slate"] .ai-hero h1 {
+  color: #FFFFFF !important;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Ensure paragraph text is also white */
+[data-md-color-scheme="default"] .ai-hero p,
+[data-md-color-scheme=""] .ai-hero p,
+.ai-hero p {
+  color: #FFFFFF !important;
+  opacity: 0.95;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3) !important;
+}
+
+[data-md-color-scheme="slate"] .ai-hero p {
+  color: #FFFFFF !important;
+  opacity: 0.95;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Additional specificity for Material theme classes */
+.md-content .ai-hero h1,
+.md-typeset .ai-hero h1 {
+  color: #FFFFFF !important;
+}
+
+.md-content .ai-hero p,
+.md-typeset .ai-hero p {
+  color: #FFFFFF !important;
+}
+
+/* Force override any inherited colors */
+.ai-hero * {
+  color: inherit;
+}
+
+.ai-hero h1,
+.ai-hero h2,
+.ai-hero h3,
+.ai-hero p,
+.ai-hero span {
+  color: #FFFFFF !important;
+}

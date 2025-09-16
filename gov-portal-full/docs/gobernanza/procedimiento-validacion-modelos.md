@@ -612,10 +612,10 @@ validation_process_metrics = {
 ## 🤝 Contacto y Soporte
 
 ### Equipo de Validación de Modelos
-- **Email**: model-validation@banco.mx
+- **Email**: model-validation@novasolutionsystems.com
 - **Teams**: #model-risk-management
 - **Horario**: Lun-Vie 8:00-18:00
-- **Escalamiento**: mrm-escalation@banco.mx
+- **Escalamiento**: mrm-escalation@novasolutionsystems.com
 
 ### Recursos Adicionales
 - [Política de Uso Responsable de IA](politica-uso-responsable-ia.md)

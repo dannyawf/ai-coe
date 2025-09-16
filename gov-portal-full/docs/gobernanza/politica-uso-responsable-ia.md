@@ -307,9 +307,9 @@ Todo plan de remediación debe incluir obligatoriamente:
 ## 🚨 Mecanismos de Denuncia
 
 ### Canales Disponibles
-- 📧 **Email confidencial**: etica-ia@banco.mx
+- 📧 **Email confidencial**: etica-ia@novasolutionsystems.com
 - 📞 **Línea directa**: 800-ETICA-IA
-- 🌐 **Portal anónimo**: ethics.banco.mx/ia
+- 🌐 **Portal anónimo**: ethics.novasolutionsystems.com/ia
 - 💬 **Buzón físico**: En cada oficina
 
 ### Protección al Denunciante
@@ -363,10 +363,10 @@ Todo plan de remediación debe incluir obligatoriamente:
 ## 📞 Contacto y Soporte
 
 ### Centro de Excelencia de IA
-- **Email**: coe-ia@banco.mx
+- **Email**: coe-ia@novasolutionsystems.com
 - **Teams**: Canal #ai-governance
 - **Horario**: Lun-Vie 8:00-18:00
-- **Portal**: nova-cell.banco.mx/ethics
+- **Portal**: nova-cell.novasolutionsystems.com/ethics
 
 ### Recursos Adicionales
 - [Framework AISIA](framework-aisia.md)

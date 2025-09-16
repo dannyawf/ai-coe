@@ -402,10 +402,10 @@ graph LR
 - 🤝 **Networking Session** - Último viernes del mes
 
 ### Contacto y Soporte
-- 📧 **Email**: coe-ia@banco.mx
+- 📧 **Email**: coe-ia@novasolutionsystems.com
 - 💬 **Teams**: #ai-exploration
 - 📞 **Office Hours**: Lun-Vie 10-12h
-- 🌐 **Portal**: [nova-cell.banco.mx](../servicios/plataforma/nova-cell-hub.md)
+- 🌐 **Portal**: [nova-cell.novasolutionsystems.com](../servicios/plataforma/nova-cell-hub.md)
 
 ## 🚀 Siguiente Paso: Experimentar
 

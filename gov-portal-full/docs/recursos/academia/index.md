@@ -75,17 +75,17 @@ Selecciona tu rol actual o el rol al que aspiras para acceder a una ruta de apre
 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin: 30px 0;">
   
   <div style="border: 2px solid #e2e8f0; border-radius: 10px; padding: 20px;">
-    <h3>👨‍💻 Desarrollador de IA</h3>
+    <h3>👨‍💻 Desarrollador con IA</h3>
     <p><strong>Para:</strong> Programadores, Software Engineers, Full-Stack Developers</p>
-    <p>Domina el desarrollo de aplicaciones de IA con Nova-Cell y las mejores prácticas del sector.</p>
+    <p>Multiplica tu productividad usando Nova-Cell y herramientas de IA para desarrollo tradicional.</p>
     <ul>
-      <li>✅ Desarrollo con LangChain</li>
-      <li>✅ Integración de modelos LLM</li>
-      <li>✅ APIs y microservicios de IA</li>
-      <li>✅ Testing y deployment</li>
+      <li>✅ Generación automática de código</li>
+      <li>✅ IA para debugging y testing</li>
+      <li>✅ Documentación automática</li>
+      <li>✅ Code review asistido por IA</li>
     </ul>
-    <p><strong>Duración:</strong> 12 semanas | <strong>Nivel:</strong> Intermedio-Avanzado</p>
-    <a href="../../academy/guia-desarrolladores-ia.md" style="display: inline-block; background: #0284c7; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; margin-top: 10px;">→ Iniciar Ruta de Desarrollador</a>
+    <p><strong>Duración:</strong> 4 semanas | <strong>Nivel:</strong> Básico-Intermedio</p>
+    <a href="../../academy/guia-desarrollador-productivo-ia.md" style="display: inline-block; background: #0284c7; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; margin-top: 10px;">→ Iniciar Ruta de Desarrollador</a>
   </div>
 
   <div style="border: 2px solid #e2e8f0; border-radius: 10px; padding: 20px;">
@@ -304,18 +304,134 @@ Selecciona tu rol actual o el rol al que aspiras para acceder a una ruta de apre
   <div>📚 O'Reilly</div>
 </div>
 
-## 📊 Métricas de Éxito
+## 📊 Métricas de Éxito y Framework IMPACT
+
+### Framework IMPACT para Medición de Adopción
+
+Nuestra Academia utiliza el **Framework IMPACT** para medir el éxito de la capacitación en IA, basado en investigación del sector financiero:
+
+#### 🎯 Las 6 Dimensiones de Medición IMPACT
+
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin: 20px 0;">
+
+  <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; border-left: 4px solid #0284c7;">
+    <h4 style="color: #0284c7; margin-top: 0;">I - Implementation</h4>
+    <ul style="margin: 5px 0; font-size: 0.9em;">
+      <li>Tasa de Adopción</li>
+      <li>Time to First Value</li>
+      <li>Cobertura de Equipos</li>
+    </ul>
+  </div>
+
+  <div style="background: #f0fdf4; padding: 15px; border-radius: 8px; border-left: 4px solid #16a34a;">
+    <h4 style="color: #16a34a; margin-top: 0;">M - Momentum</h4>
+    <ul style="margin: 5px 0; font-size: 0.9em;">
+      <li>Tendencia Semanal</li>
+      <li>Retención de Usuarios</li>
+      <li>Viralidad Interna</li>
+    </ul>
+  </div>
+
+  <div style="background: #fefce8; padding: 15px; border-radius: 8px; border-left: 4px solid #ca8a04;">
+    <h4 style="color: #ca8a04; margin-top: 0;">P - Performance</h4>
+    <ul style="margin: 5px 0; font-size: 0.9em;">
+      <li>Velocidad de Tareas</li>
+      <li>Cycle Time</li>
+      <li>Flow Efficiency</li>
+    </ul>
+  </div>
+
+  <div style="background: #fdf2f8; padding: 15px; border-radius: 8px; border-left: 4px solid #db2777;">
+    <h4 style="color: #db2777; margin-top: 0;">A - Acceptance</h4>
+    <ul style="margin: 5px 0; font-size: 0.9em;">
+      <li>Tasa de Aceptación</li>
+      <li>Calidad del Output</li>
+      <li>Developer NPS</li>
+    </ul>
+  </div>
+
+  <div style="background: #f0f3ff; padding: 15px; border-radius: 8px; border-left: 4px solid #7c3aed;">
+    <h4 style="color: #7c3aed; margin-top: 0;">C - Cost-Effective</h4>
+    <ul style="margin: 5px 0; font-size: 0.9em;">
+      <li>ROI de Entrenamiento</li>
+      <li>Ahorro de Costos</li>
+      <li>Break-even Point</li>
+    </ul>
+  </div>
+
+  <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #059669;">
+    <h4 style="color: #059669; margin-top: 0;">T - Trust</h4>
+    <ul style="margin: 5px 0; font-size: 0.9em;">
+      <li>Confidence Score</li>
+      <li>Satisfaction Index</li>
+      <li>Engagement Level</li>
+    </ul>
+  </div>
+
+</div>
+
+#### 📈 Curva de Adopción de 11 Semanas
+
+Basado en nuestro análisis de transformación IA, los profesionales capacitados siguen este patrón predictivo:
+
+<div style="background: #f8fafc; padding: 20px; border-radius: 10px; margin: 20px 0;">
+
+  <table style="width: 100%; margin: 10px 0;">
+    <tr style="background: #e2e8f0;">
+      <th>Semanas</th>
+      <th>Fase</th>
+      <th>Productividad</th>
+      <th>Características</th>
+    </tr>
+    <tr>
+      <td><strong>1-3</strong></td>
+      <td>🤔 Fricción Inicial</td>
+      <td>0.8x-1.1x</td>
+      <td>Curva de aprendizaje, resistencia natural</td>
+    </tr>
+    <tr>
+      <td><strong>4-6</strong></td>
+      <td>🚀 Adaptación</td>
+      <td>1.4x</td>
+      <td>Recuperación gradual, primeros quick wins</td>
+    </tr>
+    <tr>
+      <td><strong>7-9</strong></td>
+      <td>⚡ Aceleración</td>
+      <td>1.9x</td>
+      <td>Confianza establecida, adopción masiva</td>
+    </tr>
+    <tr>
+      <td><strong>10-11</strong></td>
+      <td>🎯 Madurez</td>
+      <td>2.2x-2.5x</td>
+      <td>ROI positivo, liderazgo en proyectos</td>
+    </tr>
+  </table>
+
+</div>
 
 ### Impacto en el Negocio
 
 <div style="background: #f0fdf4; padding: 20px; border-radius: 10px; margin: 20px 0;">
-  <h4 style="color: #16a34a;">ROI de la Formación</h4>
+  <h4 style="color: #16a34a;">ROI de la Formación con Framework IMPACT</h4>
+
+  **Métricas Validadas en Sector Financiero:**
   <ul>
-    <li>⬆️ <strong>40%</strong> incremento en productividad post-certificación</li>
-    <li>⏱️ <strong>60%</strong> reducción en tiempo de implementación de proyectos IA</li>
-    <li>💰 <strong>$2.5M USD</strong> ahorro promedio por proyecto optimizado</li>
-    <li>📈 <strong>85%</strong> de graduados lideran proyectos de IA exitosos</li>
+    <li>⬆️ <strong>2.5x</strong> productividad esperada (vs 40% anterior)</li>
+    <li>⏱️ <strong>11 semanas</strong> para ROI positivo (medido con IMPACT)</li>
+    <li>💰 <strong>150% ROI</strong> en 6 meses post-certificación</li>
+    <li>📈 <strong>84%</strong> de graduados adoptan IA efectivamente</li>
+    <li>🎯 <strong>25-40%</strong> tasa de aceptación óptima de herramientas IA</li>
+    <li>🔧 <strong><15 minutos</strong> Time to First Value promedio</li>
   </ul>
+
+  **Sistema de Alerta Temprana:**
+  <ul>
+    <li>✅ **Señales de Éxito:** Developer NPS >20, uso diario >30min</li>
+    <li>🚨 **Señales de Alerta:** Tasa aceptación <15%, NPS negativo</li>
+  </ul>
+
 </div>
 
 ## 🚀 ¿Listo para Comenzar?

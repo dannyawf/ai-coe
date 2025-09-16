@@ -419,7 +419,7 @@ graph LR
 
 <div class="support-card">
 <h4>📧 Consultas Generales</h4>
-<p><strong>Email:</strong> coe-ia@banco.mx</p>
+<p><strong>Email:</strong> coe-ia@novasolutionsystems.com</p>
 <p><strong>Teams:</strong> #coe-ia-soporte</p>
 <p><strong>SLA:</strong> 24 horas hábiles</p>
 </div>
@@ -427,7 +427,7 @@ graph LR
 <div class="support-card">
 <h4>🚨 Urgencias</h4>
 <p><strong>Hotline:</strong> ext. 5555</p>
-<p><strong>Escalación:</strong> gerencia-coe@banco.mx</p>
+<p><strong>Escalación:</strong> ai@novasolutionsystems.com</p>
 <p><strong>SLA:</strong> 4 horas</p>
 </div>
 
@@ -824,4 +824,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ---
 
-**Centro de Excelencia de IA** | Banco XYZ | coe-ia@banco.mx | ext. 5555
+**Centro de Excelencia de IA** | Banco XYZ | coe-ia@novasolutionsystems.com | ext. 5555

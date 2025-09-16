@@ -1412,7 +1412,7 @@ notify_stakeholders() {
                 \"fields\": [
                     {\"title\": \"ID\", \"value\": \"$INCIDENT_ID\", \"short\": true},
                     {\"title\": \"Sistema\", \"value\": \"$SYSTEM_AFFECTED\", \"short\": true},
-                    {\"title\": \"War Room\", \"value\": \"https://meet.banco.mx/warroom\", \"short\": false}
+                    {\"title\": \"War Room\", \"value\": \"https://meet.novasolutionsystems.com/warroom\", \"short\": false}
                 ]
             }]
         }"
@@ -1486,7 +1486,7 @@ create_warroom() {
             }"
         
         # Crear documento compartido
-        curl -X POST https://api.confluence.banco.mx/content \
+        curl -X POST https://api.confluence.novasolutionsystems.com/content \
             -H "Authorization: Bearer ${CONFLUENCE_TOKEN}" \
             -d "{
                 \"type\": \"page\",
@@ -1810,9 +1810,9 @@ se generaron {len(self.analysis['action_items'])} items de acción para prevenir
 - **Confluence:** Documentación
 
 ### Contactos Clave
-- **Risk Management IA:** risk-ai@banco.mx
-- **CoE IA:** coe-ia@banco.mx
-- **Incident Response:** incident-response@banco.mx
+- **Risk Management IA:** risk-ai@novasolutionsystems.com
+- **CoE IA:** coe-ia@novasolutionsystems.com
+- **Incident Response:** incident-response@novasolutionsystems.com
 - **Línea Directa 24/7:** +52-555-XXX-XXXX
 
 ### Actualizaciones del Documento

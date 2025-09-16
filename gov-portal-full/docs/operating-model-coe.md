@@ -317,19 +317,68 @@ Se propone un **modelo híbrido** de financiación:
 
 ### 6.1 Métricas Clave y Objetivos
 
+### 6.1.1 Curva de Adopción de 11 Semanas
+
+El CoE IA implementa un programa estructurado de adopción basado en la curva validada de 11 semanas para maximizar la productividad y minimizar el tiempo de implementación:
+
+| Semana | Fase | Productividad Meta | Actividades Clave | Métrica de Éxito |
+|--------|------|-------------------|-------------------|------------------|
+| 1-2 | Setup Inicial | 0.3x | Configuración ambiente, accesos, training básico | 100% equipos con acceso |
+| 3-4 | Familiarización | 0.6x | Primeros casos de uso, shadowing, mentoring | 80% completó primer caso |
+| 5-6 | Adopción Básica | 1.0x | Paridad con métodos tradicionales | TTFV ≤ 30 días |
+| 7-8 | Aceleración | 1.5x | Optimización de workflows, autonomía | Velocity ≥ 1.5x |
+| 9-10 | Optimización | 2.0x | Patrones avanzados, best practices | Quality Score ≥ 8.0 |
+| 11+ | Maestría | 2.5x | Productividad máxima, mentoría a otros | ROI ≥ 200% |
+
+### 6.1.2 Seis Métricas Críticas de Éxito
+
+El CoE IA monitorea continuamente seis indicadores predictivos que determinan el éxito de la adopción:
+
+#### 🎯 Métricas Predictivas (Zona Verde/Alerta/Crítica)
+
+1. **Time to First Value (TTFV)**
+   - 🟢 Zona Verde: ≤ 30 días
+   - 🟡 Zona Alerta: 31-45 días
+   - 🔴 Zona Crítica: > 45 días
+
+2. **Developer Velocity Index**
+   - 🟢 Zona Verde: ≥ 2.0x
+   - 🟡 Zona Alerta: 1.5x-1.9x
+   - 🔴 Zona Crítica: < 1.5x
+
+3. **Code Quality Score**
+   - 🟢 Zona Verde: ≥ 8.0/10
+   - 🟡 Zona Alerta: 7.0-7.9/10
+   - 🔴 Zona Crítica: < 7.0/10
+
+4. **Security Compliance Rate**
+   - 🟢 Zona Verde: ≥ 95%
+   - 🟡 Zona Alerta: 90-94%
+   - 🔴 Zona Crítica: < 90%
+
+5. **User Engagement Rate**
+   - 🟢 Zona Verde: ≥ 70%
+   - 🟡 Zona Alerta: 60-69%
+   - 🔴 Zona Crítica: < 60%
+
+6. **Business ROI Realized**
+   - 🟢 Zona Verde: ≥ 200%
+   - 🟡 Zona Alerta: 150-199%
+   - 🔴 Zona Crítica: < 150%
+
 #### Implementation (Implementación)
 - **Adopción:** >80% equipos usando el Hub en 6 meses
 - **Cobertura:** 100% artefactos críticos migrados
-- **Time to First Value:** <15 minutos para nuevos usuarios
+- **Time to First Value:** ≤ 30 días (Métrica Crítica #1)
 
 #### Momentum (Impulso)
 - **Crecimiento:** +25% artefactos nuevos mensualmente
-- **Engagement:** >70% usuarios activos semanalmente
+- **Engagement:** ≥70% usuarios activos semanalmente (Métrica Crítica #5)
 - **Madurez:** % de squads federados con AI Product Owners y AI Risk Officers
 
 #### Performance (Desempeño)
-- **Eficiencia de Procesos:** Mejora 2.2x-2.5x en velocidad y throughput
-- **Calidad de Modelos:** Precisión, robustez y explicabilidad
+- **Eficiencia de Procesos:** Mejora 2.2x-2.5x en velocidad y throughput (Métrica Crítica #2)
+- **Calidad de Modelos:** Precisión, robustez y explicabilidad (Métrica Crítica #3)
 - **Disponibilidad:** 99.9% uptime Nova-Cell y Knowledge Hub
 
 #### Acceptance (Aceptación)
@@ -338,12 +387,12 @@ Se propone un **modelo híbrido** de financiación:
 - **NPS de Usuarios:** +20 puntos en satisfacción
 
 #### Cost-Effective (Costo-Beneficio)
-- **ROI:** Break-even semana 11, 150% ROI año 1
+- **ROI:** Break-even semana 11, ≥200% ROI año 1 (Métrica Crítica #6)
 - **Ahorro de Costos:** Reducción en costos operativos
 - **Eficiencia:** Tiempo de desarrollo de soluciones IA
 
 #### Trust (Confianza)
-- **Compliance:** 100% auditorías pasadas sin hallazgos críticos
+- **Compliance:** ≥95% auditorías pasadas sin hallazgos críticos (Métrica Crítica #4)
 - **Seguridad:** Cero incidentes de seguridad relacionados con IA
 - **Explicabilidad:** % de decisiones de IA explicables a reguladores
 

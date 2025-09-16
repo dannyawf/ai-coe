@@ -1,0 +1,126 @@
+/* Fix for vertical cut-off in navigation tabs */
+
+/* Global fix for Material theme tabs container */
+.md-header__inner {
+  overflow: visible !important;
+}
+
+.md-tabs__wrapper {
+  overflow: visible !important;
+}
+
+/* Ensure tabs container has proper height */
+.md-tabs {
+  min-height: 48px;
+  height: auto;
+  overflow: visible !important;
+  position: relative;
+  z-index: 1;
+}
+
+/* Fix tabs list container */
+.md-tabs__list {
+  min-height: 48px;
+  height: auto;
+  display: flex;
+  align-items: stretch;
+  overflow-x: auto;
+  overflow-y: visible !important;
+}
+
+/* Ensure tab items stretch to full height */
+.md-tabs__item {
+  display: flex;
+  align-items: stretch;
+  min-height: 48px;
+}
+
+/* Fix tab links to show full content */
+.md-tabs__link {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  min-height: 48px;
+  white-space: nowrap;
+}
+
+/* Fix emoji positioning */
+.md-tabs__link > span:first-child {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 8px;
+  font-size: 1.2em;
+  line-height: 1;
+}
+
+/* Text after emoji */
+.md-tabs__link > span:last-child,
+.md-tabs__link > text {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.2;
+}
+
+/* Ensure proper spacing for all screen sizes */
+@media screen and (min-width: 60em) {
+  .md-tabs {
+    min-height: 48px;
+  }
+
+  .md-tabs__list {
+    padding: 0;
+  }
+
+  .md-tabs__item {
+    flex: 1 1 auto;
+  }
+
+  .md-tabs__link {
+    justify-content: center;
+    padding: 14px 12px;
+  }
+}
+
+/* Additional fix for sticky header */
+.md-header--lifted .md-tabs {
+  overflow: visible !important;
+}
+
+/* Fix active tab indicator */
+.md-tabs__item--active .md-tabs__link {
+  position: relative;
+  color: var(--md-primary-fg-color);
+}
+
+.md-tabs__item--active .md-tabs__link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--md-accent-fg-color);
+}
+
+/* Remove any height restrictions from parent containers */
+.md-header,
+.md-header__inner,
+.md-tabs__wrapper {
+  height: auto !important;
+  min-height: auto !important;
+}
+
+/* Ensure proper z-indexing */
+.md-tabs {
+  z-index: 2;
+}
+
+.md-tabs__list {
+  z-index: 2;
+}
+
+/* Override any theme-specific height constraints */
+[data-md-component="tabs"] {
+  height: auto !important;
+  overflow: visible !important;
+}

@@ -212,6 +212,31 @@ Este dashboard provee una visión 360° del rendimiento y valor del Centro de Ex
 ## I - Implementation (Implementación)
 *Mide la velocidad y eficiencia con la que desplegamos soluciones de IA desde la ideación hasta la producción.*
 
+### Curva de Adopción de 11 Semanas - Framework IMPACT
+
+<div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
+    <h4 style="color: var(--banco-primary-blue); margin-bottom: 15px;">📈 Seguimiento de Progreso por Equipos</h4>
+    <table style="width: 100%; border-collapse: collapse;">
+        <thead>
+            <tr style="background-color: var(--banco-accent-gray);">
+                <th>Semana</th>
+                <th>Fase</th>
+                <th>Productividad Esperada</th>
+                <th>Métrica Clave</th>
+                <th>Estado Actual</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1-2</td><td>Setup Inicial</td><td>0.3x</td><td>Configuración de ambiente</td><td>✅ 100%</td></tr>
+            <tr><td>3-4</td><td>Familiarización</td><td>0.6x</td><td>Primeros casos de uso</td><td>✅ 95%</td></tr>
+            <tr><td>5-6</td><td>Adopción Básica</td><td>1.0x</td><td>Paridad con métodos tradicionales</td><td>🔄 85%</td></tr>
+            <tr><td>7-8</td><td>Aceleración</td><td>1.5x</td><td>Primera mejora significativa</td><td>🔄 70%</td></tr>
+            <tr><td>9-10</td><td>Optimización</td><td>2.0x</td><td>Flujos de trabajo optimizados</td><td>⏳ 45%</td></tr>
+            <tr><td>11+</td><td>Maestría</td><td>2.5x</td><td>Productividad máxima sostenida</td><td>⏳ 25%</td></tr>
+        </tbody>
+    </table>
+</div>
+
 <div class="dashboard-grid">
     <div class="card">
         <div class="card-title">Tiempo Promedio de Despliegue</div>
@@ -223,12 +248,12 @@ Este dashboard provee una visión 360° del rendimiento y valor del Centro de Ex
         </div>
     </div>
     <div class="card">
-        <div class="card-title">Proyectos en Pipeline</div>
+        <div class="card-title">Equipos en Curva de Adopción</div>
         <div>
-            <span class="kpi-value">25</span>
+            <span class="kpi-value">18</span><span class="kpi-unit">/ 25</span>
         </div>
         <div class="kpi-context">
-            8 en desarrollo, 12 en validación, 5 en ideación
+            72% completaron las primeras 6 semanas
         </div>
     </div>
     <div class="card">
@@ -238,6 +263,15 @@ Este dashboard provee una visión 360° del rendimiento y valor del Centro de Ex
         </div>
         <div class="kpi-context">
             Despliegues sin necesidad de rollback
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-title">Productividad Promedio Actual</div>
+        <div>
+            <span class="kpi-value">1.8x</span>
+        </div>
+        <div class="kpi-context">
+            Meta objetivo: 2.2x para Q2 2025
         </div>
     </div>
 </div>
@@ -388,6 +422,44 @@ pie title Proyectos de IA Activos por Unidad de Negocio
     "Operaciones" : 12
     "Marketing" : 8
 ```
+
+### 🎯 Framework IMPACT - 6 Métricas Críticas de Éxito
+
+<div style="background-color: #f0f9ff; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid var(--banco-secondary-green);">
+    <h4 style="color: var(--banco-primary-blue); margin-bottom: 15px;">📊 Indicadores Predictivos de Éxito</h4>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px;">
+        <div style="background: white; padding: 15px; border-radius: 6px; border: 1px solid #e1e8ed;">
+            <h5 style="color: var(--banco-text-dark); margin: 0 0 10px;">⚡ Time to First Value (TTFV)</h5>
+            <div style="font-size: 1.5em; font-weight: bold; color: var(--banco-secondary-green);">28 días</div>
+            <div style="font-size: 0.9em; color: #657786;">Meta: ≤ 30 días | Zona de alerta: > 45 días</div>
+        </div>
+        <div style="background: white; padding: 15px; border-radius: 6px; border: 1px solid #e1e8ed;">
+            <h5 style="color: var(--banco-text-dark); margin: 0 0 10px;">📈 Developer Velocity Index</h5>
+            <div style="font-size: 1.5em; font-weight: bold; color: var(--banco-secondary-green);">2.3x</div>
+            <div style="font-size: 0.9em; color: #657786;">Meta: ≥ 2.0x | Zona de alerta: < 1.5x</div>
+        </div>
+        <div style="background: white; padding: 15px; border-radius: 6px; border: 1px solid #e1e8ed;">
+            <h5 style="color: var(--banco-text-dark); margin: 0 0 10px;">🔄 Code Quality Score</h5>
+            <div style="font-size: 1.5em; font-weight: bold; color: var(--banco-secondary-green);">8.7/10</div>
+            <div style="font-size: 0.9em; color: #657786;">Meta: ≥ 8.0 | Zona de alerta: < 7.0</div>
+        </div>
+        <div style="background: white; padding: 15px; border-radius: 6px; border: 1px solid #e1e8ed;">
+            <h5 style="color: var(--banco-text-dark); margin: 0 0 10px;">🛡️ Security Compliance Rate</h5>
+            <div style="font-size: 1.5em; font-weight: bold; color: var(--banco-secondary-green);">98.5%</div>
+            <div style="font-size: 0.9em; color: #657786;">Meta: ≥ 95% | Zona de alerta: < 90%</div>
+        </div>
+        <div style="background: white; padding: 15px; border-radius: 6px; border: 1px solid #e1e8ed;">
+            <h5 style="color: var(--banco-text-dark); margin: 0 0 10px;">🎯 User Engagement Rate</h5>
+            <div style="font-size: 1.5em; font-weight: bold; color: var(--banco-secondary-green);">84%</div>
+            <div style="font-size: 0.9em; color: #657786;">Meta: ≥ 70% | Zona de alerta: < 60%</div>
+        </div>
+        <div style="background: white; padding: 15px; border-radius: 6px; border: 1px solid #e1e8ed;">
+            <h5 style="color: var(--banco-text-dark); margin: 0 0 10px;">💰 Business ROI Realized</h5>
+            <div style="font-size: 1.5em; font-weight: bold; color: var(--banco-secondary-green);">315%</div>
+            <div style="font-size: 0.9em; color: #657786;">Meta: ≥ 200% | Zona de alerta: < 150%</div>
+        </div>
+    </div>
+</div>
 
 ---
 

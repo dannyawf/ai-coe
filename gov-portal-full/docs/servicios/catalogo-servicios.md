@@ -687,9 +687,9 @@ pricing_factors = {
 ## 🤝 Cómo Empezar
 
 ### Paso 1: Contacto Inicial
-- Email: coe-ia@banco.mx
+- Email: coe-ia@novasolutionsystems.com
 - Teams: #ai-center-of-excellence
-- Portal: nova-cell.banco.mx/services
+- Portal: nova-cell.novasolutionsystems.com/services
 - Teléfono: Ext. 5555
 
 ### Paso 2: Discovery Call (30 min)
@@ -735,9 +735,9 @@ pricing_factors = {
 
 **Para más información o solicitar servicios:**
 
-📧 coe-ia@banco.mx  
+📧 coe-ia@novasolutionsystems.com  
 💬 Teams: #ai-services  
-🌐 nova-cell.banco.mx  
+🌐 nova-cell.novasolutionsystems.com  
 📞 Ext. 5555
 
 *"Transformando el futuro del banco con IA responsable"*

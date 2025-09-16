@@ -106,7 +106,7 @@ system_requirements:
 
 ```bash
 # Instalación global via npm (desde registro interno)
-npm config set registry https://npm.banco.mx
+npm config set registry https://npm.novasolutionsystems.com
 npm install -g @banco/nova-cell-cli
 
 # Verificar instalación
@@ -114,7 +114,7 @@ nova-cell --version
 # Output: Nova-Cell CLI v2.0.3
 
 # Configurar variables de entorno
-export NOVA_CELL_API_URL=https://nova-cell.banco.mx/api/v1
+export NOVA_CELL_API_URL=https://nova-cell.novasolutionsystems.com/api/v1
 export NOVA_CELL_ENV=production
 ```
 
@@ -125,11 +125,11 @@ export NOVA_CELL_ENV=production
 nova-cell auth login --sso
 
 # El browser abrirá para autenticación
-# Callback URL: https://nova-cell.banco.mx/auth/callback
+# Callback URL: https://nova-cell.novasolutionsystems.com/auth/callback
 
 # Verificar autenticación
 nova-cell auth status
-# Output: Authenticated as: juan.perez@banco.mx (Developer)
+# Output: Authenticated as: juan.perez@novasolutionsystems.com (Developer)
 # Token expires: 2025-01-10 18:00:00
 ```
 
@@ -410,9 +410,9 @@ info:
     Generado por Nova-Cell 2.0
   contact:
     name: CoE IA - Banco
-    email: coe-ia@banco.mx
+    email: coe-ia@novasolutionsystems.com
 servers:
-  - url: https://api.banco.mx/v1
+  - url: https://api.novasolutionsystems.com/v1
     description: Production
 security:
   - bearerAuth: []
@@ -454,7 +454,7 @@ paths:
 // .vscode/settings.json
 {
   "nova-cell.enabled": true,
-  "nova-cell.api.endpoint": "https://nova-cell.banco.mx/api/v1",
+  "nova-cell.api.endpoint": "https://nova-cell.novasolutionsystems.com/api/v1",
   "nova-cell.auth.method": "sso",
   "nova-cell.compliance.level": "high",
   "nova-cell.features": {
@@ -484,7 +484,7 @@ paths:
 <!-- .idea/nova-cell.xml -->
 <component name="NovaCellSettings">
   <option name="enabled" value="true"/>
-  <option name="apiEndpoint" value="https://nova-cell.banco.mx/api/v1"/>
+  <option name="apiEndpoint" value="https://nova-cell.novasolutionsystems.com/api/v1"/>
   <option name="complianceLevel" value="PCI-DSS"/>
   <option name="features">
     <feature name="smartCompletion" enabled="true"/>
@@ -571,7 +571,7 @@ Authorization: Bearer <jwt_token>
 
 ```python
 # Installation
-pip install nova-cell-sdk --index-url https://pypi.banco.mx
+pip install nova-cell-sdk --index-url https://pypi.novasolutionsystems.com
 
 # Usage
 from nova_cell import NovaCellClient
@@ -580,7 +580,7 @@ from nova_cell.models import GenerateRequest, ComplianceLevel
 # Initialize client
 client = NovaCellClient(
     api_key=os.getenv("NOVA_CELL_API_KEY"),
-    base_url="https://nova-cell.banco.mx/api/v1"
+    base_url="https://nova-cell.novasolutionsystems.com/api/v1"
 )
 
 # Generate code
@@ -622,7 +622,7 @@ public class Example {
         // Initialize client
         NovaCellClient client = NovaCellClient.builder()
             .apiKey(System.getenv("NOVA_CELL_API_KEY"))
-            .baseUrl("https://nova-cell.banco.mx/api/v1")
+            .baseUrl("https://nova-cell.novasolutionsystems.com/api/v1")
             .build();
         
         // Generate service
@@ -655,7 +655,7 @@ import { NovaCellClient, GenerationType } from '@banco/nova-cell-sdk';
 
 const client = new NovaCellClient({
   apiKey: process.env.NOVA_CELL_API_KEY,
-  baseUrl: 'https://nova-cell.banco.mx/api/v1'
+  baseUrl: 'https://nova-cell.novasolutionsystems.com/api/v1'
 });
 
 // Generate React component
@@ -687,7 +687,7 @@ async function generateComponent() {
 ```javascript
 // Webhook configuration
 const webhookConfig = {
-  url: 'https://your-service.banco.mx/webhooks/nova-cell',
+  url: 'https://your-service.novasolutionsystems.com/webhooks/nova-cell',
   events: [
     'code.generated',
     'security.scan.completed',
@@ -1128,9 +1128,9 @@ nova-cell cache stats
 
 ### Soporte
 
-- **Email**: nova-cell-support@banco.mx
+- **Email**: ai@novasolutionsystems.com
 - **Teams**: Canal #nova-cell-devs
-- **Wiki Interna**: wiki.banco.mx/nova-cell
+- **Wiki Interna**: wiki.novasolutionsystems.com/nova-cell
 - **Helpdesk**: Ext. 4242
 
 ---

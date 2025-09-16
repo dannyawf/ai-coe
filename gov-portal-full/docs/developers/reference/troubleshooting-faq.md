@@ -4,7 +4,7 @@
 
 **Última Actualización:** Enero 2025  
 **Versión Platform:** 2.0.3  
-**Canales de Soporte:** [Slack](https://banco-ai.slack.com) | [Email](mailto:nova-support@banco.mx)
+**Canales de Soporte:** [Slack](https://banco-ai.slack.com) | [Email](mailto:ai@novasolutionsystems.com)
 
 ## 🚨 Problemas Comunes y Soluciones
 
@@ -131,7 +131,7 @@ class TokenManager:
     
     def refresh_token(self):
         response = requests.post(
-            "https://api.nova-cell.banco.mx/auth/token",
+            "https://api.nova-cell.novasolutionsystems.com/auth/token",
             json={
                 "client_id": self.client_id,
                 "client_secret": self.client_secret,
@@ -217,7 +217,7 @@ class RobustAIClient:
         async with httpx.AsyncClient() as client:
             async with client.stream(
                 "POST",
-                "https://api.nova-cell.banco.mx/inference",
+                "https://api.nova-cell.novasolutionsystems.com/inference",
                 json={"prompt": prompt, "stream": True}
             ) as response:
                 async for chunk in response.aiter_text():
@@ -619,7 +619,7 @@ echo "✅ Environment reset complete!"
 ### Canales de Soporte
 
 - **🔥 Urgente (P0):** Llamar al +52 55 1234 5678
-- **📧 Email:** nova-support@banco.mx
+- **📧 Email:** ai@novasolutionsystems.com
 - **💬 Slack:** #nova-cell-support
 - **📝 Tickets:** [JIRA](https://banco.atlassian.net/nova)
 

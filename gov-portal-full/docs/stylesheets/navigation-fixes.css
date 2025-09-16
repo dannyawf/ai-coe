@@ -1,13 +1,21 @@
 /* Navigation fixes for all tabs visibility */
 
+/* Fix vertical cut-off issue */
+.md-tabs {
+  min-height: 3rem;
+  overflow: visible !important;
+}
+
 /* Ensure all navigation tabs are visible */
 .md-tabs__list {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
-  overflow-y: hidden;
+  overflow-y: visible !important;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
+  min-height: 3rem;
+  align-items: center;
 }
 
 /* Make tabs more compact if needed */
@@ -15,20 +23,29 @@
   flex: 0 0 auto;
   white-space: nowrap;
   min-width: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 /* Reduce padding on tabs for more space */
 .md-tabs__link {
-  padding: 0.6rem 0.8rem;
+  padding: 0.75rem 0.8rem;
   font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  min-height: 3rem;
+  line-height: 1.2;
 }
 
 /* Ensure emojis don't break layout */
-.md-tabs__link .twemoji {
+.md-tabs__link .twemoji,
+.md-tabs__link .emoji {
   vertical-align: middle;
-  height: 1.125em;
-  width: 1.125em;
-  margin-right: 0.25rem;
+  height: 1.2em;
+  width: 1.2em;
+  margin-right: 0.35rem;
+  display: inline-block;
 }
 
 /* Add scroll indicators for mobile */
@@ -65,16 +82,20 @@
   .md-tabs__list {
     justify-content: space-evenly;
     max-width: 100%;
+    overflow-y: visible !important;
+    overflow-x: visible !important;
   }
-  
+
   .md-tabs__item {
     flex: 1 1 auto;
     max-width: none;
   }
-  
+
   .md-tabs__link {
     text-align: center;
-    padding: 0.75rem 0.5rem;
+    padding: 0.9rem 0.5rem;
+    white-space: normal;
+    word-wrap: break-word;
   }
 }
 

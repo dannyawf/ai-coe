@@ -689,7 +689,81 @@ Según estudios de McKinsey y Gartner para banca mexicana:
 
 ## 🔗 Integración con Framework IMPACT
 
-La calculadora ROI se alinea con las métricas del Framework IMPACT:
+La calculadora ROI se alinea con las métricas del Framework IMPACT y la curva de adopción de 11 semanas:
+
+### Mapeo de Métricas IMPACT
+
+<div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
+    <table style="width: 100%; border-collapse: collapse;">
+        <thead>
+            <tr style="background-color: #e9ecef;">
+                <th>Dimensión IMPACT</th>
+                <th>Métrica de la Calculadora</th>
+                <th>Umbral de Éxito</th>
+                <th>Fase de la Curva (Semanas)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>I</strong>mplementation</td>
+                <td>Time to First Value (TTFV)</td>
+                <td>≤ 30 días</td>
+                <td>1-6: Setup y Familiarización</td>
+            </tr>
+            <tr>
+                <td><strong>M</strong>omentum</td>
+                <td>Tasa de adopción de equipos</td>
+                <td>≥ 70% equipos activos</td>
+                <td>5-8: Adopción y Aceleración</td>
+            </tr>
+            <tr>
+                <td><strong>P</strong>erformance</td>
+                <td>Developer Velocity Index</td>
+                <td>≥ 2.0x productividad</td>
+                <td>7-11: Aceleración a Maestría</td>
+            </tr>
+            <tr>
+                <td><strong>A</strong>cceptance</td>
+                <td>User Engagement Rate</td>
+                <td>≥ 70% participación</td>
+                <td>3-9: Familiarización a Optimización</td>
+            </tr>
+            <tr>
+                <td><strong>C</strong>ost-Effective</td>
+                <td>ROI Realizado</td>
+                <td>≥ 200% en año 1</td>
+                <td>6-11: Adopción a Maestría</td>
+            </tr>
+            <tr>
+                <td><strong>T</strong>rust</td>
+                <td>Security Compliance Rate</td>
+                <td>≥ 95% cumplimiento</td>
+                <td>1-11: Todas las fases</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+### Predictores de Éxito en la Curva de Adopción
+
+<div style="background-color: #e8f5e8; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #28a745;">
+    <h4 style="color: #155724; margin-bottom: 15px;">🎯 6 Métricas Críticas por Fase</h4>
+
+    **Semanas 1-4 (Setup y Familiarización):**
+    - Time to First Value: ≤ 30 días
+    - Security Compliance: ≥ 95%
+    - Engagement inicial: ≥ 50%
+
+    **Semanas 5-8 (Adopción y Aceleración):**
+    - Developer Velocity: ≥ 1.5x
+    - Code Quality Score: ≥ 7.5
+    - User Engagement: ≥ 70%
+
+    **Semanas 9-11+ (Optimización y Maestría):**
+    - Developer Velocity: ≥ 2.2x
+    - Business ROI: ≥ 200%
+    - Todas las métricas en zona óptima
+</div>
 
 ```mermaid
 graph LR
@@ -699,13 +773,20 @@ graph LR
     A --> E[Acceptance]
     A --> F[Cost-Effective]
     A --> G[Trust]
-    
-    B --> H[Tiempo de implementación]
-    C --> I[Proyectos evaluados/mes]
-    D --> J[ROI real vs proyectado]
-    E --> K[Tasa de aprobación]
-    F --> L[Eficiencia de costos]
-    G --> M[Cumplimiento regulatorio]
+
+    B --> H[TTFV ≤ 30 días]
+    C --> I[70% equipos activos]
+    D --> J[Velocity 2.2x]
+    E --> K[Engagement ≥ 70%]
+    F --> L[ROI ≥ 200%]
+    G --> M[Compliance ≥ 95%]
+
+    style H fill:#e8f5e8
+    style I fill:#e8f5e8
+    style J fill:#e8f5e8
+    style K fill:#e8f5e8
+    style L fill:#e8f5e8
+    style M fill:#e8f5e8
 ```
 
 ## 💡 Mejores Prácticas
@@ -748,9 +829,9 @@ graph LR
 
 Para dudas sobre el uso de la calculadora ROI:
 
-- **Email**: roi-calculator@banco.mx
+- **Email**: roi-calculator@novasolutionsystems.com
 - **Teams**: Canal #roi-iniciativas-ia
-- **Wiki**: wiki.banco.mx/roi-calculator
+- **Wiki**: wiki.novasolutionsystems.com/roi-calculator
 - **Helpdesk CoE**: Ext. 4242
 
 ---

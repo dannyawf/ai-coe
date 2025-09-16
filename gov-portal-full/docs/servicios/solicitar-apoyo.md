@@ -358,7 +358,7 @@ graph LR
 
 <div class="contact-card">
 <h4>📧 Email Directo</h4>
-<p>coe-support@banco.mx</p>
+<p>ai@novasolutionsystems.com</p>
 <p>Respuesta en 24 horas</p>
 </div>
 
@@ -441,7 +441,7 @@ Te proporcionaremos feedback detallado y alternativas. Puedes reenviar la solici
 
 <details>
 <summary><strong>¿Cómo escalo una solicitud si no recibo respuesta?</strong></summary>
-Puedes escalar contactando a gerencia-coe@banco.mx o llamando a la extensión 9999.
+Puedes escalar contactando a ai@novasolutionsystems.com o llamando a la extensión 9999.
 </details>
 
 ---
@@ -802,4 +802,4 @@ window.addEventListener('load', function() {
 
 ---
 
-**Centro de Excelencia de IA** | Siempre listos para apoyarte | coe-support@banco.mx
+**Centro de Excelencia de IA** | Siempre listos para apoyarte | ai@novasolutionsystems.com

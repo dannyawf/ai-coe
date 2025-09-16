@@ -559,17 +559,17 @@ uat_protocol:
 
 | Recurso | Disponibilidad | Cómo Solicitar | Review Obligatorio |
 |---------|---------------|----------------|--------------------|
-| **Data Scientists CoE** | 20 hrs/semana | coe-ia@banco.mx | Sprint reviews |
+| **Data Scientists CoE** | 20 hrs/semana | coe-ia@novasolutionsystems.com | Sprint reviews |
 | **ML Engineers** | 10 hrs/semana | Slack #ml-support | Diseño técnico |
 | **Arquitectos IA** | Consultas ad-hoc | Office hours martes | Arquitectura |
-| **Especialistas en ética** | Review obligatorio | ethics-ai@banco.mx | ✅ Antes de Go/No-Go |
-| **Legal & Compliance** | Review obligatorio | compliance-ai@banco.mx | ✅ Antes de Go/No-Go |
-| **Security Team** | Review obligatorio | security-ai@banco.mx | ✅ Código y datos |
+| **Especialistas en ética** | Review obligatorio | ethics-ai@novasolutionsystems.com | ✅ Antes de Go/No-Go |
+| **Legal & Compliance** | Review obligatorio | compliance-ai@novasolutionsystems.com | ✅ Antes de Go/No-Go |
+| **Security Team** | Review obligatorio | security-ai@novasolutionsystems.com | ✅ Código y datos |
 
 ### Herramientas y Templates
 - 🔧 [Nova-Cell Experiment Tracker](../servicios/plataforma/nova-cell-hub.md)
 - 📊 [Jupyter Notebooks Templates](../templates/experiment-notebooks/)
-- 📈 [MLflow para tracking](http://mlflow.banco.mx)
+- 📈 [MLflow para tracking](http://mlflow.novasolutionsystems.com)
 - 🎯 [A/B Testing Framework](../tools/ab-testing-guide.md)
 
 ## 📞 Checkpoints y Reviews

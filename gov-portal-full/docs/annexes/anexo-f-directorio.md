@@ -11,7 +11,7 @@
 **Integración:** Active Directory, Teams, Slack  
 **Formato:** Desktop & Mobile Friendly
 
-> **⚠️ IMPORTANTE:** Este directorio se actualiza trimestralmente. Para cambios urgentes, contactar a coe-admin@banco.mx
+> **⚠️ IMPORTANTE:** Este directorio se actualiza trimestralmente. Para cambios urgentes, contactar a ai@novasolutionsystems.com
 
 ---
 
@@ -21,14 +21,14 @@
 
 | Cargo | Nombre | Email | Ext | Móvil | Horario | Teams/Slack | Escalamiento |
 |-------|--------|-------|-----|-------|---------|-------------|--------------|
-| **CEO** | Roberto Mendoza | rmendoza@banco.mx | 1001 | +52 555-100-1001 | 24/7 | @CEO-Roberto | P1 Crítico |
-| **CTO** | María García | mgarcia@banco.mx | 1002 | +52 555-100-1002 | 24/7 | @CTO-Maria | P1 Crítico |
-| **CIO** | Carlos López | clopez@banco.mx | 1003 | +52 555-100-1003 | 24/7 | @CIO-Carlos | P1 Crítico |
-| **CISO** | Ana Martínez | amartinez@banco.mx | 1004 | +52 555-100-1004 | 24/7 | @CISO-Ana | P1 Seguridad |
-| **CRO** | Luis Hernández | lhernandez@banco.mx | 1005 | +52 555-100-1005 | Business | @CRO-Luis | P1 Riesgos |
-| **CDO** | Sofia Torres | storres@banco.mx | 1006 | +52 555-100-1006 | Business | @CDO-Sofia | P2 Alto |
-| **CFO** | Diego Ruiz | druiz@banco.mx | 1007 | +52 555-100-1007 | Business | @CFO-Diego | P2 Alto |
-| **COO** | Laura Díaz | ldiaz@banco.mx | 1008 | +52 555-100-1008 | 24/7 | @COO-Laura | P1 Operaciones |
+| **CEO** | Roberto Mendoza | rmendoza@novasolutionsystems.com | 1001 | +52 555-100-1001 | 24/7 | @CEO-Roberto | P1 Crítico |
+| **CTO** | María García | mgarcia@novasolutionsystems.com | 1002 | +52 555-100-1002 | 24/7 | @CTO-Maria | P1 Crítico |
+| **CIO** | Carlos López | clopez@novasolutionsystems.com | 1003 | +52 555-100-1003 | 24/7 | @CIO-Carlos | P1 Crítico |
+| **CISO** | Ana Martínez | amartinez@novasolutionsystems.com | 1004 | +52 555-100-1004 | 24/7 | @CISO-Ana | P1 Seguridad |
+| **CRO** | Luis Hernández | lhernandez@novasolutionsystems.com | 1005 | +52 555-100-1005 | Business | @CRO-Luis | P1 Riesgos |
+| **CDO** | Sofia Torres | storres@novasolutionsystems.com | 1006 | +52 555-100-1006 | Business | @CDO-Sofia | P2 Alto |
+| **CFO** | Diego Ruiz | druiz@novasolutionsystems.com | 1007 | +52 555-100-1007 | Business | @CFO-Diego | P2 Alto |
+| **COO** | Laura Díaz | ldiaz@novasolutionsystems.com | 1008 | +52 555-100-1008 | 24/7 | @COO-Laura | P1 Operaciones |
 
 **Canal Teams Principal:** `#executive-team`  
 **Slack Ejecutivo:** `#c-suite-channel`
@@ -41,32 +41,32 @@
 
 | Rol | Nombre | Email | Ext | Horario | Canal | Especialidad |
 |-----|--------|-------|-----|---------|-------|--------------|
-| **Head of AI CoE** | Dr. Fernando Gómez | fgomez@banco.mx | 2001 | 08:00-18:00 | #coe-leadership | Estrategia IA |
-| **AI Governance Lead** | Patricia Ruiz | pruiz@banco.mx | 2002 | 08:00-18:00 | #ai-governance | Compliance |
-| **ML Platform Lead** | Roberto Silva | rsilva@banco.mx | 2003 | 08:00-18:00 | #ml-platform | Nova-Cell 2.0 |
-| **Data Science Manager** | Alejandra Vega | avega@banco.mx | 2004 | 08:00-18:00 | #data-science | Modelos |
-| **MLOps Lead** | Javier Castro | jcastro@banco.mx | 2005 | 08:00-18:00 | #mlops-team | CI/CD |
+| **Head of AI CoE** | Dr. Fernando Gómez | fgomez@novasolutionsystems.com | 2001 | 08:00-18:00 | #coe-leadership | Estrategia IA |
+| **AI Governance Lead** | Patricia Ruiz | pruiz@novasolutionsystems.com | 2002 | 08:00-18:00 | #ai-governance | Compliance |
+| **ML Platform Lead** | Roberto Silva | rsilva@novasolutionsystems.com | 2003 | 08:00-18:00 | #ml-platform | Nova-Cell 2.0 |
+| **Data Science Manager** | Alejandra Vega | avega@novasolutionsystems.com | 2004 | 08:00-18:00 | #data-science | Modelos |
+| **MLOps Lead** | Javier Castro | jcastro@novasolutionsystems.com | 2005 | 08:00-18:00 | #mlops-team | CI/CD |
 
 ### Data Scientists & ML Engineers
 
 | Rol | Nombre | Email | Ext | Área Focus | On-Call |
 |-----|--------|-------|-----|------------|---------|
-| **Sr Data Scientist** | Carmen Flores | cflores@banco.mx | 2010 | NLP & Chatbots | Rotación A |
-| **Sr Data Scientist** | Miguel Ángel | mangel@banco.mx | 2011 | Computer Vision | Rotación B |
-| **ML Engineer** | Daniela Morales | dmorales@banco.mx | 2012 | Fraud Detection | Rotación A |
-| **ML Engineer** | Eduardo Ramos | eramos@banco.mx | 2013 | Credit Scoring | Rotación B |
-| **Data Engineer** | Valeria Jiménez | vjimenez@banco.mx | 2014 | Data Pipelines | Rotación C |
-| **AI Architect** | Oscar Navarro | onavarro@banco.mx | 2015 | Architecture | Principal |
-| **Research Scientist** | Dr. Isabel Chen | ichen@banco.mx | 2016 | R&D | No |
-| **Junior Data Scientist** | Andrea López | alopez@banco.mx | 2017 | Support | Backup |
+| **Sr Data Scientist** | Carmen Flores | cflores@novasolutionsystems.com | 2010 | NLP & Chatbots | Rotación A |
+| **Sr Data Scientist** | Miguel Ángel | mangel@novasolutionsystems.com | 2011 | Computer Vision | Rotación B |
+| **ML Engineer** | Daniela Morales | dmorales@novasolutionsystems.com | 2012 | Fraud Detection | Rotación A |
+| **ML Engineer** | Eduardo Ramos | eramos@novasolutionsystems.com | 2013 | Credit Scoring | Rotación B |
+| **Data Engineer** | Valeria Jiménez | vjimenez@novasolutionsystems.com | 2014 | Data Pipelines | Rotación C |
+| **AI Architect** | Oscar Navarro | onavarro@novasolutionsystems.com | 2015 | Architecture | Principal |
+| **Research Scientist** | Dr. Isabel Chen | ichen@novasolutionsystems.com | 2016 | R&D | No |
+| **Junior Data Scientist** | Andrea López | alopez@novasolutionsystems.com | 2017 | Support | Backup |
 
 ### AI Ethics & Risk Team
 
 | Rol | Nombre | Email | Ext | Foco |
 |-----|--------|-------|-----|------|
-| **Ethics Officer** | Mariana Soto | msoto@banco.mx | 2020 | Fairness & Bias |
-| **Risk Analyst** | Pedro Guerrero | pguerrero@banco.mx | 2021 | Model Risk |
-| **Compliance Specialist** | Lucia Méndez | lmendez@banco.mx | 2022 | Regulatory |
+| **Ethics Officer** | Mariana Soto | msoto@novasolutionsystems.com | 2020 | Fairness & Bias |
+| **Risk Analyst** | Pedro Guerrero | pguerrero@novasolutionsystems.com | 2021 | Model Risk |
+| **Compliance Specialist** | Lucia Méndez | lmendez@novasolutionsystems.com | 2022 | Regulatory |
 
 **War Room Channel:** `#ai-incident-response`  
 **Daily Standup:** 09:00 AM en Teams
@@ -79,16 +79,16 @@
 
 | Área | AI Champion | Email | Ext | Reunión Semanal | Proyecto Actual |
 |------|-------------|-------|-----|-----------------|-----------------|
-| **Banca Retail** | Jorge Delgado | jdelgado@banco.mx | 3001 | Lunes 10:00 | Chatbot Clientes |
-| **Banca Empresarial** | Claudia Ríos | crios@banco.mx | 3002 | Lunes 14:00 | Credit Scoring |
-| **Banca Patrimonial** | Andrés Molina | amolina@banco.mx | 3003 | Martes 10:00 | Robo-Advisor |
-| **Tesorería** | Beatriz Luna | bluna@banco.mx | 3004 | Martes 14:00 | Trading Algos |
-| **Riesgos** | Sergio Padilla | spadilla@banco.mx | 3005 | Miércoles 10:00 | Fraud Detection |
-| **Marketing** | Paola Guzmán | pguzman@banco.mx | 3006 | Miércoles 14:00 | Segmentación |
-| **Operaciones** | Ricardo Montes | rmontes@banco.mx | 3007 | Jueves 10:00 | RPA + IA |
-| **Legal** | Fernanda Cruz | fcruz@banco.mx | 3008 | Jueves 14:00 | Contract Analysis |
-| **Recursos Humanos** | Mónica Vargas | mvargas@banco.mx | 3009 | Viernes 10:00 | Talent Analytics |
-| **Innovación** | Gabriel Torres | gtorres@banco.mx | 3010 | Viernes 14:00 | Lab Projects |
+| **Banca Retail** | Jorge Delgado | jdelgado@novasolutionsystems.com | 3001 | Lunes 10:00 | Chatbot Clientes |
+| **Banca Empresarial** | Claudia Ríos | crios@novasolutionsystems.com | 3002 | Lunes 14:00 | Credit Scoring |
+| **Banca Patrimonial** | Andrés Molina | amolina@novasolutionsystems.com | 3003 | Martes 10:00 | Robo-Advisor |
+| **Tesorería** | Beatriz Luna | bluna@novasolutionsystems.com | 3004 | Martes 14:00 | Trading Algos |
+| **Riesgos** | Sergio Padilla | spadilla@novasolutionsystems.com | 3005 | Miércoles 10:00 | Fraud Detection |
+| **Marketing** | Paola Guzmán | pguzman@novasolutionsystems.com | 3006 | Miércoles 14:00 | Segmentación |
+| **Operaciones** | Ricardo Montes | rmontes@novasolutionsystems.com | 3007 | Jueves 10:00 | RPA + IA |
+| **Legal** | Fernanda Cruz | fcruz@novasolutionsystems.com | 3008 | Jueves 14:00 | Contract Analysis |
+| **Recursos Humanos** | Mónica Vargas | mvargas@novasolutionsystems.com | 3009 | Viernes 10:00 | Talent Analytics |
+| **Innovación** | Gabriel Torres | gtorres@novasolutionsystems.com | 3010 | Viernes 14:00 | Lab Projects |
 
 **Community of Practice:** Primer jueves de cada mes, 16:00  
 **Slack Channel:** `#ai-champions`
@@ -101,23 +101,23 @@
 
 | Equipo | Líder | Email | Ext | Horario | Especialidad |
 |--------|-------|-------|-----|---------|--------------|
-| **Cloud Architecture** | Raúl Aguilar | raguilar@banco.mx | 4001 | 07:00-16:00 | AWS, Azure |
-| **Data Platform** | Sandra Herrera | sherrera@banco.mx | 4002 | 07:00-16:00 | Data Lake |
-| **API Management** | Carlos Reyes | creyes@banco.mx | 4003 | 08:00-17:00 | REST, GraphQL |
-| **DevOps** | Luis Campos | lcampos@banco.mx | 4004 | 24/7 Rotation | CI/CD |
-| **Security Architecture** | Diana Vázquez | dvazquez@banco.mx | 4005 | 08:00-17:00 | Zero Trust |
-| **Network Team** | Manuel Ortiz | mortiz@banco.mx | 4006 | 24/7 NOC | Connectivity |
-| **Database Admin** | Teresa Wong | twong@banco.mx | 4007 | 07:00-16:00 | PostgreSQL |
-| **Monitoring** | Alejandro Paz | apaz@banco.mx | 4008 | 24/7 SOC | Observability |
+| **Cloud Architecture** | Raúl Aguilar | raguilar@novasolutionsystems.com | 4001 | 07:00-16:00 | AWS, Azure |
+| **Data Platform** | Sandra Herrera | sherrera@novasolutionsystems.com | 4002 | 07:00-16:00 | Data Lake |
+| **API Management** | Carlos Reyes | creyes@novasolutionsystems.com | 4003 | 08:00-17:00 | REST, GraphQL |
+| **DevOps** | Luis Campos | lcampos@novasolutionsystems.com | 4004 | 24/7 Rotation | CI/CD |
+| **Security Architecture** | Diana Vázquez | dvazquez@novasolutionsystems.com | 4005 | 08:00-17:00 | Zero Trust |
+| **Network Team** | Manuel Ortiz | mortiz@novasolutionsystems.com | 4006 | 24/7 NOC | Connectivity |
+| **Database Admin** | Teresa Wong | twong@novasolutionsystems.com | 4007 | 07:00-16:00 | PostgreSQL |
+| **Monitoring** | Alejandro Paz | apaz@novasolutionsystems.com | 4008 | 24/7 SOC | Observability |
 
 ### Development Teams
 
 | Squad | Tech Lead | Email | Ext | Stack |
 |-------|-----------|-------|-----|-------|
-| **Frontend Squad** | Natalia Rojas | nrojas@banco.mx | 4010 | React, Angular |
-| **Backend Squad** | Iván Salinas | isalinas@banco.mx | 4011 | Java, Python |
-| **Mobile Squad** | Karla Domínguez | kdominguez@banco.mx | 4012 | iOS, Android |
-| **QA Automation** | Roberto Peña | rpena@banco.mx | 4013 | Selenium, Jest |
+| **Frontend Squad** | Natalia Rojas | nrojas@novasolutionsystems.com | 4010 | React, Angular |
+| **Backend Squad** | Iván Salinas | isalinas@novasolutionsystems.com | 4011 | Java, Python |
+| **Mobile Squad** | Karla Domínguez | kdominguez@novasolutionsystems.com | 4012 | iOS, Android |
+| **QA Automation** | Roberto Peña | rpena@novasolutionsystems.com | 4013 | Selenium, Jest |
 
 **Incident Bridge:** Extension 4444  
 **Architecture Review Board:** Miércoles 11:00
@@ -130,15 +130,15 @@
 
 | Función | Responsable | Email | Ext | Horario | Certificaciones |
 |---------|------------|-------|-----|---------|-----------------|
-| **Chief Risk Officer** | Enrique Mora | emora@banco.mx | 5001 | 08:30-17:30 | CRM, FRM |
-| **Operational Risk** | Verónica Ibarra | vibarra@banco.mx | 5002 | 08:30-17:30 | ORM |
-| **Credit Risk** | Joaquín Valdés | jvaldes@banco.mx | 5003 | 08:30-17:30 | CRC |
-| **Market Risk** | Silvia Gutiérrez | sgutierrez@banco.mx | 5004 | 08:30-17:30 | PRM |
-| **Model Risk** | Dr. Alberto Ríos | arios@banco.mx | 5005 | 08:30-17:30 | MRM |
-| **Compliance Officer** | Laura Estrada | lestrada@banco.mx | 5006 | 08:30-17:30 | CAMS |
-| **AML Officer** | Francisco Nava | fnava@banco.mx | 5007 | 24/7 | CAMS, CFE |
-| **Data Privacy Officer** | Martha Sánchez | msanchez@banco.mx | 5008 | 08:30-17:30 | CIPP/E |
-| **Internal Audit** | Gustavo Lima | glima@banco.mx | 5009 | 08:30-17:30 | CIA |
+| **Chief Risk Officer** | Enrique Mora | emora@novasolutionsystems.com | 5001 | 08:30-17:30 | CRM, FRM |
+| **Operational Risk** | Verónica Ibarra | vibarra@novasolutionsystems.com | 5002 | 08:30-17:30 | ORM |
+| **Credit Risk** | Joaquín Valdés | jvaldes@novasolutionsystems.com | 5003 | 08:30-17:30 | CRC |
+| **Market Risk** | Silvia Gutiérrez | sgutierrez@novasolutionsystems.com | 5004 | 08:30-17:30 | PRM |
+| **Model Risk** | Dr. Alberto Ríos | arios@novasolutionsystems.com | 5005 | 08:30-17:30 | MRM |
+| **Compliance Officer** | Laura Estrada | lestrada@novasolutionsystems.com | 5006 | 08:30-17:30 | CAMS |
+| **AML Officer** | Francisco Nava | fnava@novasolutionsystems.com | 5007 | 24/7 | CAMS, CFE |
+| **Data Privacy Officer** | Martha Sánchez | msanchez@novasolutionsystems.com | 5008 | 08:30-17:30 | CIPP/E |
+| **Internal Audit** | Gustavo Lima | glima@novasolutionsystems.com | 5009 | 08:30-17:30 | CIA |
 
 **Risk Committee:** Último viernes del mes  
 **Compliance Hotline:** 5555
@@ -230,13 +230,13 @@
 
 | Nombre | Rol | Comités | Email |
 |--------|-----|---------|-------|
-| Roberto Mendoza | CEO | Todos (cuando requiere) | rmendoza@banco.mx |
-| Fernando Gómez | Head of AI CoE | Governance, Ethics, Innovation | fgomez@banco.mx |
-| Patricia Ruiz | AI Governance | Governance, Ethics, Model Risk | pruiz@banco.mx |
-| Enrique Mora | CRO | Model Risk, Security | emora@banco.mx |
-| Ana Martínez | CISO | Security, Change Advisory | amartinez@banco.mx |
+| Roberto Mendoza | CEO | Todos (cuando requiere) | rmendoza@novasolutionsystems.com |
+| Fernando Gómez | Head of AI CoE | Governance, Ethics, Innovation | fgomez@novasolutionsystems.com |
+| Patricia Ruiz | AI Governance | Governance, Ethics, Model Risk | pruiz@novasolutionsystems.com |
+| Enrique Mora | CRO | Model Risk, Security | emora@novasolutionsystems.com |
+| Ana Martínez | CISO | Security, Change Advisory | amartinez@novasolutionsystems.com |
 
-**Secretaría Técnica:** coe-governance@banco.mx  
+**Secretaría Técnica:** coe-governance@novasolutionsystems.com  
 **SharePoint Comités:** https://banco.sharepoint.com/committees
 
 ---
@@ -260,10 +260,10 @@
 
 | Publicación | Frecuencia | Editor | Suscripción |
 |-------------|------------|--------|-------------|
-| **AI Weekly Digest** | Semanal (Lunes) | Paola Guzmán | ai-digest@banco.mx |
-| **Technical Bulletin** | Quincenal | Roberto Silva | tech-bulletin@banco.mx |
-| **Executive Summary** | Mensual | Fernando Gómez | exec-summary@banco.mx |
-| **Risk & Compliance Update** | Mensual | Patricia Ruiz | risk-update@banco.mx |
+| **AI Weekly Digest** | Semanal (Lunes) | Paola Guzmán | ai-digest@novasolutionsystems.com |
+| **Technical Bulletin** | Quincenal | Roberto Silva | tech-bulletin@novasolutionsystems.com |
+| **Executive Summary** | Mensual | Fernando Gómez | exec-summary@novasolutionsystems.com |
+| **Risk & Compliance Update** | Mensual | Patricia Ruiz | risk-update@novasolutionsystems.com |
 
 ### Reuniones Recurrentes
 
@@ -281,7 +281,7 @@
 ### App Móvil del Directorio
 - **iOS:** [App Store - Banco AI Directory](#)
 - **Android:** [Google Play - Banco AI Directory](#)
-- **Web App:** https://directory.banco.mx
+- **Web App:** https://directory.novasolutionsystems.com
 
 ### QR para Agregar Contactos Clave
 
@@ -298,7 +298,7 @@
 ### Proceso de Actualización
 
 1. **Revisión Trimestral:** Primera semana de cada trimestre
-2. **Solicitud de Cambios:** Via ServiceNow o email a coe-admin@banco.mx
+2. **Solicitud de Cambios:** Via ServiceNow o email a ai@novasolutionsystems.com
 3. **Aprobación:** Manager directo + CoE Admin
 4. **Publicación:** Dentro de 48 hrs hábiles
 5. **Notificación:** Email automático a suscriptores
@@ -324,11 +324,11 @@
 
 | Lista | Email | Propósito | Miembros |
 |-------|-------|-----------|----------|
-| **AI Leadership** | ai-leadership@banco.mx | Decisiones estratégicas | 12 |
-| **AI All Hands** | ai-all@banco.mx | Comunicación general | 150+ |
-| **AI Technical** | ai-tech@banco.mx | Temas técnicos | 45 |
-| **AI Business** | ai-business@banco.mx | Champions y POs | 30 |
-| **AI Emergency** | ai-emergency@banco.mx | Incidentes críticos | 20 |
+| **AI Leadership** | ai-leadership@novasolutionsystems.com | Decisiones estratégicas | 12 |
+| **AI All Hands** | ai-all@novasolutionsystems.com | Comunicación general | 150+ |
+| **AI Technical** | ai-tech@novasolutionsystems.com | Temas técnicos | 45 |
+| **AI Business** | ai-business@novasolutionsystems.com | Champions y POs | 30 |
+| **AI Emergency** | ai-emergency@novasolutionsystems.com | Incidentes críticos | 20 |
 
 ---
 
@@ -338,7 +338,7 @@ Este directorio contiene información confidencial y propietaria del banco. Su d
 
 **Clasificación:** Confidencial - Uso Interno  
 **Vigencia:** Hasta próxima actualización trimestral  
-**Contacto Admin:** coe-admin@banco.mx | Ext. 9000
+**Contacto Admin:** ai@novasolutionsystems.com | Ext. 9000
 
 ---
 

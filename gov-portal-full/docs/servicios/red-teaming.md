@@ -507,15 +507,15 @@ Completa el formulario de solicitud con:
 
 **¿Listo para probar la seguridad de tu IA?**
 
-- **Email**: redteam-ai@banco.mx
+- **Email**: redteam-ai@novasolutionsystems.com
 - **Teléfono**: +52 55 1234 5678
-- **Portal**: https://security.banco.mx/redteam
+- **Portal**: https://security.novasolutionsystems.com/redteam
 - **Urgencias 24/7**: +52 55 9876 5432
 
 ---
 
-[Solicitar Red Teaming](mailto:redteam-ai@banco.mx?subject=Solicitud%20Red%20Team){.md-button .md-button--primary}
-[Descargar Brochure](https://nova-cell.banco.mx/docs/redteam-brochure.pdf){.md-button}
+[Solicitar Red Teaming](mailto:redteam-ai@novasolutionsystems.com?subject=Solicitud%20Red%20Team){.md-button .md-button--primary}
+[Descargar Brochure](https://nova-cell.novasolutionsystems.com/docs/redteam-brochure.pdf){.md-button}
 
 ---
 

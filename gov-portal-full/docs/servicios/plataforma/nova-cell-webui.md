@@ -1128,12 +1128,12 @@ pie title Distribución de Proyectos por Área
 
 ### Recursos de Aprendizaje
 - **🎓 [Nova-Cell Academy](../../../developers/academy/curriculum-desarrolladores-ai.md)** - Cursos estructurados
-- **📹 [Video Tutorials](https://learning.banco.mx/nova-cell)** - Tutoriales paso a paso
+- **📹 [Video Tutorials](https://learning.novasolutionsystems.com/nova-cell)** - Tutoriales paso a paso
 - **🏆 [Certificación Oficial](https://cert.nova-cell.mx)** - Programa de certificación
 
 ### Soporte y Comunidad
 - **💬 [Community Forum](https://community.nova-cell.mx)** - Preguntas y respuestas
-- **📞 [Support Ticket](mailto:nova-support@banco.mx)** - Soporte técnico directo
+- **📞 [Support Ticket](mailto:ai@novasolutionsystems.com)** - Soporte técnico directo
 - **📖 [Knowledge Base](https://kb.nova-cell.mx)** - Base de conocimiento
 
 ## 🚀 Primeros Pasos
@@ -1159,10 +1159,10 @@ pie title Distribución de Proyectos por Área
 </div>
 
 #### URLs de Acceso:
-- **🌐 Producción:** [https://nova-cell.banco.mx](https://nova-cell.banco.mx)
-- **🧪 Desarrollo:** [https://dev.nova-cell.banco.mx](https://dev.nova-cell.banco.mx)
-- **📊 Monitoreo:** [https://monitor.nova-cell.banco.mx](https://monitor.nova-cell.banco.mx)
-- **📚 Documentación:** [https://docs.nova-cell.banco.mx](https://docs.nova-cell.banco.mx)
+- **🌐 Producción:** [https://nova-cell.novasolutionsystems.com](https://nova-cell.novasolutionsystems.com)
+- **🧪 Desarrollo:** [https://dev.nova-cell.novasolutionsystems.com](https://dev.nova-cell.novasolutionsystems.com)
+- **📊 Monitoreo:** [https://monitor.nova-cell.novasolutionsystems.com](https://monitor.nova-cell.novasolutionsystems.com)
+- **📚 Documentación:** [https://docs.nova-cell.novasolutionsystems.com](https://docs.nova-cell.novasolutionsystems.com)
 
 ### Tutorial de 15 Minutos
 
@@ -1186,7 +1186,7 @@ pie title Distribución de Proyectos por Área
   <h2 style="margin: 0;">🌐 Nova-Cell Web UI: Donde la IA se Vuelve Accesible</h2>
   <p style="margin: 10px 0;">"Transforma ideas complejas en soluciones inteligentes con clicks simples"</p>
   <div style="margin-top: 20px;">
-    <a href="https://nova-cell.banco.mx" style="background: white; color: #4299e1; padding: 10px 20px; border-radius: 5px; text-decoration: none; margin: 0 10px;">🚀 Acceder Ahora</a>
+    <a href="https://nova-cell.novasolutionsystems.com" style="background: white; color: #4299e1; padding: 10px 20px; border-radius: 5px; text-decoration: none; margin: 0 10px;">🚀 Acceder Ahora</a>
     <a href="./nova-cell-cli.md" style="background: white; color: #3182ce; padding: 10px 20px; border-radius: 5px; text-decoration: none; margin: 0 10px;">🛠️ Ver CLI</a>
     <a href="https://demo.nova-cell.mx" style="background: white; color: #4299e1; padding: 10px 20px; border-radius: 5px; text-decoration: none; margin: 0 10px;">🎯 Demo Interactivo</a>
   </div>

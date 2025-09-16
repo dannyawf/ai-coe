@@ -748,9 +748,9 @@ graph LR
 
 Para dudas sobre el uso de la calculadora ROI:
 
-- **Email**: roi-calculator@banco.mx
+- **Email**: roi-calculator@novasolutionsystems.com
 - **Teams**: Canal #roi-iniciativas-ia
-- **Wiki**: wiki.banco.mx/roi-calculator
+- **Wiki**: wiki.novasolutionsystems.com/roi-calculator
 - **Helpdesk CoE**: Ext. 4242
 
 ---

@@ -600,7 +600,7 @@ security_kpis = {
 
 ### Security Operations Center (SOC)
 - **24/7 Hotline**: +52-555-SEC-URITY
-- **Email**: soc@banco.mx
+- **Email**: soc@novasolutionsystems.com
 - **Slack**: #security-incidents
 - **PagerDuty**: security-oncall
 

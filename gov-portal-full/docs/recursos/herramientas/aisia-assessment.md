@@ -640,9 +640,9 @@ Los resultados de AISIA alimentan directamente las métricas del Framework IMPAC
 
 Para dudas sobre el uso de la herramienta AISIA:
 
-- **Email**: aisia-support@banco.mx
+- **Email**: ai@novasolutionsystems.com
 - **Teams**: Canal #aisia-evaluaciones
-- **Wiki**: wiki.banco.mx/aisia
+- **Wiki**: wiki.novasolutionsystems.com/aisia
 - **Helpdesk CoE**: Ext. 4242
 
 ---

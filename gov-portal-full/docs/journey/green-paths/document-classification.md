@@ -478,20 +478,20 @@ change_management:
 
 ### Herramientas
 - [ROI Calculator](../../tools/roi-calculator.md)
-- [Document Taxonomy Builder](https://nova-cell.banco.mx/tools/taxonomy)
-- [Model Performance Dashboard](https://nova-cell.banco.mx/dashboards/doc-class)
+- [Document Taxonomy Builder](https://nova-cell.novasolutionsystems.com/tools/taxonomy)
+- [Model Performance Dashboard](https://nova-cell.novasolutionsystems.com/dashboards/doc-class)
 
 ### Soporte
-- **Product Owner**: Laura Jiménez (laura.jimenez@banco.mx)
-- **ML Engineer Lead**: Roberto Silva (roberto.silva@banco.mx)
-- **CoE Support**: coe-ia@banco.mx
+- **Product Owner**: Laura Jiménez (laura.jimenez@novasolutionsystems.com)
+- **ML Engineer Lead**: Roberto Silva (roberto.silva@novasolutionsystems.com)
+- **CoE Support**: coe-ia@novasolutionsystems.com
 
 ---
 
 **¿Listo para automatizar tu procesamiento documental?**
 
-[Solicitar PoC](mailto:coe-ia@banco.mx?subject=PoC%20Document%20Classification){.md-button .md-button--primary}
-[Ver Demo](https://nova-cell.banco.mx/demos/document-ai){.md-button}
+[Solicitar PoC](mailto:coe-ia@novasolutionsystems.com?subject=PoC%20Document%20Classification){.md-button .md-button--primary}
+[Ver Demo](https://nova-cell.novasolutionsystems.com/demos/document-ai){.md-button}
 
 ---
 
