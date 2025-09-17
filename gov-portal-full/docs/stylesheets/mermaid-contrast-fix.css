@@ -1,0 +1,209 @@
+/* Mermaid Diagram Contrast Fix for Light and Dark Themes */
+
+/* Base styles for all mermaid diagrams */
+.mermaid {
+  --mermaid-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Light theme styles */
+[data-md-color-scheme="default"] .mermaid,
+.mermaid {
+  /* Node text colors - ensure high contrast on colored backgrounds */
+  --mermaid-label-color: #FFFFFF !important;
+  --mermaid-node-fg-color: #FFFFFF !important;
+
+  /* Background colors for nodes */
+  --mermaid-node-bg-color: #4051B5 !important;
+  --mermaid-node-border: #2E3F9F !important;
+
+  /* Edge and arrow colors */
+  --mermaid-edge-color: #333333 !important;
+  --mermaid-arrow-color: #333333 !important;
+
+  /* Text colors for labels outside nodes */
+  --mermaid-label-text-color: #333333 !important;
+  --mermaid-edge-label-color: #333333 !important;
+
+  /* Flowchart specific */
+  --mermaid-flowchart-label-color: #FFFFFF !important;
+  --mermaid-flowchart-node-fg-color: #FFFFFF !important;
+}
+
+/* Dark theme styles */
+[data-md-color-scheme="slate"] .mermaid {
+  /* Node text colors - ensure high contrast on colored backgrounds */
+  --mermaid-label-color: #FFFFFF !important;
+  --mermaid-node-fg-color: #FFFFFF !important;
+
+  /* Background colors for nodes */
+  --mermaid-node-bg-color: #5A6BC8 !important;
+  --mermaid-node-border: #4858B8 !important;
+
+  /* Edge and arrow colors */
+  --mermaid-edge-color: #E8E8E8 !important;
+  --mermaid-arrow-color: #E8E8E8 !important;
+
+  /* Text colors for labels outside nodes */
+  --mermaid-label-text-color: #E8E8E8 !important;
+  --mermaid-edge-label-color: #E8E8E8 !important;
+
+  /* Flowchart specific */
+  --mermaid-flowchart-label-color: #FFFFFF !important;
+  --mermaid-flowchart-node-fg-color: #FFFFFF !important;
+}
+
+/* Override inline styles for text elements in mermaid */
+.mermaid text,
+.mermaid .nodeLabel,
+.mermaid .label,
+.mermaid .labelText,
+.mermaid .edgeLabel,
+.mermaid .edgePath .path,
+.mermaid .flowchart-link {
+  fill: var(--mermaid-label-color) !important;
+  color: var(--mermaid-label-color) !important;
+}
+
+/* Ensure text in rectangles (nodes) is white for contrast */
+.mermaid rect + text,
+.mermaid .node rect + text,
+.mermaid g.node text {
+  fill: #FFFFFF !important;
+  font-weight: 500 !important;
+}
+
+/* Edge labels should use appropriate contrast color */
+.mermaid .edgeLabel text,
+.mermaid .edgeLabel .label {
+  fill: var(--mermaid-edge-label-color) !important;
+}
+
+/* Fix for styled nodes with custom colors */
+.mermaid .node[style*="fill:#667eea"] text,
+.mermaid .node[style*="fill:#764ba2"] text,
+.mermaid .node[style*="fill:#f093fb"] text,
+.mermaid .node[style*="fill:#4CAF50"] text,
+.mermaid .node[style*="fill:#ff6b6b"] text,
+.mermaid .node[style*="fill:#4ecdc4"] text {
+  fill: #FFFFFF !important;
+  font-weight: 600 !important;
+}
+
+/* Additional support for Mermaid's style syntax */
+.mermaid g[id*="667eea"] text,
+.mermaid g[id*="764ba2"] text,
+.mermaid g[id*="f093fb"] text,
+.mermaid g[id*="4CAF50"] text,
+.mermaid g[id*="ff6b6b"] text,
+.mermaid g[id*="4ecdc4"] text {
+  fill: #FFFFFF !important;
+}
+
+/* Fix for nodes styled via Mermaid's style command */
+.mermaid .node[class*="style"] text,
+.mermaid g[class*="style"] text {
+  fill: #FFFFFF !important;
+  font-weight: 500 !important;
+}
+
+/* Ensure proper contrast for different node types */
+.mermaid .node.default text { fill: #FFFFFF !important; }
+.mermaid .node.start text { fill: #FFFFFF !important; }
+.mermaid .node.end text { fill: #FFFFFF !important; }
+.mermaid .cluster text { fill: var(--mermaid-label-text-color) !important; }
+
+/* Subgraph labels */
+.mermaid .cluster-label text,
+.mermaid .subgraph .label {
+  fill: var(--mermaid-label-text-color) !important;
+  font-weight: 600 !important;
+}
+
+/* Fix for organization chart specific elements */
+.mermaid .org-chart text,
+.mermaid .orgchart text {
+  fill: #FFFFFF !important;
+}
+
+/* Improve readability with text shadows on colored backgrounds */
+.mermaid rect + text,
+.mermaid .node text {
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Make sure arrows are visible */
+.mermaid .arrowheadPath {
+  fill: var(--mermaid-arrow-color) !important;
+  stroke: var(--mermaid-arrow-color) !important;
+}
+
+/* Edge paths */
+.mermaid .edgePath .path {
+  stroke: var(--mermaid-edge-color) !important;
+}
+
+/* Ensure links between nodes are visible */
+.mermaid .flowchart-link {
+  stroke: var(--mermaid-edge-color) !important;
+}
+
+/* Additional fixes for specific diagram types */
+
+/* Gantt chart text */
+.mermaid .gantt text {
+  fill: var(--mermaid-label-text-color) !important;
+}
+
+/* Pie chart text */
+.mermaid .pie text {
+  fill: var(--mermaid-label-text-color) !important;
+}
+
+/* State diagram text */
+.mermaid .state-label text {
+  fill: #FFFFFF !important;
+}
+
+/* Class diagram text */
+.mermaid .classLabel text {
+  fill: #FFFFFF !important;
+}
+
+/* Sequence diagram text */
+.mermaid .actor text,
+.mermaid .messageText {
+  fill: var(--mermaid-label-text-color) !important;
+}
+
+/* Fix for the specific organizational chart in operating-model-coe.md */
+.mermaid g[id*="Consejo"] text,
+.mermaid g[id*="Chief"] text,
+.mermaid g[id*="Comité"] text,
+.mermaid g[id*="Centro"] text,
+.mermaid g[id*="Director"] text,
+.mermaid g[id*="Arquitecto"] text,
+.mermaid g[id*="AI"] text,
+.mermaid g[id*="MLOps"] text,
+.mermaid g[id*="Data"] text {
+  fill: #FFFFFF !important;
+  font-weight: 500 !important;
+}
+
+/* Ensure all text elements have minimum font size for readability */
+.mermaid text {
+  font-size: 14px !important;
+  min-font-size: 12px !important;
+}
+
+/* High contrast mode for accessibility */
+@media (prefers-contrast: high) {
+  .mermaid text,
+  .mermaid .label,
+  .mermaid .nodeLabel {
+    font-weight: bold !important;
+  }
+
+  .mermaid rect + text {
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.8) !important;
+  }
+}

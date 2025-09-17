@@ -717,14 +717,14 @@ El Centro de Excelencia ofrece:
 **Contacto:**
 - Email: mlops@novasolutionsystems.com
 - Slack: #mlops-support
-- Teams: MLOps Community
+- #Google Chat: MLOps Community
 
 ---
 
 **¿Listo para escalar tu ML a producción?**
 
 [Solicitar Consultoría MLOps](mailto:mlops@novasolutionsystems.com?subject=Consultoría%20MLOps){.md-button .md-button--primary}
-[Unirse a la Comunidad](https://teams.microsoft.com/join/mlops-community){.md-button}
+[Unirse a la Comunidad](https://chat.google.com/room/AAQAugDuKpE?cls=1){.md-button}
 
 ---
 

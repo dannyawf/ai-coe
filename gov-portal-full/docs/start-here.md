@@ -229,8 +229,8 @@ Acelera tu implementación con estos patrones validados y preaprobados por gober
 
 <div class="nova-card-feature" style="text-align: center;">
     <span style="font-size: 3em;">💬</span>
-    <h4>Teams</h4>
-    <p><a href="https://teams.microsoft.com/l/channel/coe-ia">Canal CoE-IA</a></p>
+    <h4>Google Chat</h4>
+    <p><a href="https://chat.google.com/room/AAQAugDuKpE?cls=1">Canal Centro de Excelencia IA</a></p>
 </div>
 
 <div class="nova-card-feature" style="text-align: center;">

@@ -171,7 +171,7 @@ RUN python /app/scripts/replace_variables.py
 
 ### Comunicación (6 variables)
 - Slack: 4 variables
-- Teams: 2 variables
+- #Google Chat: 2 variables
 
 ## 🔍 Troubleshooting
 

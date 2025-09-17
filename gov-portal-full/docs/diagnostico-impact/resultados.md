@@ -82,17 +82,13 @@ No hay presupuesto asignado para IA, lo que puede indicar tanto falta de planifi
 
 ## ⚠️ Evaluación de Riesgos
 
-<div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
-
 | Área de Riesgo | Situación Actual | Nivel de Riesgo | Impacto Potencial |
-|----------------|------------------|-----------------|-------------------|
-| **Seguridad de Datos** | Sin procesos de seguridad para IA | <span style="background: #FFEBEE; color: #C62828; padding: 4px 8px; border-radius: 12px; font-weight: bold;">ALTO</span> | Posible fuga de código propietario o datos sensibles |
-| **Compliance** | Sin políticas formales de uso | <span style="background: #FFEBEE; color: #C62828; padding: 4px 8px; border-radius: 12px; font-weight: bold;">ALTO</span> | Riesgo regulatorio y de auditoría |
-| **Financiero** | Sin presupuesto definido | <span style="background: #FFF3E0; color: #F57C00; padding: 4px 8px; border-radius: 12px; font-weight: bold;">MEDIO</span> | Gastos no controlados en herramientas individuales |
-| **Operacional** | Uso informal sin estándares | <span style="background: #FFF3E0; color: #F57C00; padding: 4px 8px; border-radius: 12px; font-weight: bold;">MEDIO</span> | Inconsistencia en calidad y procesos |
-| **Conocimiento** | Adopción sin capacitación formal | <span style="background: #FFF3E0; color: #F57C00; padding: 4px 8px; border-radius: 12px; font-weight: bold;">MEDIO</span> | Uso subóptimo de herramientas |
-
-</div>
+|-----------------|-------------------|------------------|-------------------|
+| **Seguridad de Datos** | Sin procesos de seguridad para IA | **ALTO** 🔴 | Posible fuga de código propietario o datos sensibles |
+| **Compliance** | Sin políticas formales de uso | **ALTO** 🔴 | Riesgo regulatorio y de auditoría |
+| **Financiero** | Sin presupuesto definido | **MEDIO** 🟡 | Gastos no controlados en herramientas individuales |
+| **Operacional** | Uso informal sin estándares | **MEDIO** 🟡 | Inconsistencia en calidad y procesos |
+| **Conocimiento** | Adopción sin capacitación formal | **MEDIO** 🟡 | Uso subóptimo de herramientas |
 
 ## 💡 Recomendaciones Prioritarias
 

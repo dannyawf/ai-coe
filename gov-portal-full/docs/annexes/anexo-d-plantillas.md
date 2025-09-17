@@ -754,7 +754,7 @@ Solicitud formal de cambios en sistemas de IA en producción.
 
 **Centro de Excelencia de IA**
 - 📧 templates-ia@novasolutionsystems.com
-- 💬 Teams: #documentation-support
+- 💬 #Google Chat: #documentation-support
 - 🌐 Wiki: https://wiki.banco.interno/templates
 
 ---

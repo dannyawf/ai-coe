@@ -351,7 +351,7 @@ frameworks:
 - **Documentación:** Confluence + Notion
 - **Diagramas:** Miro + Draw.io
 - **Código:** GitHub + VS Code
-- **Comunicación:** Slack + Teams
+- **Comunicación:** Slack + Google Chat
 - **Tracking:** Jira + Azure DevOps
 
 ## 💰 ROI del Servicio

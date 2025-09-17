@@ -623,7 +623,7 @@ Nova-Cell Core Platform:
 
 **Canales por Audiencia**:
 - **Ejecutivos**: Executive dashboard real-time + monthly board reports
-- **Mandos Medios**: Teams channels + bi-weekly workshops + manager kits
+- **Mandos Medios**: canales de Google Chat + bi-weekly workshops + manager kits
 - **Empleados Frontline**: WhatsApp groups + video tutorials + peer mentoring
 - **Clientes**: In-app messaging + email campaigns + social media + website
 

@@ -524,7 +524,7 @@ graph TD
 
 **Centro de Excelencia de IA**
 - 📧 Email: coe-ia@novasolutionsystems.com
-- 💬 Teams: Canal #AISIA-Support
+- 💬 #Google Chat: Canal #AISIA-Support
 - 🌐 Portal: https://aisia.banco.interno
 - 📱 Ext: 5555
 

@@ -122,8 +122,10 @@ extra_css:
   - stylesheets/contrast-fixes.css
   - stylesheets/mermaid-fixes.css
   - stylesheets/navigation-fixes.css
+  - stylesheets/mermaid-contrast-fix.css
   - stylesheets/tabs-vertical-fix.css
   - stylesheets/hero-text-override.css
+  - stylesheets/menu-contrast-fix.css
 
 # Extra JavaScript for Mermaid diagrams
 extra_javascript:
@@ -219,6 +221,7 @@ nav:
     - Operating Model:
       - Modelo Operativo CoE: gobernanza/operating-model-coe.md
       - Plan Comunicación: gobernanza/plan-comunicacion-coe.md
+      - Catálogo Servicios: servicios/catalogo-servicios.md
       - DoD SDLC con IA: sdlc-dod-ai-view.md
     - Métricas y Dashboards:
       - Dashboard Portfolio: metricas/dashboard-portfolio.md

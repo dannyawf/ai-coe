@@ -581,7 +581,7 @@ report = risk_mgr.generate_report(
 
 **Gestión de Riesgos IA - CoE**
 - 📧 risk-ai@novasolutionsystems.com
-- 💬 Teams: #risk-management-ai
+- 💬 #Google Chat: #risk-management-ai
 - 📱 Hotline: 5555 (Riesgos Críticos)
 - 🌐 Portal: https://risk.nova-cell.banco.interno
 

@@ -369,9 +369,9 @@ graph LR
 </div>
 
 <div class="contact-card">
-<h4>💼 Teams</h4>
+<h4>💼 Google Chat</h4>
 <p>#coe-ia-support</p>
-<a href="https://teams.microsoft.com/channel/coe-support" class="btn-secondary">Ir al Canal</a>
+<a href="https://chat.google.com/room/AAQAugDuKpE?cls=1" class="btn-secondary">Ir al Canal</a>
 </div>
 
 </div>
@@ -383,7 +383,7 @@ graph LR
 - 🗓️ **Jueves:** 15:00 - 16:00 hrs - Estrategia y gobernanza
 - 🗓️ **Viernes:** 12:00 - 13:00 hrs - Open Q&A
 
-[Unirse a Office Hours](https://teams.microsoft.com/meet/office-hours){.md-button}
+[Unirse a Office Hours](https://chat.google.com/room/AAQAugDuKpE?cls=1){.md-button}
 
 ---
 

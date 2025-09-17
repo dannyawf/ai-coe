@@ -126,7 +126,7 @@ casos_exito = {
 1. **Contacto Inicial**
    - Email: coe-ia@novasolutionsystems.com
    - Portal: nova-cell.novasolutionsystems.com/services
-   - Teams: #ai-services
+   - #Google Chat: #ai-services
 
 2. **Discovery Call** (30 min)
    - Entendemos tu necesidad

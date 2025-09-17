@@ -688,7 +688,7 @@ pricing_factors = {
 
 ### Paso 1: Contacto Inicial
 - Email: coe-ia@novasolutionsystems.com
-- Teams: #ai-center-of-excellence
+- #Google Chat: #ai-center-of-excellence
 - Portal: nova-cell.novasolutionsystems.com/services
 - Teléfono: Ext. 5555
 
@@ -736,7 +736,7 @@ pricing_factors = {
 **Para más información o solicitar servicios:**
 
 📧 coe-ia@novasolutionsystems.com  
-💬 Teams: #ai-services  
+💬 #Google Chat: #ai-services  
 🌐 nova-cell.novasolutionsystems.com  
 📞 Ext. 5555
 

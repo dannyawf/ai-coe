@@ -420,7 +420,7 @@ graph LR
 <div class="support-card">
 <h4>📧 Consultas Generales</h4>
 <p><strong>Email:</strong> coe-ia@novasolutionsystems.com</p>
-<p><strong>Teams:</strong> #coe-ia-soporte</p>
+<p><strong>#Google Chat:</strong> #coe-ia-soporte</p>
 <p><strong>SLA:</strong> 24 horas hábiles</p>
 </div>
 
@@ -434,7 +434,7 @@ graph LR
 <div class="support-card">
 <h4>🗓️ Office Hours</h4>
 <p><strong>Horario:</strong> Martes y Jueves 10:00-11:00 AM</p>
-<p><strong>Teams:</strong> [Unirse a sesión](https://teams.microsoft.com/meet/coe-office-hours)</p>
+<p><strong>#Google Chat:</strong> [Unirse a sesión](https://chat.google.com/room/AAQAugDuKpE?cls=1)</p>
 <p><strong>Formato:</strong> Agenda abierta</p>
 </div>
 

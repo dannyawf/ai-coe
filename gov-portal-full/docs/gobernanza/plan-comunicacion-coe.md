@@ -47,7 +47,7 @@ Generar confianza, transparencia y entusiasmo en torno a la Inteligencia Artific
 | **Gerencia Media** | "Te equipamos para liderar en la era de la IA. Serás clave en la transformación, te daremos las guías y el soporte para gestionar a tu equipo en este cambio." | De apoyo, empoderador, práctico. | Guías para líderes, Sesiones "Café con el CoE", AI Champions Community. |
 | **Personal Operativo** | "La IA es tu nuevo copiloto. **Nova-Cell 2.0** está aquí para eliminar las tareas tediosas y repetitivas, permitiéndote enfocarte en lo que aporta más valor y desarrollar nuevas capacidades." | Reasegurador, inspirador, sencillo. | Cápsulas de video, Infografías, Newsletter, Comunicados de RRHH. |
 | **Áreas de Control** | "Construimos la innovación sobre una base de cumplimiento y ética. Nuestro marco de gobernanza es transparente y cumple con los más altos estándares regulatorios (**CNBV, ISO 42001**)." | Técnico, transparente, riguroso. | Portal de Gobierno AI, Sesiones técnicas, Documentación de modelos. |
-| **Tecnología y Datos** | "El CoE define el 'qué' y el 'porqué' de la IA; colaboramos estrechamente con ustedes para construir el 'cómo'. **Nova-Cell 2.0** se integra de forma segura y escalable en nuestra arquitectura." | De colaboración, técnico, respetuoso de su dominio. | Foros técnicos, Documentación en Confluence, Canales de Slack/Teams dedicados. |
+| **Tecnología y Datos** | "El CoE define el 'qué' y el 'porqué' de la IA; colaboramos estrechamente con ustedes para construir el 'cómo'. **Nova-Cell 2.0** se integra de forma segura y escalable en nuestra arquitectura." | De colaboración, técnico, respetuoso de su dominio. | Foros técnicos, Documentación en Confluence, Canales de Slack/Google Chat dedicados. |
 
 ## 5. Canales de Comunicación (Expandido)
 
@@ -55,7 +55,7 @@ Generar confianza, transparencia y entusiasmo en torno a la Inteligencia Artific
 | :--- | :--- | :--- | :--- |
 | **Portal de Gobierno AI (Intranet)** | Actualización constante | Todos | **Fuente única de verdad.** Incluye: Política de Uso Aceptable de IA, catálogo de casos de uso aprobados, guías de "Prompting" para **Nova-Cell 2.0**, FAQs, calendario de capacitaciones, documentación de cumplimiento **LFPDPPP**. |
 | **Newsletter Mensual "El Pulso AI"** | Mensual | Todos | Mantener el "top of mind". Secciones: "El Prompt del Mes", "Héroe de la IA" (reconocimiento), "Mitos vs. Realidades", "Avance de Proyectos Clave", "La IA y la Regulación" (cápsula de Cumplimiento). |
-| **AI Champions Community (Teams)** | Permanente | Gerencia Media, Personal Operativo avanzado | Crear una red de evangelizadores y soporte de primer nivel. Canal para compartir mejores prácticas, resolver dudas operativas de **Nova-Cell 2.0**, y obtener feedback directo del "piso de operaciones". |
+| **AI Champions Community (Google Chat)** | Permanente | Gerencia Media, Personal Operativo avanzado | Crear una red de evangelizadores y soporte de primer nivel. Canal para compartir mejores prácticas, resolver dudas operativas de **Nova-Cell 2.0**, y obtener feedback directo del "piso de operaciones". |
 | **Townhalls Trimestrales** | Trimestral | Todos (con transmisión en vivo) | Liderazgo visible y alineación estratégica. Presentado por un miembro del C-Level y el Director del CoE. Muestra de demos en vivo, celebración de grandes hitos, sesión abierta de Q&A. |
 | **Sesiones "Café con el CoE"** | Quincenal | Gerencia Media, Líderes de Negocio | Espacio informal y de aforo limitado (15-20 personas) para resolver dudas específicas, discutir barreras y co-crear soluciones. Clave para gestionar la resistencia de la "capa de en medio". |
 | **Roadshows Departamentales** | A demanda / Trimestral | Unidades de Negocio específicas | Presentaciones personalizadas que aterrizan el valor de la IA y **Nova-Cell 2.0** a los KPIs y procesos específicos de cada área (ej. "IA para originación de crédito", "IA para personalización de campañas"). |
@@ -106,7 +106,7 @@ Adoptaremos el modelo ADKAR para estructurar la gestión del cambio, asegurando 
 | :--- | :--- | :--- | :--- | :--- |
 | **Alcance (Reach)** | Tasa de apertura del Newsletter "El Pulso AI" | % de correos abiertos | Mensual | Sistema de mailing interno |
 | | Visitas únicas al Portal de Gobierno AI | # de visitantes únicos | Mensual | Analítica de Intranet |
-| **Engagement** | Participación en la AI Champions Community | # de posts, comentarios, reacciones | Semanal | Métricas de Teams/Slack |
+| **Engagement** | Participación en la AI Champions Community | # de posts, comentarios, reacciones | Semanal | Métricas de Google Chat/Slack |
 | | Tasa de finalización de cursos de IA | % de inscritos que completan el curso | Trimestral | Plataforma de e-learning |
 | **Adopción** | Usuarios Activos Mensuales (MAU) de **Nova-Cell 2.0** | # de usuarios únicos que interactúan con la plataforma | Mensual | Dashboard de la plataforma |
 | | Casos de uso enviados al CoE | # de propuestas recibidas por mes | Mensual | Formulario en el Portal |
@@ -155,7 +155,7 @@ Adoptaremos el modelo ADKAR para estructurar la gestión del cambio, asegurando 
 ## 12. Protocolos de Escalación de Comunicación
 
 *   **Nivel 1 (Operativo):** Dudas sobre el uso de **Nova-Cell 2.0**, preguntas sobre políticas.
-    *   **Canal:** AI Champions Community en Teams.
+    *   **Canal:** AI Champions Community en Google Chat.
     *   **Responsable:** AI Champions / Analista del CoE.
     *   **SLA de Respuesta:** 24 horas.
 *   **Nivel 2 (Táctico):** Resistencia de un equipo, dudas sobre la aplicación de la IA en un proceso, identificación de nuevos casos de uso, riesgos potenciales identificados.

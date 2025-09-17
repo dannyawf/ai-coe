@@ -535,6 +535,6 @@ const newPrompt = await knowledgeHub.createPrompt({
 
 ---
 
-*Esta guía técnica forma parte integral del ecosistema de gobernanza de IA del Banco y será revisada semestralmente o ante cambios regulatorios significativos. Para consultas técnicas o propuestas de mejora, contactar al Centro de Excelencia de IA a través del canal #ai-governance en Teams corporativo.*
+*Esta guía técnica forma parte integral del ecosistema de gobernanza de IA del Banco y será revisada semestralmente o ante cambios regulatorios significativos. Para consultas técnicas o propuestas de mejora, contactar al Centro de Excelencia de IA a través del canal #ai-governance en Google Chat corporativo.*
 
 **Documento controlado - Prohibida su reproducción sin autorización del CoE IA**

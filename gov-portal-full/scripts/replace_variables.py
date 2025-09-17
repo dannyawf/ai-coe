@@ -125,9 +125,9 @@ class VariableReplacer:
                     flat['{{SLACK_SUPPORT}}'] = slack['channels'].get('support', '')
                     flat['{{SLACK_DEV}}'] = slack['channels'].get('dev', '')
 
-            if 'teams' in self.variables['communication']:
-                flat['{{TEAMS_URL}}'] = self.variables['communication']['teams'].get('url', '')
-                flat['{{TEAMS_CHANNEL}}'] = self.variables['communication']['teams'].get('channel', '')
+            if 'google_chat' in self.variables['communication']:
+                flat['{{GCHAT_URL}}'] = self.variables['communication']['google_chat'].get('url', '')
+                flat['{{GCHAT_CHANNEL}}'] = self.variables['communication']['google_chat'].get('channel', '')
 
         # Servicios externos
         if 'external' in self.variables:

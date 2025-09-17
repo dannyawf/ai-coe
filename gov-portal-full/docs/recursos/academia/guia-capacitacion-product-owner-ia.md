@@ -559,7 +559,7 @@ Restricciones:
 - **Instructor Principal**: AI Product Owner Senior con 5+ años experiencia bancaria
 - **Facilitadores Técnicos**: 2 especialistas Nova-Cell para soporte hands-on
 - **Asistente IA**: Nova-Cell Training Bot disponible 24/7 para dudas
-- **Foro de Dudas**: Canal Teams dedicado con respuesta <4 horas
+- **Foro de Dudas**: Canal de Google Chat dedicado con respuesta <4 horas
 - **Horario de Oficina**: Lunes y miércoles 18:00-19:00 para sesiones 1-on-1
 
 ### Post-Curso

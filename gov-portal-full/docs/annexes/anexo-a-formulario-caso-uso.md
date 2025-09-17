@@ -433,7 +433,7 @@ Los casos de uso serán evaluados según los siguientes criterios:
 ### Centro de Excelencia de IA
 
 - **Email:** coe-ia@novasolutionsystems.com
-- **Teams:** Canal CoE-IA-Soporte
+- **#Google Chat:** Canal CoE-IA en Google Chat-Soporte
 - **Portal:** https://coe-ia.banco.interno
 - **Horario de Atención:** Lunes a Viernes, 9:00 - 18:00 hrs
 

@@ -89,9 +89,9 @@ communication:
       support: "#ai-support"               # {{SLACK_SUPPORT}}
       dev: "#ai-developers"                # {{SLACK_DEV}}
 
-  teams:
-    url: "https://chat.google.com/room/AAQAugDuKpE?cls=1" # {{TEAMS_URL}}
-    channel: "Centro de Excelencia IA"     # {{TEAMS_CHANNEL}}
+  google_chat:
+    url: "https://chat.google.com/room/AAQAugDuKpE?cls=1" # {{GCHAT_URL}}
+    channel: "Centro de Excelencia IA"     # {{GCHAT_CHANNEL}}
 
 # -----------------------------------------------------------------------------
 # SERVICIOS EXTERNOS

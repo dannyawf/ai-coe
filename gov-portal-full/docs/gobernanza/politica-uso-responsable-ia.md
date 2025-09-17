@@ -364,7 +364,7 @@ Todo plan de remediación debe incluir obligatoriamente:
 
 ### Centro de Excelencia de IA
 - **Email**: coe-ia@novasolutionsystems.com
-- **Teams**: Canal #ai-governance
+- **Google Chat**: [Canal Centro de Excelencia IA](https://chat.google.com/room/AAQAugDuKpE?cls=1)
 - **Horario**: Lun-Vie 8:00-18:00
 - **Portal**: nova-cell.novasolutionsystems.com/ethics
 

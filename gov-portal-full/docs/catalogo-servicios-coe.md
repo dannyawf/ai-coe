@@ -197,7 +197,7 @@ El CoE IA ofrece un conjunto integral de servicios, agrupados en categorías cla
 **Rol del CoE Responsable:** Todos los roles del CoE IA (soporte L2/L3), coordinación con Helpdesk de TI (L1)
 
 **Flujo de Solicitud:**
-1. **Inicio:** Apertura de ticket a través del sistema de gestión de servicios o canal Teams #ai-governance
+1. **Inicio:** Apertura de ticket a través del sistema de gestión de servicios o [Canal Centro de Excelencia IA en Google Chat](https://chat.google.com/room/AAQAugDuKpE?cls=1)
 2. **Clasificación y Priorización:** Clasificación por tipo y nivel de impacto/urgencia
 3. **Resolución:** Trabajo en la resolución por equipo del Helpdesk AI o experto correspondiente
 4. **Cierre:** Notificación al solicitante una vez resuelto el ticket
@@ -343,7 +343,7 @@ Algunos servicios podrán ser sujetos a chargeback o cost-sharing:
 ## 5. Mecanismos de Retroalimentación y Satisfacción del Cliente
 
 - **Encuestas de Satisfacción:** Encuestas trimestrales para medir satisfacción y Net Promoter Score (NPS)
-- **Canales de Retroalimentación Directa:** Helpdesk AI y canal #ai-governance en Teams
+- **Canales de Retroalimentación Directa:** Helpdesk AI y [Canal Centro de Excelencia IA en Google Chat](https://chat.google.com/room/AAQAugDuKpE?cls=1)
 - **Reuniones de Revisión de Servicio:** Reuniones periódicas con principales stakeholders
 - **Programa de AI Champions:** Canal bidireccional de retroalimentación
 
@@ -379,6 +379,6 @@ Algunos servicios podrán ser sujetos a chargeback o cost-sharing:
 
 ---
 
-*Este Catálogo de Servicios es un documento vivo que será revisado y actualizado periódicamente para adaptarse a la evolución de la tecnología, la normativa y las necesidades del Banco. Para consultas o aclaraciones, contactar al Centro de Excelencia de IA a través del canal #ai-governance en Teams corporativo.*
+*Este Catálogo de Servicios es un documento vivo que será revisado y actualizado periódicamente para adaptarse a la evolución de la tecnología, la normativa y las necesidades del Banco. Para consultas o aclaraciones, contactar al Centro de Excelencia de IA a través del [Canal Centro de Excelencia IA en Google Chat](https://chat.google.com/room/AAQAugDuKpE?cls=1).*
 
 **Documento controlado - Prohibida su reproducción sin autorización del CoE IA**

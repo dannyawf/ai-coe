@@ -383,7 +383,7 @@ class AdoptionManager:
 |-------------|---------|---------|-----------|-------|
 | **Executive Leadership** | ROI impact, strategic value | Executive dashboard | Weekly | Product Owner |
 | **Department Heads** | Operational improvements | Email + Meetings | Bi-weekly | Program Manager |
-| **End Users** | How-to, benefits, support | Teams, Email, Portal | Daily → Weekly | Change Manager |
+| **End Users** | How-to, benefits, support | Google Chat, Email, Portal | Daily → Weekly | Change Manager |
 | **IT Operations** | Technical status, issues | Slack, Dashboards | Real-time | Tech Lead |
 | **Risk & Compliance** | Audit results, metrics | Reports, Meetings | Weekly | Compliance Lead |
 | **External Regulators** | Compliance status | Formal reports | Monthly/Quarterly | Legal |

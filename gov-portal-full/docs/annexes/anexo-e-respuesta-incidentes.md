@@ -420,7 +420,7 @@ graph TB
 
 ### Templates de Comunicación
 
-#### **Template 1: Alerta Inicial (Slack/Teams)**
+#### **Template 1: Alerta Inicial (Slack/Google Chat)**
 ```markdown
 🚨 **INCIDENTE IA - [P1/P2/P3/P4]** 🚨
 
@@ -523,7 +523,7 @@ Atentamente,
 | **Logs** | ELK Stack | Análisis de logs centralizados | https://kibana.banco.interno |
 | **Alertas** | PagerDuty | Gestión de on-call y escalamiento | https://banco.pagerduty.com |
 | **Tickets** | Jira Service Mgmt | Registro y tracking de incidentes | https://jira.banco.interno |
-| **Comunicación** | Slack/Teams | Coordinación en tiempo real | #ai-incidents |
+| **Comunicación** | Slack/Google Chat | Coordinación en tiempo real | #ai-incidents |
 | **War Room** | Zoom | Video conferencia de crisis | Meeting ID: 999-888-777 |
 | **Modelos** | MLflow | Registry y versionado de modelos | https://mlflow.banco.interno |
 | **Documentación** | Confluence | Knowledge base y post-mortems | https://wiki.banco.interno |

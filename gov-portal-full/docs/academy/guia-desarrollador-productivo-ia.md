@@ -417,7 +417,7 @@ security:
 
 ### Comunidad
 - **Slack:** #nova-cell-users
-- **Teams:** Nova-Cell Community
+- **#Google Chat:** Nova-Cell Community
 - **Wiki interno:** wiki.novasolutionsystems.com/nova-cell
 
 ### Soporte

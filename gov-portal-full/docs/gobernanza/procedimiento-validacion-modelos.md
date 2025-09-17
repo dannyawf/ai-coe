@@ -2,7 +2,7 @@
 
 ## 📋 Resumen Ejecutivo
 
-Este procedimiento establece el marco metodológico obligatorio para la validación de todos los modelos de Inteligencia Artificial antes de su despliegue en producción, garantizando su confiabilidad, equidad y cumplimiento regulatorio según las disposiciones de la CNBV y Banxico.
+Este procedimiento establece el marco metodológico para la validación de todos los modelos de Inteligencia Artificial antes de su despliegue en producción, garantizando su confiabilidad, equidad y alineación con mejores prácticas de la industria y estándares regulatorios aplicables.
 
 ### Información Clave
 - **Aplicación**: Todos los modelos de IA/ML en el banco

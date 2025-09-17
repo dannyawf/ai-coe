@@ -23,49 +23,49 @@ hide:
 <div class="card-grid">
   <div class="banking-card">
     <div class="card-icon">🏛️</div>
-    <h3><a href="/governance/politica-uso-responsable-ia/">Gobernanza de IA</a></h3>
-    <p>Políticas, procedimientos y cumplimiento regulatorio ISO/IEC 42001 para el uso responsable de Inteligencia Artificial en banca.</p>
+    <h3><a href="governance/politica-uso-responsable-ia.md">Gobernanza de IA</a></h3>
+    <p>Políticas, procedimientos y framework de cumplimiento para el uso responsable de Inteligencia Artificial en banca (en proceso de certificación ISO/IEC 42001).</p>
   </div>
 
   <div class="banking-card">
     <div class="card-icon">🚀</div>
-    <h3><a href="/knowledge-hub-guide/#arquitectura-nova-cell">Plataforma Nova-Cell</a></h3>
+    <h3><a href="knowledge-hub-guide.md#arquitectura-nova-cell">Plataforma Nova-Cell</a></h3>
     <p>Motor colaborativo LLM para desarrollo aumentado con IA, optimizando la productividad de los equipos de desarrollo.</p>
   </div>
 
   <div class="banking-card">
     <div class="card-icon">🔄</div>
-    <h3><a href="/sdlc-dod-ai-view/">SDLC con IA</a></h3>
+    <h3><a href="sdlc-dod-ai-view.md">SDLC con IA</a></h3>
     <p>Definition of Done aumentado con IA para cada fase del ciclo de desarrollo, con casos de uso y mejoras específicas.</p>
   </div>
 
   <div class="banking-card">
     <div class="card-icon">🎓</div>
-    <h3><a href="/academy/guia-capacitacion-product-owner-ia/">Academia de IA</a></h3>
+    <h3><a href="academy/guia-capacitacion-product-owner-ia.md">Academia de IA</a></h3>
     <p>Programas de formación y certificación en Inteligencia Artificial diseñados para todos los roles organizacionales.</p>
   </div>
 
   <div class="banking-card">
     <div class="card-icon">📚</div>
-    <h3><a href="/knowledge-hub-guide/">Knowledge Hub</a></h3>
+    <h3><a href="knowledge-hub-guide.md">Knowledge Hub</a></h3>
     <p>Librería centralizada de prompts, agentes y mejores prácticas validadas por expertos de la industria bancaria.</p>
   </div>
 
   <div class="banking-card">
     <div class="card-icon">📊</div>
-    <h3><a href="/operating-model-coe/#framework-de-metricas-impact">Métricas IMPACT</a></h3>
+    <h3><a href="operating-model-coe.md#framework-de-metricas-impact">Métricas IMPACT</a></h3>
     <p>Dashboard ejecutivo de adopción, madurez y ROI de iniciativas de IA con indicadores clave de rendimiento.</p>
   </div>
 
   <div class="banking-card">
     <div class="card-icon">📖</div>
-    <h3><a href="/playbooks/playbook-banca-digital-ia/">Playbooks Especializados</a></h3>
+    <h3><a href="playbooks/playbook-banca-digital-ia.md">Playbooks Especializados</a></h3>
     <p>Guías sectoriales detalladas para la implementación exitosa de soluciones de IA en diferentes áreas bancarias.</p>
   </div>
 
   <div class="banking-card">
     <div class="card-icon">🏢</div>
-    <h3><a href="/operating-model-coe/">Centro de Operaciones</a></h3>
+    <h3><a href="operating-model-coe.md">Centro de Operaciones</a></h3>
     <p>Modelo operativo del CoE, catálogo de servicios y estrategia de comunicación para la adopción efectiva de IA.</p>
   </div>
 </div>
@@ -82,7 +82,7 @@ hide:
       <a href="https://forms.gle/sasDGBjZD6MPKUjt6" target="_blank" style="display: inline-block; background: white; color: #667eea; padding: 15px 40px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; margin: 0 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
         📝 Completar Diagnóstico
       </a>
-      <a href="/diagnostico-impact/resultados/" style="display: inline-block; background: rgba(255,255,255,0.2); color: white; padding: 15px 40px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; margin: 0 10px; border: 2px solid white;">
+      <a href="diagnostico-impact/resultados.md" style="display: inline-block; background: rgba(255,255,255,0.2); color: white; padding: 15px 40px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; margin: 0 10px; border: 2px solid white;">
         📊 Ver Resultados
       </a>
     </div>
@@ -126,18 +126,18 @@ hide:
 
 <div class="info-cards" markdown>
 
-!!! success "Métricas Clave"
-    - **85%** Cobertura de adopción semanal Nova-Cell
-    - **2.1x** Productividad en squads aumentados
-    - **7.3 días** Time to First Value promedio
-    - **162%** ROI proyectado a 3 años
+!!! success "Métricas Objetivo (Basadas en Framework SPACE)"
+    - **85%** Cobertura de adopción semanal objetivo Nova-Cell
+    - **2.1x** Productividad esperada en squads aumentados
+    - **7.3 días** Time to First Value objetivo
+    - **162%** ROI proyectado a 3 años (estimación basada en benchmarks SPACE)
 
-!!! info "Servicios Activos"
-    - ✅ Validación de Modelos (ISO 23053)
-    - ✅ Academia AI con 12 cursos
-    - ✅ Knowledge Hub con 250+ artefactos
-    - ✅ Helpdesk AI 24/7
-    - ✅ Shadow AI Control activo
+!!! info "Servicios en Implementación"
+    - 🚧 Framework de Validación de Modelos (en proceso de certificación ISO 23053)
+    - 🚧 Academia AI (12 cursos en desarrollo)
+    - 🚧 Knowledge Hub (objetivo: 250+ artefactos)
+    - 🚧 Helpdesk AI (en configuración)
+    - 🚧 Sistema de Control Shadow AI (piloto)
 
 !!! warning "En Desarrollo"
     - 🚧 Integración con EU AI Act
@@ -150,26 +150,26 @@ hide:
 ## 🗺️ Navegación por Rol
 
 ### Para **Product Owners**
-- [Guía de Capacitación PO](/academy/guia-capacitacion-product-owner-ia/)
-- [Knowledge Hub - Casos de Uso](/knowledge-hub-guide/#casos-de-uso-validados)
-- [Playbook Banca Digital](/playbooks/playbook-banca-digital-ia/)
+- [Guía de Capacitación PO](academy/guia-capacitacion-product-owner-ia.md)
+- [Knowledge Hub - Casos de Uso](knowledge-hub-guide.md#casos-de-uso-validados)
+- [Playbook Banca Digital](playbooks/playbook-banca-digital-ia.md)
 
 ### Para **Desarrolladores**
-- [Knowledge Hub - Arquitectura Técnica](/knowledge-hub-guide/#arquitectura-tecnica)
-- [Best Practices de Prompts](/knowledge-hub-guide/#mejores-practicas)
-- [Playbooks de Implementación](/playbooks/playbook-banca-digital-ia/#implementacion-tecnica)
+- [Knowledge Hub - Arquitectura Técnica](knowledge-hub-guide.md#arquitectura-tecnica)
+- [Best Practices de Prompts](knowledge-hub-guide.md#mejores-practicas)
+- [Playbooks de Implementación](playbooks/playbook-banca-digital-ia.md#implementacion-tecnica)
 
 ### Para **Risk Officers**
-- [Procedimiento de Validación](/governance/procedimiento-validacion-modelos/)
-- [Política de Uso Responsable](/governance/politica-uso-responsable-ia/)
-- [Framework de Riesgos](/governance/politica-uso-responsable-ia/#gestion-de-riesgos)
+- [Procedimiento de Validación](governance/procedimiento-validacion-modelos.md)
+- [Política de Uso Responsable](governance/politica-uso-responsable-ia.md)
+- [Framework de Riesgos](governance/politica-uso-responsable-ia.md#gestion-de-riesgos)
 
 ### Para **Ejecutivos**
-- [Operating Model del CoE](/operating-model-coe/)
-- [Catálogo de Servicios CoE](/catalogo-servicios-coe/)
-- [Plan de Comunicación](/plan-comunicacion-coe/)
-- [Framework de Métricas IMPACT](/operating-model-coe/#framework-de-metricas-impact)
-- [Política de Gobernanza](/governance/politica-uso-responsable-ia/)
+- [Operating Model del CoE](operating-model-coe.md)
+- [Catálogo de Servicios CoE](catalogo-servicios-coe.md)
+- [Plan de Comunicación](plan-comunicacion-coe.md)
+- [Framework de Métricas IMPACT](operating-model-coe.md#framework-de-metricas-impact)
+- [Política de Gobernanza](governance/politica-uso-responsable-ia.md)
 
 ## 📅 Actualizaciones Recientes
 
@@ -186,7 +186,7 @@ hide:
   <div class="nova-accent-border">
     <ul style="list-style: none; padding: 0;">
       <li style="padding: 0.5rem 0;">📧 <strong>Email:</strong> coe-ia@novasolutionsystems.com</li>
-      <li style="padding: 0.5rem 0;">💬 <strong>Teams:</strong> Canal #ai-excellence</li>
+      <li style="padding: 0.5rem 0;">💬 <strong>Google Chat:</strong> <a href="https://chat.google.com/room/AAQAugDuKpE?cls=1">Canal Centro de Excelencia IA</a></li>
       <li style="padding: 0.5rem 0;">📞 <strong>Helpdesk:</strong> Ext. 4242</li>
       <li style="padding: 0.5rem 0;">📚 <strong>Wiki:</strong> <a href="https://wiki.novasolutionsystems.com/ai">wiki.novasolutionsystems.com/ai</a></li>
     </ul>

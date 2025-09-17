@@ -19,7 +19,7 @@
 
 ### Leadership Team
 
-| Cargo | Nombre | Email | Ext | Móvil | Horario | Teams/Slack | Escalamiento |
+| Cargo | Nombre | Email | Ext | Móvil | Horario | Google Chat/Slack | Escalamiento |
 |-------|--------|-------|-----|-------|---------|-------------|--------------|
 | **CEO** | Roberto Mendoza | rmendoza@novasolutionsystems.com | 1001 | +52 555-100-1001 | 24/7 | @CEO-Roberto | P1 Crítico |
 | **CTO** | María García | mgarcia@novasolutionsystems.com | 1002 | +52 555-100-1002 | 24/7 | @CTO-Maria | P1 Crítico |
@@ -30,7 +30,7 @@
 | **CFO** | Diego Ruiz | druiz@novasolutionsystems.com | 1007 | +52 555-100-1007 | Business | @CFO-Diego | P2 Alto |
 | **COO** | Laura Díaz | ldiaz@novasolutionsystems.com | 1008 | +52 555-100-1008 | 24/7 | @COO-Laura | P1 Operaciones |
 
-**Canal Teams Principal:** `#executive-team`  
+**Canal de Google Chat Principal:** `#executive-team`  
 **Slack Ejecutivo:** `#c-suite-channel`
 
 ---
@@ -69,7 +69,7 @@
 | **Compliance Specialist** | Lucia Méndez | lmendez@novasolutionsystems.com | 2022 | Regulatory |
 
 **War Room Channel:** `#ai-incident-response`  
-**Daily Standup:** 09:00 AM en Teams
+**Daily Standup:** 09:00 AM en Google Chat
 
 ---
 
@@ -267,7 +267,7 @@
 
 ### Reuniones Recurrentes
 
-| Reunión | Frecuencia | Host | Teams Link |
+| Reunión | Frecuencia | Host | Google Chat Link |
 |---------|------------|------|------------|
 | **AI Town Hall** | Mensual - 1er Jueves 16:00 | Fernando Gómez | [Join](#) |
 | **Technical Deep Dive** | Quincenal - Martes 14:00 | Roberto Silva | [Join](#) |

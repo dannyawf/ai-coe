@@ -1,21 +1,7 @@
----
-tags:
-  - gobernanza
-  - inteligencia-artificial
-  - operating-model
-  - coe-ia
-  - organizacion
-  - raci
-  - impact-framework
-search:
-  boost: 2
----
-
-# Modelo Operativo del Centro de Excelencia de Inteligencia Artificial (CoE IA)
+# ⚙️ Modelo Operativo del Centro de Excelencia de IA
 
 <div class="nova-card-hero nova-scale-in">
-  <h2 style="margin: 0; font-size: 1.8rem;">⚙️ Modelo Operativo del CoE IA</h2>
-  <p style="margin: 0.5rem 0 0; opacity: 0.9;">Estructura, funciones y procesos para la adopción segura y responsable de IA</p>
+  <p style="margin: 0; font-size: 1.2rem; font-weight: 600;">Estructura, funciones y procesos para la adopción segura y responsable de IA</p>
 </div>
 
 <div class="nova-grid nova-grid--2" style="margin: 2rem 0;">
@@ -129,7 +115,7 @@ El Arquitecto de Adopción de IA es un rol estratégico único que actúa como e
 - Mantener actualizado el roadmap de adopción por área
 - Coordinar con AI Champions en cada vertical
 - Documentar mejores prácticas y lecciones aprendidas
-- Contribuir al Knowledge Hub con casos de éxito
+- Contribuir al Knowledge Hub con aprendizajes y mejores prácticas
 - Participar en la evaluación de herramientas y proveedores
 
 **Frecuencia de Actividades:**
@@ -566,6 +552,6 @@ El CoE IA monitorea continuamente seis indicadores predictivos que determinan el
 
 ---
 
-*Este Modelo Operativo es un documento vivo que será revisado y actualizado periódicamente para adaptarse a la evolución de la tecnología, la normativa y las necesidades del Banco. Para consultas o aclaraciones, contactar al Centro de Excelencia de IA a través del canal #ai-governance en Teams corporativo.*
+*Este Modelo Operativo es un documento vivo que será revisado y actualizado periódicamente para adaptarse a la evolución de la tecnología, la normativa y las necesidades del Banco. Para consultas o aclaraciones, contactar al Centro de Excelencia de IA a través del [Canal Centro de Excelencia IA en Google Chat](https://chat.google.com/room/AAQAugDuKpE?cls=1).*
 
 **Documento controlado - Prohibida su reproducción sin autorización del CoE IA**

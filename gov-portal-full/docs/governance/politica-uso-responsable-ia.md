@@ -632,6 +632,6 @@ Esta política asegura que toda implementación de IA se alinee con nuestra cult
 
 ---
 
-*Esta política entra en vigencia inmediatamente tras su aprobación y será revisada trimestralmente o ante cambios regulatorios significativos. Para consultas o aclaraciones, contactar al Centro de Excelencia de IA a través del canal #ai-governance en Teams corporativo.*
+*Esta política entra en vigencia inmediatamente tras su aprobación y será revisada trimestralmente o ante cambios regulatorios significativos. Para consultas o aclaraciones, contactar al Centro de Excelencia de IA a través del [Canal Centro de Excelencia IA en Google Chat](https://chat.google.com/room/AAQAugDuKpE?cls=1).*
 
 **Documento controlado - Prohibida su reproducción sin autorización del CoE IA**

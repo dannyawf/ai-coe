@@ -843,4 +843,4 @@ Performance:
 
 **Documento controlado - Distribución según matriz de clasificación de información corporativa**
 
-*Este procedimiento entra en vigencia inmediatamente y será revisado trimestralmente o ante cambios regulatorios significativos. Para consultas técnicas contactar al Centro de Excelencia de IA via #ai-governance en Teams corporativo.*
+*Este procedimiento entra en vigencia inmediatamente y será revisado trimestralmente o ante cambios regulatorios significativos. Para consultas técnicas contactar al Centro de Excelencia de IA via #ai-governance en Google Chat corporativo.*

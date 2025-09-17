@@ -1235,7 +1235,7 @@ Combinamos Scrum con prácticas DevOps y elementos de Extreme Programming, adapt
 - **#architecture**: Design discussions
 - **#incidents**: Real-time incident coordination
 
-**Zoom/Teams Setup**
+**Zoom/Google Chat Setup**
 - **Daily Standups**: 15 min morning sync
 - **Pair Programming**: Screen sharing sessions
 - **Architecture Reviews**: Design discussions

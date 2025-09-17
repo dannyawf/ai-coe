@@ -410,7 +410,7 @@ open http://localhost:3000
 
 - 📖 [Documentación completa en Confluence](https://confluence.novasolutionsystems.com/rag-assistant)
 - 🎥 [Video tutorial paso a paso](https://learning.novasolutionsystems.com/rag-tutorial)
-- 💬 [Canal Teams de soporte](https://teams.microsoft.com/l/channel/rag-support)
+- 💬 [Canal de Google Chat de soporte](https://chat.google.com/room/AAQAugDuKpE?cls=1)
 - 🐛 [Reportar issues](https://jira.novasolutionsystems.com/rag-assistant)
 
 ## 🤝 Soporte del CoE
